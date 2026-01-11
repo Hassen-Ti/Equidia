@@ -1,0 +1,617 @@
+PROJET EQUICOACH
+
+J'ai pour projet de créer une application qui permettrait aux cavaliers qui montent en autonomie d'avoir des séances audios avec temps de pause pour les exos etc en fonction de leur besoin. Cette appli evoluera au debut avec des audios avec commande vocales (stop, continue, revenir en arriere, "explique moi mieux ce terme ou ca"), apres y intégrer des interactions grace à l'IA donc lui parler, lui poser des questions par exemple, et enfin à terme j'avais meme penser à un système de caméra ( pas forcement sur le cavalier en lui meme mais pourquoi pas) mais plutôt à poser dans le manege ou carriere pour pouvoir avoir la vue d'ensemble cheval + cavalier , pour que la voix de l'IA puisse corriger en temps réel en regardant et analysant la position du cheval, la vitesse, la position du cavalier. Les séances sont basées sur la FFE et d'autres sites .
+
+
+EquiCoach doit devenir l'outil indispensable pour les cavaliers en autonomie. C'est un coach virtuel de poche qui remplace la préparation fastidieuse et apporte structure, progression et plaisir.
+
+🎯 Les 5 piliers de l'addiction positive :
+1. ZÉRO PRÉPARATION
+Le cavalier lance l'audio et se laisse guider
+Pas besoin de réfléchir 30 min à "qu'est-ce que je vais faire aujourd'hui ?"
+Tout est pensé, structuré, chronométré
+2. COHÉRENCE PÉDAGOGIQUE
+Chaque exercice a un "pourquoi" explicite
+Les transitions entre blocs sont fluides et logiques
+Progression naturelle du simple au complexe
+3. SENSATION DE PROGRÈS
+Question de réflexion en fin de séance pour ancrer le bénéfice
+"Est-ce que tu sens la différence ?" → Prise de conscience immédiate
+Le cavalier se dit : "Grâce à EquiCoach, je progresse vraiment"
+4. PLAISIR ET VARIÉTÉ
+Échauffements originaux (triangle, carré, spirale)
+Tracés intelligents et inédits
+Jamais la même routine → Pas d'ennui
+5. FACILITÉ AU QUOTIDIEN
+Pas de matériel complexe
+Adaptable en manège partagé
+Durées variées (20, 30, 45, 60 min) selon le temps disponible 
+
+Objectif final : Que le cavalier ne puisse plus s'en passer et se dise :
+"Avant EquiCoach, je tournais en rond. Maintenant, chaque séance a du sens et je progresse vraiment."
+
+
+Phase 1 : MVP (Produit Minimum Viable)
+Application mobile avec séances audio pré-enregistrées
+
+Filtres : discipline, niveau cavalier, durée, thème (assouplissement, précision, transitions, etc.)
+Lecture audio guidée pendant la séance
+Carnet de suivi simple (séances effectuées, notes personnelles)
+
+Phase 2 : Version avancée avec IA
+Coaching "live" par caméra + analyse IA
+
+Analyse vidéo en temps réel (posture, rectitude du cheval, qualité des transitions)
+Conseils audio adaptés instantanément
+Option caméra casque ou fixe
+
+Structure pédagogique d'une seance:
+Échauffement progressif
+Exercices préparatoires avant la souplesse latérale
+Progression logique des difficultés
+Retour au calme
+
+Utilisation de Détails techniques :
+Quels exercices précis ? (épaule en dedans, cession, contre-épaule, cercles, serpentines ?)
+Transitions intégrées ?
+Allures travaillées ? (pas, trot, galop ?)
+
+
+ Ca serait classer par discipline : dressage, obstacle, travail à pied, balade, travail spécifique (exos spécifiques + mise en selle ) et corrections de problèmes (cheval qui tire, qui n'avance pas etc).
+
+ Il y aura également de filtres selon les niveaux du galop 2/3 jusqu'au 7 pour pouvoir choisir sa seance + facilement - de Meme il y aura un filtre avec la durée de la seance voulue ( de 20 à 60 min ). 
+
+pour l'instant j'ai crée une bibliotheque de 100 séances, que j'aimerais developper au fur et à mesure. 
+
+Ca sera uniquement une application mobile avec:
+
+Page d'accueil : un système de recommandation de seance à chaque jour qu'on se connecte + en dessous des bulles avec toutes les displines et thématiques. Lorsqu'on appuie sur une bulle, s'affiche en dessous les différentes séances associées. Juste en dessous des bulles il y aura juste les deux filtres "niveau" et "durée". La liste des séances sera donc associée aux filtres choisis. 
+
+Ecran de seance avec lecteur audio
+
+Page de Profil utilisateur : necessaire au système de recommandation et de personnalisation. Cette fiche sera crée des l'inscription avec le nom du cavalier, son niveau, le nom de son ou ses chevaux , leurs ages, tempérament du cheval calme energique chaud froid(si le client veut le faire), les points faibles de son cheval (raide d'un cote, manque dimpulsio, récipité tire sur la main ...) ou à lui meme, les disciplines qu'il prefere, ceux en quoi il souhaite progresser(impulsion, souplessse, precision equilibre etc) . Types d'infrastructures utilisables (manege, carrières, matériels etc), ses objectifs prioritaires (par ex :Améliorer ma position Progresser en dressage Travailler l'obstacle Gagner en confiance Préparer une compétition Détente et plaisir)
+
+Page Tableau de bord (a mettre dans page profil peut etre?!) : avec historique "continuer votre progression, ciblage "travaillez sur vos points fiables " etc 
+
+J'aimerais qu'a la fin de chaque séance l'utilisateur puisse noter sa seance, mettre des commentaires si besoin (trop facile, parfait, trop difficile) et mettre son ressenti par rapport à lui et son cheval. Systeme de feedback pour les erreurs ou beug avec formulaire ou autre 
+
+📜 CAHIER DES CHARGES DÉTAILLÉ : SCRIPTS AUDIO ÉQUESTRES
+I. FORMATAGE AUDIO & LISIBILITÉ (Le "Prêt-à-Enregistrer")
+Structure Monoligne : Chaque phrase occupe une seule ligne. Cela permet de ne pas perdre le fil lors de la lecture au micro.
+
+Ponctuation de Temps (Balises) : Chaque ligne est suivie d'une balise [Pause : X secondes]. Ces pauses sont calculées pour inclure le temps de réflexion et de mise en œuvre physique du cavalier.
+
+Calibrage du Chronomètre : La somme du temps de lecture (vitesse calme) et des pauses doit correspondre à la durée totale annoncée (ex: 30 min).
+
+II. ADAPTATION AU NIVEAU (Le Dosage Pédagogique)
+Modulation du Vocabulaire : * Niveaux Débutants (G1-G3) : Vocabulaire imagé, peu de termes techniques complexes.
+
+Niveaux Intermédiaires (G4-G5) : Introduction des termes de mécanique équestre (engagement, rectitude).
+
+Niveaux Avancés (G6-G7) : Focus sur le ressenti fin, la locomotion et l'équilibre.
+
+Usage des Métaphores : À utiliser avec une extrême parcimonie. Elles servent uniquement à débloquer une sensation (ex: "le contact moelleux d'un oiseau"). Elles sont quasi-absentes pour les niveaux confirmés.
+
+III. RÉDACTION & TON (La Plume du Coach)
+Tutoiement Pédagogique : Un ton direct, complice et professionnel.
+
+Le Style "Action-Directe" : Éviter les explications passives. Utiliser l'impératif ou le futur d'action (ex: "Ferme tes doigts" au lieu de "Il faudrait fermer les doigts").
+
+Sobriété Utile : Supprimer tout adjectif ou commentaire qui n'aide pas directement le cavalier dans son action présente.
+
+Précision Motrice et Rythme de Récupération : Chaque consigne technique doit être une action physique concrète et immédiate (ex: 'ferme tes doigts', 'redresse ton buste'), et chaque bloc d'effort doit être obligatoirement suivi d'une minute de récupération active au pas rênes longues pour garantir la physiologie du cheval
+
+IV. STRUCTURE SYSTÉMATIQUE D'UNE SÉANCE
+Note de Matériel : Liste exhaustive de l'équipement nécessaire. Règle d'or : Le cavalier ne doit jamais descendre de cheval pour modifier le dispositif.
+
+Introduction : Présentation de l'objectif technique (ex: l'incurvation) et des bénéfices pour le cheval.
+
+Échauffement : Progressivité des allures adaptée au thème de la séance. Routine variée et diversifiée d'une séance à l'autre (ex: carré, spirale, serpentines) pour éviter l'ennui et préparer spécifiquement le corps du cheval au thème du jour.
+
+Transitions Pédagogiques (Le "Pourquoi") : Entre chaque exercice, expliquer l'enchaînement (ex: "Maintenant que nous avons mobilisé les épaules, nous allons chercher à stabiliser les hanches"). Interdiction : Ne pas dire le mot "Logique".
+
+Corps de Séance : Blocs d'exercices avec options de difficulté (Option A pour simplifier, Option B pour complexifier) annoncées dès le début. Diversité et Sobriété Pédagogique : Chaque séance doit rompre la routine en proposant des exercices variés et des combinaisons de figures inédites (ex: transitions spécifiques dans le pli, enchaînements techniques non-conventionnels, tracés hybrides). Cette originalité doit reposer sur l'intelligence de l'exercice plutôt que sur l'accumulation de matériel, afin de garantir une mise en place rapide et une cohabitation fluide dans un manège partagé."
+
+Retour au Calme : Phase de récupération active (rênes longues) et bilan des points clé La fin de séance doit privilégier un ton bienveillant et inclure une question unique invitant le cavalier à évaluer un bénéfice précis de la séance (ex: gain de légèreté, réactivité). L'objectif est de favoriser l'ancrage positif et la prise de conscience du progrès immédiat.
+
+
+Pauses de Récupération (Règle d'Or) : Intégrer systématiquement des phases de récupération active (pas rênes longues) de 1 à 2 minutes après chaque bloc d'effort intense (fin d'échauffement, fin d'exercice technique). Le temps total de travail effectif doit être équilibré par ces temps de repos pour préserver le souffle et le moral du cheval.Ces pauses permettent l'oxygénation des muscles, la baisse du rythme cardiaque et l'assimilation mentale des consignes."
+
+Règle du "Galop Plaisir Optionnel" : Cette règle équilibre rigueur pédagogique et plaisir du cavalier. Pour les séances G2-3 techniques (rectitude, précision, souplesse latérale), PAS de galop car le risque pédagogique est trop élevé - ces cavaliers doivent consolider pas/trot. Pour les séances G4-5+ de dressage technique, structure en 2 phases : 80% du temps = travail PAS/TROT uniquement (concentration sur l'objectif pédagogique sans dilution), puis dernières 3-5 min = "Galop plaisir" présenté clairement comme récompense avec consignes simples et détendues (ex: "Profite de ce moment avec ton cheval"). Exception : séances où le galop fait partie intégrante du travail technique (engagement des postérieurs, transitions fluides, impulsion, variations d'amplitude). Pourquoi ? Le galop est émotionnellement gratifiant pour la majorité des cavaliers → facteur d'addiction positive à EquiCoach.
+
+V. RIGUEUR TECHNIQUE & GÉOMÉTRIE
+Précision Spatiale : Utilisation systématique des lettres de manège (A, E, B, C...) et des lignes de référence (ligne du milieu, ligne du quart).
+
+Schéma Technique Invisible : Chaque demande suit le cycle Préparation / Action / Sortie.
+
+Note Cruciale : Ce schéma structure le texte mais les termes "Préparation", "Action" ou "Sortie" ne sont jamais prononcés à l'oral.
+
+Tracés Réels : Les consignes respectent les temps de préparation réels (ex: anticiper le pli avant d'entrer dans un cercle).
+
+VI. IMMERSION AUDIO & GESTION DU SILENCE
+Le Silence Habité : Pas de silence total de plus de 45 secondes. Si l'exercice est long, intercaler des rappels de position ou des observations sur le rythme.
+
+
+Conseils de Relâchement : Donner des conseils pour évacuer les tensions (épaules, souffle, talons, mains).
+
+Interdictions : Ne jamais prononcer "Scan corporel", ne jamais parler des "mâchoires" ou des "dents".
+
+Anticipation ("Si jamais...") : Intégrer des conseils de correction immédiate pour les fautes classiques liées à l'exercice (ex: "Si ton cheval tombe sur l'épaule intérieure, renforce ta jambe à la sangle").
+
+Typologie des Pauses et Continuité : Respecter trois types de silences : l'assimilation (immédiate), le travail (stabilisation) et la récupération (repos). Pour tout silence de travail, confirmer systématiquement l'allure ou l'exercice en cours (ex: 'On maintient ce galop sur le cercle') afin d'éliminer toute incertitude pour le cavalier.
+
+Conclusion Chaleureuse et Réflexive : La fin de séance doit privilégier un ton bienveillant et inclure une question unique invitant le cavalier à évaluer un bénéfice précis de la séance (ex: gain de légèreté, réactivité). L'objectif est de favoriser l'ancrage positif et la prise de conscience du progrès immédiat.
+
+VII. DOSAGE DE LA MOTIVATION
+La Règle d'Or : Un seul encouragement durant l'exercice le plus difficile, et un mot positif en conclusion.
+
+Phrases de Motivation : Utiliser des formulations variées (ex: "Chaque séance est une pierre de plus à l'édifice", "La régularité est la clé du progrès").
+
+
+IDEES SUPPLEMENTAIRES : 
+
+- Lorsque l'on cliquera sur une seance, cest donc une page audio qui va s'ouvrir mais je pensais éventuellement de mettre en dessous des explications de certains exercices afin que les cavaliers puissent lire en amont de la seance les exos et mieux les appréhender. 
+
+- avoir une page également liée au fait de partager ses seances avec d'autres personnes de la comunauté, ou savoir qui a fait cette seance autour de nous - quelque chose liée à l'echange, ou reseau social interne ou partager des infos etc 
+
+- J'aurais besoin d'un dashbord admin avec : Séances les plus populaires/Notes moyennes par séance/Problèmes récurrents du cheval/Demandes de nouvelles séances
+
+
+- Beaucoup de cavaliers réclament de progresser , voici les fonctionnalités à mettre en place pour evoluer la progression :  La progression est LA clé pour créer un effet "indispensable". Voici un système complet :
+
+📈 SYSTÈME DE PROGRESSION COMPLET
+1. SUIVI QUANTITATIF (Facile à implémenter)
+Tableau de bord personnel :
+
+🏆 Nombre de séances complétées (gamification)
+
+Badge "10 séances" / "50 séances" / "100 séances"
+
+
+📊 Graphique de régularité
+
+Calendrier visuel (comme Duolingo)
+Streaks : "7 jours d'affilée ! 🔥"
+
+
+⏱️ Temps total monté
+
+"Tu as monté 45h ce mois-ci !"
+
+
+📁 Répartition des disciplines
+
+Camembert : 60% Dressage, 30% Obstacle, 10% Balade
+
+
+
+Impact utilisateur : Motivation par la visualisation des efforts
+
+2. SUIVI QUALITATIF (Plus avancé - très différenciant)
+Auto-évaluation après chaque séance :
+Popup à la fin de la séance :
+Comment s'est passée cette séance ?
+
+[Exercice 1 : Cercles rétrécissants]
+😞 Difficile  |  😐 Moyen  |  😊 Bien  |  🤩 Excellent
+
+[Exercice 2 : Serpentines]
+😞 Difficile  |  😐 Moyen  |  😊 Bien  |  🤩 Excellent
+
+[Global]
+Mon cheval était : 😴 Mou  |  😐 Normal  |  ⚡ Énergique  |  🔥 Trop chaud
+
+[Notes libres] (optionnel)
+___________________________
+Ce que ça permet :
+
+📊 Graphique d'évolution par exercice
+
+"Serpentines : Difficile → Moyen → Bien (progression !)"
+
+
+🎯 Détection de blocages
+
+"Tu notes toujours 'Difficile' pour les cessions. Voici une séance spéciale cessions simplifiées"
+
+
+🤖 Recommandations IA intelligentes
+
+"Tu progresses en dressage ! Prêt pour une séance niveau supérieur ?"
+
+
+
+
+3. SYSTÈME DE NIVEAUX & BADGES (Gamification)
+Progression par niveau :
+🥉 CAVALIER DÉBUTANT (0-10 séances)
+→ Débloquer : Séances Galop 3-4
+
+🥈 CAVALIER RÉGULIER (10-30 séances)
+→ Débloquer : Séances Galop 5-6 + Commandes vocales avancées
+
+🥇 CAVALIER CONFIRMÉ (30-60 séances)
+→ Débloquer : Séances Galop 7+ + Analyse vidéo (Phase 2)
+
+💎 CAVALIER EXPERT (60+ séances)
+→ Débloquer : Création de séances personnalisées
+Badges spéciaux :
+
+🔥 "Régularité" : 30 jours consécutifs
+🎯 "Touche-à-tout" : Tester toutes les disciplines
+💪 "Persévérance" : Refaire 3x une séance difficile
+🌟 "Perfectionniste" : Noter 5 séances "Excellent"
+🏆 "Marathonien" : 10 séances de 60min
+🎨 "Créatif" : Utiliser la fonctionnalité "Personnaliser séance"
+
+Impact : Addiction positive (comme Strava pour les coureurs)
+
+4. OBJECTIFS PERSONNALISÉS (Très engageant)
+Système d'objectifs :
+À l'inscription :
+"Quel est ton objectif principal ?"
+
+☐ Améliorer ma position
+☐ Progresser en dressage
+☐ Gagner en confiance
+☐ Préparer une compétition
+☐ Muscler mon cheval
+☐ Varier mes séances
+
+Plan personnalisé généré automatiquement :
+📍 TON OBJECTIF : Améliorer ma position
+
+Plan 4 semaines :
+
+Semaine 1 : 🎯 Mise en selle (2x) + Dressage calme (1x)
+Semaine 2 : 🎯 Mise en selle (2x) + Travail sans étriers (1x)
+Semaine 3 : 🎯 Équilibre au galop (2x) + Dressage (1x)
+Semaine 4 : 🎯 Test progression (séance complète focus position)
+
+📊 Suivi : 3/12 séances complétées
+Notifications push :
+
+"🔔 Tu as prévu ta séance cette semaine ?"
+"🎉 Objectif semaine 1 atteint ! +50 XP"
+
+
+5. SYSTÈME XP & NIVEAUX (Type RPG - Très addictif)
+Points d'expérience :
+
+Compléter une séance : +100 XP
+Séance de 60min : +150 XP
+Noter la séance : +20 XP
+Streak 7 jours : +200 XP bonus
+Refaire une séance difficile : +50 XP
+Partager une progression : +30 XP
+
+Niveaux avec récompenses :
+Niveau 1 → 2 : 500 XP
+→ Débloque : 1 séance premium gratuite
+
+Niveau 5 : 2500 XP
+→ Débloque : Badge spécial + Thème app personnalisé
+
+Niveau 10 : 6000 XP
+→ Débloque : Accès beta "Analyse vidéo IA"
+Classement (optionnel, si communauté) :
+
+Classement mensuel entre amis
+Classement national (anonyme)
+
+
+6. JOURNAL DE BORD INTELLIGENT (Mémoire)
+Timeline automatique :
+📅 JANVIER 2026
+
+🎉 Milestone : 10 séances complétées !
+
+📈 Progression détectée :
+- Serpentines : ⭐⭐ → ⭐⭐⭐⭐ (+2 étoiles)
+- Impulsion : 😐 → 😊 (s'améliore !)
+
+💡 Recommandation : 
+Tu progresses bien en dressage. Prêt pour "Cessions à la jambe" niveau supérieur ?
+
+📊 Stats du mois :
+- 12 séances (🔥 +3 vs décembre)
+- 6h15 de selle
+- Disciplines : 70% Dressage, 20% Balade, 10% Obstacle
+Historique consultable :
+
+Voir toutes mes séances passées
+Filtrer par discipline, niveau, durée
+Refaire une ancienne séance
+Comparer ma notation avant/maintenant
+
+
+7. COMPARAISON AVANT/APRÈS (Proof of progress)
+Test de niveau régulier :
+Tous les 2 mois :
+"🎯 Test de progression Dressage - Niveau Galop 5"
+Séance spéciale qui évalue :
+
+Qualité des transitions
+Précision des figures
+Contrôle de l'impulsion
+etc.
+
+Rapport généré :
+📊 TEST DRESSAGE GALOP 5
+
+🗓️ Janvier 2026 vs Mars 2026
+
+Transitions : 6/10 → 8/10 ✅ (+2)
+Cercles : 7/10 → 9/10 ✅ (+2)
+Impulsion : 5/10 → 7/10 ✅ (+2)
+Cessions : 4/10 → 6/10 ✅ (+2)
+
+🎉 Score global : 55% → 75% 
+Progression : +20% en 2 mois !
+
+💡 Prochaine étape : Commencer les séances Galop 6
+Impact : Preuve concrète de progression = motivation++
+
+8. COACHING IA PERSONNALISÉ (Phase 2 - Killer feature)
+IA qui adapte les recommandations :
+Analyse des données :
+
+Séances complétées
+Notations
+Fréquence
+Points faibles identifiés
+
+Recommandations intelligentes :
+💬 TON COACH IA
+
+Salut ! J'ai analysé tes 15 dernières séances.
+
+📊 Constat :
+- Tu notes souvent "Difficile" sur les exercices de galop
+- Ton cheval est souvent "Mou" en début de séance
+
+💡 Recommandations :
+1. Faire 2 séances "Manque d'impulsion" (Résolution problème)
+2. Intégrer plus de transitions dans tes échauffements
+3. Tester la séance "Engagement des postérieurs"
+
+🎯 Objectif : Améliorer le galop en 3 semaines
+
+Tu veux essayer le plan ?
+[Oui, go !] [Plus tard]
+Suivi du plan :
+
+Notifications de rappel
+Ajustement selon résultats
+Célébration des victoires
+
+
+9. FONCTIONNALITÉ PHOTO/VIDÉO (Mémoire visuelle)
+Galerie de progression :
+
+📸 Photo avant/après chaque séance (optionnel)
+🎥 Vidéo courte (10s) de l'exercice clé
+📅 Timeline visuelle des progrès
+
+Exemple :
+🗓️ Mars 2026 - Épaule en dedans
+
+📸 [Photo] [Photo] [Photo]
+    Semaine 1  Sem. 3  Sem. 6
+
+💬 "On voit la différence ! L'incurvation est bien meilleure 🎉"
+
+10. COMMUNAUTÉ & PARTAGE (Social proof)
+Partager ses victoires :
+
+"J'ai complété 50 séances ! 🎉" → Partage Instagram/Facebook
+"Progression +30% en dressage !" → Badge partageable
+"Streak de 30 jours ! 🔥" → Image générée auto
+
+Groupes de motivation (optionnel) :
+
+Rejoindre des "challenges" mensuels
+"Challenge Mars : 12 séances en 30 jours"
+Classement amical
+
+
+🎯 MON PACKAGE RECOMMANDÉ POUR MVP
+PHASE 1 (Lancement) - Essentiels :
+✅ Tableau de bord (séances complétées, temps monté, streaks)
+✅ Auto-évaluation post-séance (smileys)
+✅ Badges de base (10/50/100 séances)
+✅ Journal de bord simple
+PHASE 2 (3 mois après) - Gamification :
+✅ Système XP & niveaux
+✅ Objectifs personnalisés + plans
+✅ Graphiques de progression par exercice
+✅ Tests de niveau
+PHASE 3 (6 mois après) - IA :
+✅ Coaching IA personnalisé
+✅ Recommandations intelligentes
+✅ Détection automatique de blocages
+
+💡 LA KILLER FEATURE QUI VOUS DIFFÉRENCIE
+"PROGRESSION ADAPTATIVE PAR IA"
+Combinaison de :
+
+
+Auto-évaluation après séance
+Analyse par IA des patterns
+Recommandations personnalisées automatiques
+Plan de progression sur-mesure
+
+➡️ C'est ce qu'AUCUN concurrent ne fait (et ne peut facilement copier)
+
+
+
+
+- Afin de pouvoir aider les cavaliers à corriger leur posture ou autres voici des idées de fonctionnalités à developper : La correction de posture est LE besoin majeur des cavaliers en autonomie. Voici les solutions :
+
+📸 CORRECTION DE POSTURE - SOLUTIONS TECHNIQUES
+🎥 PHASE 1 - Analyse vidéo IA (Votre vraie innovation)
+Comment ça fonctionne :
+1. Pendant ou après la séance :
+
+L'utilisateur filme 10-30 secondes (trot ou galop)
+Caméra positionnée : côté, face, ou sur la bombe
+Upload direct dans l'app
+
+2. IA analyse automatiquement :
+
+Détection du squelette (computer vision)
+Analyse de 15 points clés : tête, épaules, coudes, mains, hanches, genoux, talons
+Comparaison avec posture idéale de référence
+
+3. Rapport généré instantanément :
+📊 ANALYSE POSTURE - Trot enlevé
+
+✅ POINTS FORTS :
+- Regard haut ✓
+- Épaules droites ✓
+
+⚠️ À AMÉLIORER :
+- Mains trop hautes (+8cm)
+- Talons remontent légèrement
+- Buste penché en avant (5° de trop)
+
+💡 CONSEILS :
+→ Baisse tes mains au niveau du garrot
+→ Enfonce bien tes talons
+→ Redresse légèrement ton buste
+
+🎯 Séance recommandée : "Mise en selle - Équilibre"
+4. Overlay vidéo annoté :
+
+Vidéo avec lignes/flèches indiquant les corrections
+Comparaison côte à côte : ta position VS position idéale
+
+
+💡 PHASE 1 BIS - Plus simple pour MVP
+Mode "Photo avant/après exercice"
+1. Instructions guidées dans l'app :
+Pendant la séance audio :
+🎙️ "Pour cet exercice, tu vas travailler ta position.
+Place ton téléphone face à toi, lance la vidéo, et fais 2 tours de manège au trot enlevé."
+2. Checklist auto-évaluation posture :
+Après l'exercice, popup :
+📋 AUTO-ÉVALUATION POSTURE
+
+☐ Mon regard était-il loin devant ?
+☐ Mes épaules étaient-elles relâchées ?
+☐ Mes mains étaient-elles stables et basses ?
+☐ Mes talons étaient-ils descendus ?
+☐ Mon buste était-il droit ?
+
+Score : 3/5 → "Continue, tu progresses !"
+3. Vidéos pédagogiques intégrées :
+Bibliothèque de courtes vidéos (30s-1min) :
+
+"Comment avoir les mains basses"
+"Descendre ses talons efficacement"
+"Position au trot enlevé parfaite"
+Comparaison bon/mauvais exemples
+
+
+🤖 PHASE 2 - IA Avancée + Coach virtuel
+Analyse en temps réel (nécessite caméra connectée)
+Setup :
+
+Caméra fixe dans le manège (ou sur bombe)
+Connectée en Bluetooth à l'app
+IA analyse en temps réel
+
+Feedback audio pendant la séance :
+🎙️ [IA détecte mains trop hautes]
+→ "Attention, baisse légèrement tes mains"
+
+🎙️ [IA détecte talons qui remontent]
+→ "Enfonce bien tes talons"
+
+🎙️ [Position correcte]
+→ "Parfait, garde cette position !"
+Technologies nécessaires :
+
+Computer vision (OpenCV, MediaPipe)
+Modèle IA entraîné sur postures équestres
+Reconnaissance squelette en temps réel
+
+
+👥 PHASE 3 - Communauté + Feedback humain
+Option A : Partage vidéo + retours communauté
+📹 PARTAGER MA VIDÉO
+
+[Upload vidéo 30s]
+
+Demander des conseils à :
+☐ La communauté (cavaliers expérimentés)
+☐ Un coach pro (payant, 5€/analyse)
+
+Sous 24-48h : Retours détaillés avec annotations
+Option B : Sessions live avec coach
+📅 RÉSERVER UN COACH LIVE
+
+Séance visio pendant que tu montes :
+- Coach te regarde en direct
+- Corrige ta posture en temps réel
+- 30 min : 20€ | 60 min : 35€
+
+
+ ORGANISATION DES SÉANCES - MISE À JOUR 10/01/2026
+
+
+ STRUCTURE DES FICHIERS CRÉÉE
+- 100 séances organisées en fichiers .txt vides
+- Arborescence : SCRIPTS_SEANCES > Discipline > Niveau > fichier.txt
+- Nomenclature : snake_case (ex: transitions_fluides.txt)
+
+ DISCIPLINES :
+- SCRIPTS DRESSAGE (G2-3, G3-4, G4-5, G5-6, G6-7, G7+)
+- SCRIPTS OBSTACLE (G2-3, G3-4, G4-5, G5-6, G6-7, G7+)
+- SCRIPTS TAP (G2-3, G3-4, G4-5, G5-6, G7+)
+- SCRIPTS BALADE (G2-3, G3-4, G4-5, G5-6)
+- SCRIPTS TRAVAIL SPECIFIQUE (G3-4, G4-5, G5-6)
+- SCRIPTS MISE EN SELLE (G2-3, G3-4, G4-5)
+- SCRIPTS CORRECTION PROBLEMES (PAS de sous-dossiers - tous niveaux)
+
+ RÈGLE DU GALOP (ajoutée dans cahier des charges)
+- G2-3 techniques : PAS de galop
+- G4-5+ techniques : 80% pas/trot + 3-5 min galop plaisir en récompense
+- Exception : séances où le galop est l'objectif (engagement, transitions, etc.)
+- Justification : équilibre pédagogie + plaisir = addiction positive
+
+ RÈGLES DE FILTRAGE PAR NIVEAU (pour développement app)
+
+OPTION C RETENUE : Filtre avec toggle Inclure niveaux inférieurs
+
+Interface utilisateur :
+
+ Niveau : [G4-5 ]                   
+  Inclure les niveaux inférieurs    
+
+
+Comportement :
+- Toggle DÉCOCHÉ (par défaut) : Affiche UNIQUEMENT le niveau sélectionné
+- Toggle COCHÉ : Affiche le niveau sélectionné + tous les niveaux inférieurs
+- Catégorie Résolution de problème : TOUJOURS VISIBLE (tous niveaux)
+
+Exemples :
+ Cavalier G4-5 + toggle décoché  voit G4-5 uniquement + Résolution problème
+ Cavalier G4-5 + toggle coché  voit G4-5, G3-4, G2-3 + Résolution problème
+ Cavalier G2-3 + toggle coché  voit G2-3 + Résolution problème (pas de niveau inférieur)
+
+ EXCEPTION IMPORTANTE :
+Catégorie RÉSOLUTION DE PROBLÈME = TOUJOURS VISIBLE
+- Accessible à TOUS les niveaux (même G2-3)
+- Problèmes universels indépendants du niveau cavalier
+- PAS de sous-dossiers de niveau dans SCRIPTS CORRECTION PROBLEMES
+- Fichiers directement à la racine (10 séances universelles)
+- Pas de filtre appliqué sur cette catégorie
+
+ DOCUMENTS DE RÉFÉRENCE :
+- .agent/PHILOSOPHIE_EQUICOACH.md (piliers + règle galop)
+- .agent/PARAMETRES_SCRIPTS_AUDIO.md (paramètres techniques + règle galop)
+- .agent/REGLES_FILTRES_NIVEAUX.md (logique de filtrage détaillée avec toggle)
+- BLOC NOTES ELISA PROJET EQUICOACH.txt (cahier des charges complet)
+
+
