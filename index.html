@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecteur Intelligent</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Lecteur Vocal</h1>
+            <div class="command-guide">
+                <span>"Start"</span>
+                <span>"Pause"</span>
+                <span>"Recommence"</span>
+                <span>"Répète"</span>
+            </div>
+            <div id="app-status" class="status-indicator status-idle">En attente des commandes...</div>
+        </header>
+
+        <main>
+            <div id="content-display" class="reader-area">
+                <!-- Text will be injected here by JS -->
+            </div>
+        </main>
+
+        <footer>
+            <button id="activate-btn" class="primary-btn">Activer les Commandes Vocales</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
