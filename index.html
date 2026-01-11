@@ -10,8 +10,45 @@
 </head>
 
 <body>
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>⚙️ Configuration</h2>
+                <button id="close-modal" class="close-btn">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-group">
+                    <label>Mode Vocal</label>
+                    <div class="toggle-group">
+                        <button id="mode-webspeech" class="toggle-btn active">Web Speech (Gratuit)</button>
+                        <button id="mode-openai" class="toggle-btn">OpenAI (Premium)</button>
+                    </div>
+                </div>
+                <div class="setting-group" id="api-key-group">
+                    <label for="api-key-input">Clé API OpenAI</label>
+                    <input type="password" id="api-key-input" placeholder="sk-...">
+                    <small>⚠️ Stockée localement. Ne partagez jamais cette clé.</small>
+                </div>
+                <div class="setting-group" id="voice-select-group">
+                    <label for="voice-select">Voix TTS</label>
+                    <select id="voice-select">
+                        <option value="nova">Nova (Féminine)</option>
+                        <option value="alloy">Alloy (Neutre)</option>
+                        <option value="echo">Echo (Masculine)</option>
+                        <option value="shimmer">Shimmer (Féminine douce)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="save-settings" class="primary-btn">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <header>
+            <button id="settings-btn" class="settings-icon">⚙️</button>
             <h1>IA Vocale Multi-Mode</h1>
             <div class="mode-selector">
                 <button id="mode-reader-btn" class="mode-btn active">Lecteur</button>

@@ -3,8 +3,84 @@ const statusDiv = document.getElementById('app-status');
 const activateBtn = document.getElementById('activate-btn');
 const chatHistory = document.getElementById('chat-history');
 
+// Settings Modal
+const settingsModal = document.getElementById('settings-modal');
+const settingsBtn = document.getElementById('settings-btn');
+const closeModal = document.getElementById('close-modal');
+const saveSettings = document.getElementById('save-settings');
+const apiKeyInput = document.getElementById('api-key-input');
+const voiceSelect = document.getElementById('voice-select');
+const modeWebSpeech = document.getElementById('mode-webspeech');
+const modeOpenAI = document.getElementById('mode-openai');
+const apiKeyGroup = document.getElementById('api-key-group');
+const voiceSelectGroup = document.getElementById('voice-select-group');
+
+// Configuration
+let useOpenAI = false;
+let openaiApiKey = localStorage.getItem('openai_api_key') || '';
+let selectedVoice = localStorage.getItem('tts_voice') || 'nova';
+let mediaRecorder;
+let audioChunks = [];
+let isRecording = false;
+
+// Load saved settings
+if (openaiApiKey) {
+    apiKeyInput.value = openaiApiKey;
+    useOpenAI = true;
+    modeOpenAI.classList.add('active');
+    modeWebSpeech.classList.remove('active');
+}
+voiceSelect.value = selectedVoice;
+
+// Toggle API key visibility
+function updateAPIFieldVisibility() {
+    if (useOpenAI) {
+        apiKeyGroup.style.display = 'block';
+        voiceSelectGroup.style.display = 'block';
+    } else {
+        apiKeyGroup.style.display = 'none';
+        voiceSelectGroup.style.display = 'none';
+    }
+}
+
+modeWebSpeech.onclick = () => {
+    useOpenAI = false;
+    modeWebSpeech.classList.add('active');
+    modeOpenAI.classList.remove('active');
+    updateAPIFieldVisibility();
+};
+
+modeOpenAI.onclick = () => {
+    useOpenAI = true;
+    modeOpenAI.classList.add('active');
+    modeWebSpeech.classList.remove('active');
+    updateAPIFieldVisibility();
+};
+
+settingsBtn.onclick = () => {
+    settingsModal.classList.remove('hidden');
+    updateAPIFieldVisibility();
+};
+
+closeModal.onclick = () => settingsModal.classList.add('hidden');
+
+saveSettings.onclick = () => {
+    if (useOpenAI) {
+        openaiApiKey = apiKeyInput.value.trim();
+        if (!openaiApiKey) {
+            alert('Veuillez entrer une clé API OpenAI valide.');
+            return;
+        }
+        localStorage.setItem('openai_api_key', openaiApiKey);
+    }
+    selectedVoice = voiceSelect.value;
+    localStorage.setItem('tts_voice', selectedVoice);
+    settingsModal.classList.add('hidden');
+    updateStatus(`Configuration sauvegardée (${useOpenAI ? 'OpenAI' : 'Web Speech'})`);
+};
+
 // Mode Management
-let appMode = 'reader'; // 'reader' or 'assistant'
+let appMode = 'reader';
 const readerView = document.getElementById('reader-view');
 const assistantView = document.getElementById('assistant-view');
 const readerCmds = document.getElementById('reader-commands');
@@ -55,7 +131,6 @@ const sentences = sampleText.split(/[.!?]/).filter(s => s.trim().length > 0).map
 let currentSentenceIndex = 0;
 let isReading = false;
 let recognition;
-const synth = window.speechSynthesis;
 
 function initDisplay() {
     contentDisplay.innerHTML = '';
@@ -83,32 +158,35 @@ function highlightSentence(index) {
     }
 }
 
-function speakSentence(index) {
+async function speakSentence(index) {
     if (index >= sentences.length) {
         isReading = false;
         updateStatus("Lecture terminée.");
         return;
     }
-    synth.cancel();
+
     currentSentenceIndex = index;
     highlightSentence(index);
     isReading = true;
     updateStatus("Lecture en cours...");
 
-    const utterance = new SpeechSynthesisUtterance(sentences[index]);
-    utterance.lang = 'fr-FR';
-    utterance.onend = () => {
-        if (isReading) {
-            currentSentenceIndex++;
-            speakSentence(currentSentenceIndex);
-        }
-    };
-    synth.speak(utterance);
+    await speakText(sentences[index]);
+
+    if (isReading) {
+        currentSentenceIndex++;
+        speakSentence(currentSentenceIndex);
+    }
 }
 
 function stopReading() {
     isReading = false;
-    synth.cancel();
+    if (useOpenAI) {
+        // Stop any playing audio
+        const audio = document.querySelector('audio');
+        if (audio) audio.pause();
+    } else {
+        window.speechSynthesis.cancel();
+    }
     updateStatus("Pause.");
 }
 
@@ -147,24 +225,96 @@ function getAssistantResponse(input) {
     return "Désolé, je n'ai pas compris. Pouvez-vous répéter ?";
 }
 
-function handleAssistantInput(text) {
+async function handleAssistantInput(text) {
     addChatMessage(text, 'user');
     const response = getAssistantResponse(text);
-    setTimeout(() => {
+    setTimeout(async () => {
         addChatMessage(response, 'assistant');
-        speakText(response);
+        await speakText(response);
     }, 500);
 }
 
-function speakText(text) {
-    synth.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'fr-FR';
-    synth.speak(utterance);
+// OpenAI Whisper STT
+async function transcribeAudio(audioBlob) {
+    const formData = new FormData();
+    formData.append('file', audioBlob, 'audio.webm');
+    formData.append('model', 'whisper-1');
+    formData.append('language', 'fr');
+
+    try {
+        const response = await fetch('https://api.openai.com/v1/audio/transcriptions', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${openaiApiKey}`
+            },
+            body: formData
+        });
+
+        const data = await response.json();
+        return data.text || '';
+    } catch (error) {
+        console.error('Whisper error:', error);
+        return '';
+    }
+}
+
+// OpenAI TTS
+async function speakWithOpenAI(text) {
+    try {
+        const response = await fetch('https://api.openai.com/v1/audio/speech', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${openaiApiKey}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                model: 'tts-1',
+                voice: selectedVoice,
+                input: text
+            })
+        });
+
+        const audioBlob = await response.blob();
+        const audioUrl = URL.createObjectURL(audioBlob);
+        const audio = new Audio(audioUrl);
+
+        return new Promise((resolve) => {
+            audio.onended = resolve;
+            audio.play();
+        });
+    } catch (error) {
+        console.error('TTS error:', error);
+    }
+}
+
+// Unified speak function
+async function speakText(text) {
+    if (useOpenAI && openaiApiKey) {
+        await speakWithOpenAI(text);
+    } else {
+        // Fallback to Web Speech
+        return new Promise((resolve) => {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'fr-FR';
+            utterance.onend = resolve;
+            window.speechSynthesis.speak(utterance);
+        });
+    }
 }
 
 // Voice Recognition
 function initVoiceControl() {
+    if (useOpenAI && openaiApiKey) {
+        initWhisperRecognition();
+    } else {
+        initWebSpeechRecognition();
+    }
+    updateStatus("Commandes vocales actives.");
+    activateBtn.style.display = 'none';
+}
+
+// Web Speech Recognition (fallback)
+function initWebSpeechRecognition() {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) return;
 
@@ -175,38 +325,85 @@ function initVoiceControl() {
     recognition.onresult = (event) => {
         const last = event.results.length - 1;
         const command = event.results[last][0].transcript.trim().toLowerCase();
-        console.log("Reconnu:", command);
-
-        if (appMode === 'reader') {
-            if (command.includes('stop') || command.includes('pause')) {
-                stopReading();
-            } else if (command.includes('start') || command.includes('commence')) {
-                speakSentence(currentSentenceIndex);
-            } else if (command.includes('recommence')) {
-                speakSentence(0);
-            } else if (command.includes('répète')) {
-                let target = currentSentenceIndex - 1;
-                speakSentence(target < 0 ? 0 : target);
-            } else if (command.includes('assistant')) {
-                switchMode('assistant');
-            }
-        } else {
-            // Mode Assistant
-            if (command.includes('lecteur') || command.includes('mode lecture')) {
-                switchMode('reader');
-            } else {
-                handleAssistantInput(command);
-            }
-        }
+        handleVoiceCommand(command);
     };
 
     recognition.onend = () => {
-        if (!synth.speaking) try { recognition.start(); } catch (e) { }
+        try { recognition.start(); } catch (e) { }
     };
 
     recognition.start();
-    updateStatus("Commandes vocales actives.");
-    activateBtn.style.display = 'none';
+}
+
+// Whisper-based Recognition
+function initWhisperRecognition() {
+    navigator.mediaDevices.getUserMedia({ audio: true })
+        .then(stream => {
+            mediaRecorder = new MediaRecorder(stream);
+
+            mediaRecorder.ondataavailable = (event) => {
+                audioChunks.push(event.data);
+            };
+
+            mediaRecorder.onstop = async () => {
+                const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                audioChunks = [];
+
+                const text = await transcribeAudio(audioBlob);
+                if (text) {
+                    console.log('Whisper:', text);
+                    handleVoiceCommand(text.toLowerCase());
+                }
+
+                // Restart recording
+                if (isRecording) {
+                    audioChunks = [];
+                    mediaRecorder.start();
+                    setTimeout(() => {
+                        if (mediaRecorder.state === 'recording') {
+                            mediaRecorder.stop();
+                        }
+                    }, 3000); // Record 3s chunks
+                }
+            };
+
+            isRecording = true;
+            mediaRecorder.start();
+            setTimeout(() => {
+                if (mediaRecorder.state === 'recording') {
+                    mediaRecorder.stop();
+                }
+            }, 3000);
+        })
+        .catch(err => {
+            console.error('Microphone error:', err);
+            alert('Impossible d\'accéder au microphone.');
+        });
+}
+
+function handleVoiceCommand(command) {
+    console.log("Reconnu:", command);
+
+    if (appMode === 'reader') {
+        if (command.includes('stop') || command.includes('pause')) {
+            stopReading();
+        } else if (command.includes('start') || command.includes('commence')) {
+            speakSentence(currentSentenceIndex);
+        } else if (command.includes('recommence')) {
+            speakSentence(0);
+        } else if (command.includes('répète')) {
+            let target = currentSentenceIndex - 1;
+            speakSentence(target < 0 ? 0 : target);
+        } else if (command.includes('assistant')) {
+            switchMode('assistant');
+        }
+    } else {
+        if (command.includes('lecteur') || command.includes('mode lecture')) {
+            switchMode('reader');
+        } else {
+            handleAssistantInput(command);
+        }
+    }
 }
 
 function updateStatus(msg) {

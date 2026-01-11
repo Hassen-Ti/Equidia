@@ -1,27 +1,56 @@
 # Lecteur Vocal Intelligent & Assistant
 
-Cette application web utilise l'API **Web Speech** (Speech Recognition & Speech Synthesis) pour permettre une interaction naturelle entre l'utilisateur et le texte.
+Cette application web utilise des API de pointe pour une interaction vocale naturelle.
 
-## Fonctionnement du Text-To-Speech (TTS)
-Le TTS est géré par l'objet `window.speechSynthesis`.
-1. **Découpage** : Le texte est fragmenté en phrases pour permettre une navigation précise.
-2. **Configuration** : La langue est fixée sur `fr-FR` avec une vitesse de lecture standard (`rate: 1.0`).
-3. **Contrôle** : L'application suit l'index de la phrase en cours, permettant de mettre en pause, de reprendre ou de reculer.
+## Modes Disponibles
+
+### 1. Web Speech (Gratuit)
+- **Speech-to-Text** : API native du navigateur (Google sur Chrome/Edge)
+- **Text-to-Speech** : Voix système Windows
+- ✅ Gratuit, pas de configuration
+- ⚠️ Qualité variable, voix robotiques
+
+### 2. OpenAI (Premium) ⭐ Recommandé
+- **Speech-to-Text** : Whisper (reconnaissance ultra-précise)
+- **Text-to-Speech** : Voix neuronales réalistes (Nova, Alloy, Echo, Shimmer)
+- ✅ Qualité exceptionnelle, naturelle
+- 💰 Nécessite une clé API OpenAI ([Obtenir une clé](https://platform.openai.com/api-keys))
+
+## Configuration OpenAI
+
+1. Cliquez sur l'icône ⚙️ en haut à droite
+2. Sélectionnez "**OpenAI (Premium)**"
+3. Collez votre clé API OpenAI (`sk-...`)
+4. Choisissez votre voix préférée
+5. Cliquez sur "**Enregistrer**"
+
+> **⚠️ Sécurité** : La clé API est stockée localement dans votre navigateur. Ne partagez jamais cette clé. Pour une application en production, utilisez un backend pour masquer la clé.
 
 ## Commandes Vocales
-L'application écoute en permanence via `window.SpeechRecognition`. Voici les commandes disponibles :
 
-| Commande | Action |
-| :--- | :--- |
-| **"Start"** | Lance ou reprend la lecture du texte. |
-| **"Pause"** | Arrête immédiatement la lecture en conservant la position actuelle. |
-| **"Recommence"** | Reprend la lecture depuis le tout début du texte. |
-| **"Répète"** | Revient à la phrase précédente (équivalent à un recul de ~10s). |
-
-## Assistant Vocal (Nouveau)
-L'assistant vous permet de poser des questions simples ou de discuter. Il utilise la reconnaissance vocale pour comprendre vos demandes et la synthèse vocale pour vous répondre.
+| Mode | Commande | Action |
+| :--- | :--- | :--- |
+| **Lecteur** | "Start" | Lance ou reprend la lecture du texte |
+| | "Pause" | Arrête la lecture en conservant la position |
+| | "Recommence" | Reprend depuis le début |
+| | "Répète" | Revient à la phrase précédente (~10s) |
+| | "Assistant" | Bascule en mode Assistant |
+| **Assistant** | "Bonjour" | Salutation |
+| | "Quelle heure est-il ?" | Donne l'heure actuelle |
+| | "Qui es-tu ?" | Présentation de l'assistant |
+| | "Aide-moi" | Liste des fonctionnalités |
+| | "Lecteur" | Bascule en mode Lecteur |
 
 ## Installation
-1. Clonez le dépôt ou téléchargez les fichiers.
-2. Ouvrez `index.html` dans un navigateur moderne (Chrome ou Edge recommandés).
-3. Cliquez sur le bouton d'activation pour autoriser le microphone.
+
+1. Clonez ou téléchargez le projet
+2. Ouvrez `index.html` dans **Chrome** ou **Edge**
+3. Autorisez l'accès au microphone
+4. (Optionnel) Configurez OpenAI pour une meilleure qualité
+
+## Coûts OpenAI
+
+- **Whisper** : ~$0.006 par minute d'audio
+- **TTS** : ~$0.015 par 1000 caractères
+
+Pour un usage normal (~30 min/jour), comptez < $1/mois.
