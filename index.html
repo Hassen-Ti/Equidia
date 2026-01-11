@@ -12,19 +12,31 @@
 <body>
     <div class="container">
         <header>
-            <h1>Lecteur Vocal</h1>
-            <div class="command-guide">
-                <span>"Start"</span>
-                <span>"Pause"</span>
-                <span>"Recommence"</span>
-                <span>"Répète"</span>
+            <h1>IA Vocale Multi-Mode</h1>
+            <div class="mode-selector">
+                <button id="mode-reader-btn" class="mode-btn active">Lecteur</button>
+                <button id="mode-assistant-btn" class="mode-btn">Assistant</button>
             </div>
-            <div id="app-status" class="status-indicator status-idle">En attente des commandes...</div>
+            <div class="command-guide" id="reader-commands">
+                <span>"Start"</span> <span>"Pause"</span> <span>"Recommence"</span> <span>"Répète"</span>
+            </div>
+            <div class="command-guide hidden" id="assistant-commands">
+                <span>"Bonjour"</span> <span>"Quelle heure est-il ?"</span> <span>"Aide-moi"</span>
+            </div>
+            <div id="app-status" class="status-indicator status-idle">En attente...</div>
         </header>
 
         <main>
-            <div id="content-display" class="reader-area">
-                <!-- Text will be injected here by JS -->
+            <div id="reader-view" class="view">
+                <div id="content-display" class="reader-area">
+                    <!-- Text will be injected here by JS -->
+                </div>
+            </div>
+            <div id="assistant-view" class="view hidden">
+                <div id="chat-history" class="chat-area">
+                    <div class="message assistant">Bonjour ! Comment puis-je vous aider aujourd'hui ? Dites "Aide-moi"
+                        pour voir ce que je peux faire.</div>
+                </div>
             </div>
         </main>
 

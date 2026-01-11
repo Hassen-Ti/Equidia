@@ -1,6 +1,42 @@
 const contentDisplay = document.getElementById('content-display');
 const statusDiv = document.getElementById('app-status');
 const activateBtn = document.getElementById('activate-btn');
+const chatHistory = document.getElementById('chat-history');
+
+// Mode Management
+let appMode = 'reader'; // 'reader' or 'assistant'
+const readerView = document.getElementById('reader-view');
+const assistantView = document.getElementById('assistant-view');
+const readerCmds = document.getElementById('reader-commands');
+const assistantCmds = document.getElementById('assistant-commands');
+const modeReaderBtn = document.getElementById('mode-reader-btn');
+const modeAssistantBtn = document.getElementById('mode-assistant-btn');
+
+function switchMode(newMode) {
+    appMode = newMode;
+    if (newMode === 'reader') {
+        readerView.classList.remove('hidden');
+        assistantView.classList.add('hidden');
+        readerCmds.classList.remove('hidden');
+        assistantCmds.classList.add('hidden');
+        modeReaderBtn.classList.add('active');
+        modeAssistantBtn.classList.remove('active');
+        stopReading();
+        updateStatus("Mode Lecteur activé.");
+    } else {
+        readerView.classList.add('hidden');
+        assistantView.classList.remove('hidden');
+        readerCmds.classList.add('hidden');
+        assistantCmds.classList.remove('hidden');
+        modeReaderBtn.classList.remove('active');
+        modeAssistantBtn.classList.add('active');
+        stopReading();
+        updateStatus("Mode Assistant activé.");
+    }
+}
+
+modeReaderBtn.onclick = () => switchMode('reader');
+modeAssistantBtn.onclick = () => switchMode('assistant');
 
 const sampleText = `
 Bienvenue dans cette démonstration de lecture vocale intelligente. 
@@ -14,14 +50,13 @@ Nous espérons que cette expérience vous plaira.
 Essayez de me donner un ordre maintenant.
 `;
 
-// Logic: Split text into sentences for easier navigation
+// Reader Logic
 const sentences = sampleText.split(/[.!?]/).filter(s => s.trim().length > 0).map(s => s.trim());
 let currentSentenceIndex = 0;
 let isReading = false;
 let recognition;
 const synth = window.speechSynthesis;
 
-// Init Display
 function initDisplay() {
     contentDisplay.innerHTML = '';
     sentences.forEach((text, index) => {
@@ -30,6 +65,7 @@ function initDisplay() {
         span.classList.add('sentence');
         span.id = `sentence-${index}`;
         span.onclick = () => {
+            if (appMode !== 'reader') switchMode('reader');
             currentSentenceIndex = index;
             highlightSentence(index);
             speakSentence(index);
@@ -47,17 +83,13 @@ function highlightSentence(index) {
     }
 }
 
-// Speech Synthesis
 function speakSentence(index) {
     if (index >= sentences.length) {
         isReading = false;
         updateStatus("Lecture terminée.");
         return;
     }
-
-    // Cancel current speech if any
     synth.cancel();
-
     currentSentenceIndex = index;
     highlightSentence(index);
     isReading = true;
@@ -65,102 +97,122 @@ function speakSentence(index) {
 
     const utterance = new SpeechSynthesisUtterance(sentences[index]);
     utterance.lang = 'fr-FR';
-    utterance.rate = 1.0;
-
     utterance.onend = () => {
-        if (isReading) { // If not paused manually
-            // Move to next sentence
+        if (isReading) {
             currentSentenceIndex++;
             speakSentence(currentSentenceIndex);
         }
     };
-
-    utterance.onerror = (e) => {
-        console.error("Erreur synthèse", e);
-        isReading = false;
-    };
-
     synth.speak(utterance);
 }
 
 function stopReading() {
     isReading = false;
     synth.cancel();
-    updateStatus("Pause. Dites 'Start' pour reprendre.");
+    updateStatus("Pause.");
 }
 
-// Command Recognition
+// Assistant Logic
+function addChatMessage(text, sender) {
+    const div = document.createElement('div');
+    div.classList.add('message', sender);
+    div.textContent = text;
+    chatHistory.appendChild(div);
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+}
+
+function getAssistantResponse(input) {
+    const lowInput = input.toLowerCase();
+
+    if (lowInput.includes("bonjour") || lowInput.includes("salut")) {
+        return "Bonjour ! Comment puis-je vous aider ?";
+    }
+    if (lowInput.includes("heure")) {
+        return `Il est actuellement ${new Date().toLocaleTimeString('fr-FR')}.`;
+    }
+    if (lowInput.includes("qui es-tu") || lowInput.includes("ton nom")) {
+        return "Je suis votre assistant vocal Equidia. Je peux lire du texte ou discuter avec vous.";
+    }
+    if (lowInput.includes("aide") || lowInput.includes("faire")) {
+        return "Je peux lire le texte de gauche, vous donner l'heure, ou simplement discuter. Dites 'Active le lecteur' pour changer de mode.";
+    }
+    if (lowInput.includes("lecteur") || lowInput.includes("lire")) {
+        setTimeout(() => switchMode('reader'), 1000);
+        return "Très bien, je passe en mode lecteur.";
+    }
+    if (lowInput.includes("merci")) {
+        return "De rien ! À votre service.";
+    }
+
+    return "Désolé, je n'ai pas compris. Pouvez-vous répéter ?";
+}
+
+function handleAssistantInput(text) {
+    addChatMessage(text, 'user');
+    const response = getAssistantResponse(text);
+    setTimeout(() => {
+        addChatMessage(response, 'assistant');
+        speakText(response);
+    }, 500);
+}
+
+function speakText(text) {
+    synth.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'fr-FR';
+    synth.speak(utterance);
+}
+
+// Voice Recognition
 function initVoiceControl() {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SpeechRecognition) {
-        alert("Votre navigateur ne supporte pas la reconnaissance vocale.");
-        return;
-    }
+    if (!SpeechRecognition) return;
 
     recognition = new SpeechRecognition();
     recognition.lang = 'fr-FR';
     recognition.continuous = true;
-    recognition.interimResults = false;
-    // maxAlternatives 1 helps speed
 
     recognition.onresult = (event) => {
         const last = event.results.length - 1;
         const command = event.results[last][0].transcript.trim().toLowerCase();
-        console.log("Commande reçue:", command);
+        console.log("Reconnu:", command);
 
-        // Simple fuzzy matching
-        if (command.includes('stop') || command.includes('pause') || command.includes('arrête')) {
-            stopReading();
-        } else if (command.includes('start') || command.includes('commence') || command.includes('continue')) {
-            if (!isReading) speakSentence(currentSentenceIndex);
-        } else if (command.includes('recommence') || command.includes('début')) {
-            currentSentenceIndex = 0;
-            speakSentence(0);
-        } else if (command.includes('répète') || command.includes('arrière') || command.includes('repas')) {
-            // Rewind 1 sentence (approx 10s logic)
-            // If currently reading, we want to go back to PREVIOUS one.
-            // Current index is the one BEING read. So index - 1.
-            let target = currentSentenceIndex - 1;
-            if (target < 0) target = 0;
-            speakSentence(target);
+        if (appMode === 'reader') {
+            if (command.includes('stop') || command.includes('pause')) {
+                stopReading();
+            } else if (command.includes('start') || command.includes('commence')) {
+                speakSentence(currentSentenceIndex);
+            } else if (command.includes('recommence')) {
+                speakSentence(0);
+            } else if (command.includes('répète')) {
+                let target = currentSentenceIndex - 1;
+                speakSentence(target < 0 ? 0 : target);
+            } else if (command.includes('assistant')) {
+                switchMode('assistant');
+            }
+        } else {
+            // Mode Assistant
+            if (command.includes('lecteur') || command.includes('mode lecture')) {
+                switchMode('reader');
+            } else {
+                handleAssistantInput(command);
+            }
         }
     };
 
     recognition.onend = () => {
-        // Always restart recognition to keep listening for commands
-        console.log("Recognition ended, restarting...");
-        try {
-            recognition.start();
-        } catch (e) { /* ignore if already started */ }
+        if (!synth.speaking) try { recognition.start(); } catch (e) { }
     };
 
-    recognition.onerror = (e) => {
-        console.warn("Recognition error", e.error);
-    };
-
-    try {
-        recognition.start();
-        updateStatus("Écoute des commandes activée.");
-        activateBtn.style.display = 'none'; // Hide button once active
-    } catch (e) {
-        console.error(e);
-    }
+    recognition.start();
+    updateStatus("Commandes vocales actives.");
+    activateBtn.style.display = 'none';
 }
 
 function updateStatus(msg) {
     statusDiv.textContent = msg;
-    if (msg.includes("Lecture")) {
-        statusDiv.className = "status-indicator status-active";
-    } else {
-        statusDiv.className = "status-indicator";
-    }
+    statusDiv.className = "status-indicator " + (msg.includes("cours") || msg.includes("activ") ? "status-active" : "");
 }
 
-// Initial Setup
 initDisplay();
-
-activateBtn.addEventListener('click', () => {
-    initVoiceControl();
-    // Auto-start reading? Optional. Let's wait for "Start" command or user click on text.
-    // Better UX: Just activate mic.
-});
+activateBtn.onclick = initVoiceControl;
