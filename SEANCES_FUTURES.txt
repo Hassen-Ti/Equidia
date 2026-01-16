@@ -1,0 +1,100 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    SÉANCES EN RÉSERVE - À DÉVELOPPER PLUS TARD
+                    Date : Janvier 2026
+═══════════════════════════════════════════════════════════════════════════════
+
+Ces séances sont mises en réserve pour être réintégrées lorsque l'application
+sera plus développée et que toutes les catégories auront un nombre équilibré
+de séances.
+
+═══════════════════════════════════════════════════════════════════════════════
+                        CROSS & EXTÉRIEUR SPORTIF
+═══════════════════════════════════════════════════════════════════════════════
+
+--- GALOP DE CROSS & CONDITION PHYSIQUE ---
+104 - Entraînement fractionné pour le cross (40min) - G5-6
+105 - Galop en extérieur - Endurance longue distance (60min) - G5-6
+106 - Préparation physique pré-compétition CCE (45min) - G6-7
+
+--- GYMNASTIQUE & PRÉPARATION TECHNIQUE ---
+110 - Enchaînements rapides - Simulation cross (45min) - G5-6
+111 - Rebonds et foulées courtes - Préparation cross (35min) - G5-6
+
+--- OBSTACLES SPÉCIFIQUES CROSS ---
+115 - Fossés et contre-bas (30min) - G4-5
+116 - Obstacles de volée et largeur (35min) - G5-6
+117 - Obstacles naturels variés (40min) - G5-6
+
+--- PARCOURS & MISE EN SITUATION ---
+120 - Parcours de cross niveau club (50min) - G4-5
+121 - Reconnaissance et stratégie de parcours (45min) - G5-6
+122 - Parcours chronométré - Gestion du temps (50min) - G6-7
+123 - Préparation mentale et gestion du stress (40min) - G5-6
+
+--- RÉCUPÉRATION & SOINS POST-CROSS ---
+125 - Détente et décontraction après compétition (25min) - G3+
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                        BALADE (CATÉGORIE SUPPRIMÉE)
+═══════════════════════════════════════════════════════════════════════════════
+
+Raison de la suppression : Impossible à guider en audio car chaque environnement
+est unique. Les cavaliers en balade préfèrent la liberté plutôt que d'être guidés.
+
+Séances supprimées :
+37 - Balade en extérieur - Découverte (45min) - G2-3
+38 - Balade avec exercices terrain varié (60min) - G4-5
+39 - Balade endurance active (60min) - G5-6
+40 - Mini-TREC en extérieur (45min) - G4-5
+60 - Balade découverte débutant (30min) - G2-3
+61 - Balade montées et descentes (45min) - G3-4
+62 - Balade galop en extérieur (45min) - G4-5
+65 - Sortie autonomie et confiance (45min) - G3-4
+
+Séances réaffectées :
+✓ 63 - Balade contemplative au pas → Détente & Bien-être (renommée)
+✓ 64 - Franchissements naturels → Cross & Extérieur sportif
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                        AUTRES DISCIPLINES À DÉVELOPPER
+═══════════════════════════════════════════════════════════════════════════════
+
+HUNTER / ÉQUITATION DE TRAVAIL
+- Travail de la ligne et du style
+- Parcours hunter
+- Transitions fluides à l'obstacle
+- Travail de la cadence et régularité
+
+ENDURANCE
+- Préparation physique progressive
+- Gestion du rythme cardiaque
+- Entraînement fractionné
+- Récupération et soins
+
+ÉQUIFEEL / ÉQUIFUN
+- Parcours d'équifeel (à pied)
+- Parcours d'équifun (monté)
+- Exercices de confiance et désensibilisation
+- Jeux éducatifs
+
+WESTERN
+- Travail du reining (spins, sliding stops)
+- Barrel racing
+- Trail (obstacles western)
+- Travail du bétail
+
+VOLTIGE
+- Exercices de voltige de base
+- Préparation du cheval à la voltige
+- Travail à la longe pour la voltige
+- Figures en mouvement
+
+ATTELAGE
+- Préparation du cheval à l'attelage
+- Exercices de dressage en attelage
+- Maniabilité
+- Sécurité et gestion des situations
+
+═══════════════════════════════════════════════════════════════════════════════

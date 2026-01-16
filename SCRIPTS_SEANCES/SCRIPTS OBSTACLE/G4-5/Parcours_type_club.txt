@@ -1,387 +1,329 @@
-# Séance #10 - Parcours type club (G4-5, 45min)
+# PARCOURS TYPE CLUB - G4-5 (45 minutes)
 
-**Objectif :** Parcours complet avec virages, enchaînements et gestion du rythme
+**Objectif** : Enchaîner un parcours complet avec obstacles variés et changements de direction
 
----
-
-## INTRODUCTION
-
-Bonjour et bienvenue dans cette séance de quarante-cinq minutes dédiée au parcours d'obstacles type club.
-
-Aujourd'hui, nous allons travailler un parcours complet avec plusieurs obstacles, des virages, et des enchaînements.
-
-L'objectif est d'apprendre à gérer votre cheval sur un parcours : maintenir l'impulsion, prendre les bonnes trajectoires, et enchaîner les obstacles avec fluidité.
-
-Pour cette séance, vous aurez besoin de six à huit obstacles de soixante à quatre-vingts centimètres de hauteur.
-
-Installez votre parcours avant de commencer : alternez verticaux et oxers, créez des lignes droites et des courbes.
-
-Si vous êtes seul, vous pouvez aussi travailler sur trois ou quatre obstacles et les enchaîner plusieurs fois.
-
-Commençons.
+**Matériel nécessaire** : 5 obstacles variés (verticaux, oxers, croix). Hauteur : 65-75cm. Une carrière ou un manège de 20x60 minimum est idéal.
 
 ---
 
-## ÉCHAUFFEMENT SUR LE PLAT (12 minutes)
+## [INSTALLATION DU PARCOURS] (0:00 - 1:30)
 
-### Au pas (4 minutes)
+Avant de monter à cheval, installe ton parcours en suivant le plan visuel disponible sous le player audio.
+[Pause : 5 secondes]
 
-Démarrez au pas sur la piste, rênes longues.
+Tu auras besoin de cinq obstacles : deux verticaux, un oxer, une croix, et un vertical.
+[Pause : 5 secondes]
 
-Laissez votre cheval s'étirer tranquillement.
+Les hauteurs recommandées sont de soixante-cinq à soixante-quinze centimètres.
+[Pause : 3 secondes]
+N'hésite pas à les ajuster selon ton cheval et ton aisance.
+[Pause : 5 secondes]
 
-Faites un tour complet en observant votre parcours.
+Le plan visuel te montre précisément où placer chaque obstacle et le tracé du parcours à suivre.
+[Pause : 5 secondes]
 
-Visualisez mentalement comment vous allez l'enchaîner.
+Une fois ton parcours installé, monte à cheval et dis "Continue" pour reprendre.
+[Pause : 3 secondes]
 
-Reprenez vos rênes progressivement.
+[ATTENTE : commande "Continue"]
 
-Trouvez un contact léger et stable.
+---
 
-Continuez au pas actif.
+## [INTRODUCTION] (3:30 - 4:30)
 
-Tracez quelques cercles pour assouplir votre cheval.
+Bonjour et bienvenue dans cette séance parcours type club.
+[Pause : 5 secondes]
+Aujourd'hui, nous allons travailler l'enchaînement d'un parcours complet avec des obstacles variés et des changements de direction.
+[Pause : 5 secondes]
+L'objectif est de maintenir un galop régulier, d'anticiper tes trajectoires et de gérer ton impulsion dans les tournants.
+[Pause : 5 secondes]
 
-Changez régulièrement de main.
+Pendant cette séance, tu peux utiliser des commandes vocales.
+[Pause : 3 secondes]
+Dis "C'est fait" pour passer plus rapidement à la consigne suivante.
+[Pause : 3 secondes]
+Dis "Stop" pour mettre en pause, et "Continue" pour reprendre.
+[Pause : 5 secondes]
 
-Très bien.
+C'est parti.
+[Pause : 5 secondes]
 
-### Au trot (5 minutes)
+---
 
-Passez au trot enlevé.
+## [ÉCHAUFFEMENT - Phase 1 : Mise en route] (4:30 - 8:00)
 
-Trouvez un trot énergique, actif, régulier.
+Démarre au pas actif sur la piste.
+[Pause : 5 secondes]
+Ton cheval doit marcher avec énergie et engagement.
+[Pause : 10 secondes]
+Relâche tes épaules, descends tes talons, regarde loin devant.
+[Pause : 10 secondes]
+Fais deux tours complets de carrière.
+[Pause : 60 secondes]
+Maintenant, engage-toi sur un grand cercle de vingt mètres.
+[Pause : 5 secondes]
+Garde ce pas actif.
+[Pause : 40 secondes]
+Change de main en passant par le milieu.
+[Pause : 5 secondes]
+Reprends le cercle à l'autre main.
+[Pause : 40 secondes]
+Reviens sur la piste.
+[Pause : 10 secondes]
 
-C'est ce trot-là que vous devrez maintenir entre les obstacles.
+---
 
-Trottez sur de grandes lignes droites.
+## [ÉCHAUFFEMENT - Phase 2 : Trot et souplesse] (8:00 - 12:00)
 
-Faites quelques cercles de vingt mètres.
+Pars au trot enlevé.
+[Pause : 10 secondes]
+Cherche un trot régulier et énergique.
+[Pause : 10 secondes]
+Tes mains restent stables, ton regard est porté loin devant.
+[Pause : 10 secondes]
+Fais deux tours complets pour installer le rythme.
+[Pause : 60 secondes]
+Maintenant, engage-toi sur une serpentine de quatre boucles.
+[Pause : 5 secondes]
+Change d'incurvation à chaque changement de direction.
+[Pause : 60 secondes]
+Reviens sur la piste.
+[Pause : 10 secondes]
+Fais encore un tour au trot.
+[Pause : 30 secondes]
+Reviens au pas.
+[Pause : 10 secondes]
+Laisse ton cheval souffler, rênes longues.
+[Pause : 30 secondes]
 
-Votre cheval doit être souple, équilibré, réactif.
+---
 
-Travaillez quelques transitions trot-pas-trot.
+## [ÉCHAUFFEMENT - Phase 3 : Galop et équilibre] (12:00 - 17:00)
+
+Reprends tes rênes.
+[Pause : 5 secondes]
+Pars au galop sur la piste.
+[Pause : 10 secondes]
+Installe un galop calme, régulier et équilibré.
+[Pause : 10 secondes]
+Ton bassin accompagne le mouvement, tes épaules restent ouvertes.
+[Pause : 10 secondes]
+Fais deux tours complets pour trouver ton équilibre.
+[Pause : 60 secondes]
+Maintenant, engage-toi sur un grand cercle de vingt mètres.
+[Pause : 5 secondes]
+Garde ce galop stable sans accélérer dans les courbes.
+[Pause : 40 secondes]
+Reviens sur la piste au galop.
+[Pause : 10 secondes]
+Dans le tournant suivant, prépare ton changement de main.
+[Pause : 5 secondes]
+Traverse la carrière en diagonale au galop.
+[Pause : 15 secondes]
+Fais un tour complet à l'autre main.
+[Pause : 30 secondes]
+Reviens au pas.
+[Pause : 10 secondes]
+Laisse ton cheval récupérer, rênes longues.
+[Pause : 40 secondes]
+
+---
+
+## [TRANSITION PÉDAGOGIQUE] (17:00 - 17:30)
+
+Maintenant que ton cheval est bien échauffé, nous allons découvrir le parcours.
+[Pause : 5 secondes]
+L'objectif est de maintenir un galop régulier et d'anticiper chaque tournant.
+[Pause : 5 secondes]
+Prépare toujours ta trajectoire dans le tournant qui précède l'obstacle.
+[Pause : 5 secondes]
+
+---
+
+## [EXERCICE 1 : Reconnaissance au pas] (17:30 - 20:00)
+
+Reprends tes rênes et pars au pas.
+[Pause : 10 secondes]
+Nous allons faire une reconnaissance du parcours au pas.
+[Pause : 5 secondes]
+Passe devant chaque obstacle et observe sa hauteur, son type, et sa position.
+[Pause : 3 secondes]
+Repère les tournants et les lignes droites.
+[Pause : 3 secondes]
+Visualise mentalement comment tu vas enchaîner les obstacles.
+[Pause : 3 secondes]
+
+[ATTENTE : 120 secondes OU commande "C'est fait"]
+
+Super, tu as maintenant une vision claire du parcours.
+[Pause : 5 secondes]
+
+---
+
+## [EXERCICE 2 : Passage des obstacles isolés] (20:00 - 26:00)
+
+Nous allons maintenant passer quelques obstacles isolés pour que ton cheval prenne ses repères.
+[Pause : 5 secondes]
+Pars au galop.
+[Pause : 10 secondes]
+Choisis l'obstacle un, le vertical de gauche.
+[Pause : 3 secondes]
+Assure-toi qu'il est bien dégagé, sans autres obstacles juste derrière.
+[Pause : 3 secondes]
+Engage-toi au galop.
+[Pause : 3 secondes]
+Garde ton galop régulier, mains stables, regard vers la sortie.
+[Pause : 3 secondes]
+
+[ATTENTE : 40 secondes OU commande "C'est fait"]
+
+C'est bien.
+[Pause : 5 secondes]
+Continue au galop et choisis maintenant l'obstacle deux, l'oxer du centre.
+[Pause : 3 secondes]
+Vérifie qu'il est bien dégagé.
+[Pause : 3 secondes]
+Ferme bien tes jambes trois foulées avant pour maintenir l'impulsion.
+[Pause : 3 secondes]
+
+[ATTENTE : 40 secondes OU commande "C'est fait"]
+
+Nickel.
+[Pause : 5 secondes]
+Fais encore deux obstacles de ton choix pour que ton cheval soit en confiance.
+[Pause : 3 secondes]
+Choisis des obstacles bien dégagés, faciles d'accès.
+[Pause : 3 secondes]
+
+[ATTENTE : 90 secondes OU commande "C'est fait"]
+
+Parfait, reviens au pas.
+[Pause : 10 secondes]
+Laisse ton cheval récupérer.
+[Pause : 60 secondes]
+
+---
+
+## [TRANSITION PÉDAGOGIQUE] (26:00 - 26:30)
+
+Maintenant que ton cheval connaît les obstacles, nous allons enchaîner un parcours complet.
+[Pause : 5 secondes]
+Concentre-toi sur trois points : le rythme, la trajectoire et l'impulsion.
+[Pause : 5 secondes]
+
+---
+
+## [EXERCICE 3 : Premier parcours complet] (26:30 - 31:30)
+
+Reprends tes rênes et pars au galop.
+[Pause : 10 secondes]
+Fais un tour complet pour installer ton rythme.
+[Pause : 30 secondes]
+Maintenant, engage-toi sur le parcours.
+[Pause : 3 secondes]
+Si tu dois ralentir avant un tournant serré, reprends doucement le contact.
+[Pause : 3 secondes]
+Si tu dois accélérer après un tournant, ferme tes jambes progressivement.
+[Pause : 3 secondes]
+Anticipe chaque tournant : prépare ta trajectoire dans la courbe.
+[Pause : 3 secondes]
+Garde ton regard toujours porté vers l'obstacle suivant.
+[Pause : 3 secondes]
+
+[ATTENTE : 180 secondes OU commande "C'est fait"]
+
+Impeccable.
+[Pause : 5 secondes]
+Reviens au pas.
+[Pause : 10 secondes]
+Laisse ton cheval récupérer.
+[Pause : 90 secondes]
+
+---
+
+## [ANALYSE ET AJUSTEMENTS] (31:30 - 33:00)
+
+Prends un moment pour analyser ton parcours.
+[Pause : 5 secondes]
+Où as-tu perdu du rythme ? Où ton cheval a-t-il accéléré ou ralenti ?
+[Pause : 10 secondes]
+Repère les obstacles où tu dois améliorer ta préparation.
+[Pause : 10 secondes]
+Pour le prochain passage, concentre-toi sur ces points précis.
+[Pause : 10 secondes]
+
+---
+
+## [EXERCICE 4 : Deuxième parcours - Amélioration] (33:00 - 38:00)
+
+Reprends tes rênes et repars au galop.
+[Pause : 10 secondes]
+Fais un tour pour retrouver ton rythme.
+[Pause : 30 secondes]
+Cette fois, applique les corrections que tu viens d'identifier.
+[Pause : 3 secondes]
+Sois encore plus attentif à tes trajectoires dans les tournants.
+[Pause : 3 secondes]
+Maintiens un galop constant du premier au dernier obstacle.
+[Pause : 3 secondes]
+
+[ATTENTE : 180 secondes OU commande "C'est fait"]
 
 Excellent.
-
-### Au galop (3 minutes)
-
-Maintenant, passez au galop.
-
-Demandez un galop calme et cadencé.
-
-Galopez sur de grandes courbes.
-
-Votre cheval doit être équilibré, pas précipité.
-
-Si besoin, reprenez-le avec votre assiette et vos mains.
-
-Faites quelques transitions galop-trot-galop.
-
-Votre cheval doit rester à l'écoute.
-
-Très bien.
-
-Revenez au pas, rênes longues.
-
-Petite pause avant de commencer le travail sur les obstacles.
+[Pause : 5 secondes]
+Reviens au pas.
+[Pause : 10 secondes]
+Laisse ton cheval récupérer.
+[Pause : 90 secondes]
 
 ---
 
-## DÉTENTE À L'OBSTACLE (8 minutes)
+## [EXERCICE 5 : Parcours en fluidité] (38:00 - 43:00)
 
-Avant de faire le parcours complet, nous allons nous détendre sur un ou deux obstacles.
+Dernière fois, nous allons chercher la fluidité maximale.
+[Pause : 5 secondes]
+Reprends tes rênes et pars au galop.
+[Pause : 10 secondes]
+Fais un tour complet.
+[Pause : 30 secondes]
+Cette fois, concentre-toi uniquement sur la fluidité.
+[Pause : 3 secondes]
+Chaque tournant doit être fluide, chaque abord doit être naturel.
+[Pause : 3 secondes]
+Laisse ton cheval trouver ses distances, accompagne-le simplement.
+[Pause : 3 secondes]
 
-Reprenez le trot.
+[ATTENTE : 180 secondes OU commande "C'est fait"]
 
-Dirigez-vous vers un obstacle simple, un vertical par exemple.
-
-Trot actif, ligne droite.
-
-Regardez loin derrière l'obstacle.
-
-Trois foulées avant, fermez vos jambes pour maintenir l'impulsion.
-
-Votre cheval saute.
-
-Accompagnez avec vos mains, laissez-le utiliser son encolure.
-
-Très bien.
-
-Félicitez-le.
-
-Refaites ce saut deux ou trois fois au trot pour vous échauffer.
-
-Maintenant, passez au galop.
-
-Galop calme et régulier.
-
-Sautez le même obstacle au galop.
-
-Maintenez le galop jusqu'à l'obstacle.
-
-Ne ralentissez pas, ne précipitez pas.
-
-Laissez votre cheval trouver sa foulée d'appel.
-
-Saut.
-
-Accompagnez.
-
-Excellent.
-
-Si vous avez une ligne de deux obstacles espacés, c'est parfait pour la détente.
-
-Sautez la ligne au galop.
-
-Entre les deux obstacles, maintenez le galop, ne tirez pas sur les rênes.
-
-Laissez votre cheval se réceptionner et repartir naturellement.
-
-Très bien.
-
-Vous êtes maintenant échauffé et prêt pour le parcours.
-
-Revenez au pas.
+Bravo.
+[Pause : 5 secondes]
+Reviens au pas.
+[Pause : 10 secondes]
 
 ---
 
-## RECONNAISSANCE DU PARCOURS (2 minutes)
+## [RETOUR AU CALME] (43:00 - 47:00)
 
-Maintenant, faites une reconnaissance au pas.
-
-Marchez sur le tracé que vous allez suivre.
-
-Repérez les virages, les distances entre obstacles, les points d'appel.
-
-Visualisez votre parcours mentalement.
-
-Par exemple : obstacle un, virage à gauche, obstacle deux en ligne, virage à droite, obstacle trois, et ainsi de suite.
-
-Cette reconnaissance est importante.
-
-Elle vous permet d'anticiper et de préparer vos actions.
-
-Très bien.
-
-Vous êtes prêt.
+Laisse ton cheval marcher tranquillement, rênes longues.
+[Pause : 10 secondes]
+Relâche complètement tes épaules et ton dos.
+[Pause : 10 secondes]
+Fais trois tours complets de carrière au pas.
+[Pause : 120 secondes]
+Ton cheval a bien travaillé, laisse-le récupérer.
+[Pause : 60 secondes]
 
 ---
 
-## PARCOURS COMPLET (18 minutes)
-
-### Premier parcours (6 minutes)
-
-Reprenez le trot ou le galop selon votre niveau de confort.
-
-Pour un premier parcours, le trot est souvent plus sécurisant.
-
-Dirigez-vous vers votre premier obstacle.
-
-Trot actif, ligne droite, regard loin.
-
-Obstacle un.
-
-Saut.
-
-Très bien.
-
-Maintenant, préparez votre virage.
-
-Regardez déjà vers l'obstacle suivant.
-
-Votre main intérieure indique la direction.
-
-Votre jambe intérieure maintient l'impulsion dans le virage.
-
-Ne laissez pas votre cheval ralentir.
-
-Obstacle deux.
-
-Maintenez le trot ou le galop.
-
-Saut.
-
-Excellent.
-
-Continuez ainsi pour tout le parcours.
-
-Entre chaque obstacle, pensez à :
-- Maintenir l'impulsion
-- Regarder l'obstacle suivant
-- Préparer vos virages
-- Ne pas tirer sur les rênes
-
-Terminez votre parcours.
-
-Très bien.
-
-Revenez au pas, rênes longues.
-
-Félicitez abondamment votre cheval.
-
-Prenez quelques minutes pour analyser ce premier parcours.
-
-Qu'est-ce qui a bien fonctionné.
-
-Qu'est-ce qui était plus difficile.
-
-Les virages étaient-ils fluides.
-
-L'impulsion était-elle maintenue.
-
-Votre cheval a-t-il hésité devant certains obstacles.
-
-Très bien.
-
-### Deuxième parcours (6 minutes)
-
-Après quelques minutes de récupération, refaites le même parcours.
-
-Cette fois, essayez d'améliorer les points qui étaient difficiles lors du premier passage.
-
-Si les virages étaient trop larges, serrez-les un peu plus.
-
-Si l'impulsion baissait, pensez à fermer vos jambes plus tôt.
-
-Si votre cheval a refusé un obstacle, approchez-le avec plus de détermination.
-
-Reprenez le trot ou le galop.
-
-Partez pour votre deuxième parcours.
-
-Obstacle un.
-
-Virage.
-
-Obstacle deux.
-
-Continuez.
-
-À chaque obstacle, pensez : impulsion, trajectoire, regard.
-
-Terminez votre parcours.
-
-Très bien.
-
-Normalement, ce deuxième parcours devrait être plus fluide que le premier.
-
-Votre cheval commence à comprendre l'enchaînement.
-
-Vous aussi, vous êtes plus à l'aise.
-
-Excellent.
-
-Revenez au pas, petite pause.
-
-### Troisième parcours - Perfectionnement (6 minutes)
-
-Si vous et votre cheval êtes en forme, vous pouvez faire un troisième parcours.
-
-Cette fois, l'objectif est la fluidité.
-
-Tout doit s'enchaîner sans à-coups, sans ralentissements, sans hésitations.
-
-Si vous avez fait les deux premiers parcours au trot, essayez celui-ci au galop.
-
-Si vous étiez déjà au galop, essayez de maintenir un galop plus régulier.
-
-Visualisez votre parcours avant de partir.
-
-Respirez calmement.
-
-Vous êtes prêt.
-
-Partez.
-
-Obstacle un.
-
-Fluide.
-
-Virage.
-
-Regard vers l'obstacle deux.
-
-Impulsion.
-
-Saut.
-
-Excellent.
-
-Continuez ainsi.
-
-Chaque obstacle, chaque virage doit être fluide.
-
-Vous et votre cheval ne faites qu'un.
-
-Terminez votre parcours.
-
-Magnifique.
-
-Revenez au pas, rênes complètement longues.
-
-Félicitez votre cheval avec enthousiasme.
-
-Il vient de réaliser un parcours complet.
-
-C'est un vrai travail d'équipe.
-
----
-
-## RETOUR AU CALME (5 minutes)
-
-Marchez tranquillement au pas, rênes longues.
-
-Votre cheval peut s'étirer l'encolure vers le bas.
-
-Il a fourni un gros effort aujourd'hui.
-
-Laissez-lui le temps de récupérer.
-
-Marchez sur de grandes lignes.
-
-Profitez de ce moment pour faire un bilan de la séance.
-
-Votre cheval a-t-il été à l'aise sur le parcours.
-
-Avez-vous réussi à maintenir l'impulsion.
-
-Les virages étaient-ils fluides.
-
-Quels sont les points à améliorer pour la prochaine fois.
-
-Continuez à marcher tranquillement.
-
-Votre cheval souffle, se détend.
-
-Très bien.
-
----
-
-## CONCLUSION
-
-Nous arrivons au terme de cette séance de parcours d'obstacles.
-
-Vous avez travaillé l'enchaînement, la gestion du rythme, et les trajectoires.
-
-Ce sont les fondamentaux du saut d'obstacles.
-
-Un bon parcours, ce n'est pas seulement sauter haut.
-
-C'est aussi et surtout savoir enchaîner avec fluidité, maintenir l'impulsion, et prendre les bonnes trajectoires.
-
-Avec de l'entraînement régulier, vous gagnerez en aisance et en confiance.
-
-Variez vos parcours, changez la disposition des obstacles, alternez verticaux et oxers.
-
-Plus vous pratiquerez, plus vous et votre cheval deviendrez performants.
-
-Félicitez encore une fois votre cheval.
-
-Pensez à bien l'étirer après cette séance intensive.
-
-Merci d'avoir suivi ce travail.
-
-À très bientôt pour de nouvelles aventures équestres.
-
-Bonne continuation avec votre cheval.
+## [CONCLUSION] (47:00 - 48:00)
+
+Bravo pour cette séance.
+[Pause : 3 secondes]
+Tu as travaillé l'enchaînement d'un parcours complet avec des obstacles variés.
+[Pause : 5 secondes]
+Chaque passage t'a permis d'améliorer ton rythme, ta trajectoire et ta fluidité.
+[Pause : 5 secondes]
+La régularité et l'anticipation feront toute la différence dans tes futurs parcours.
+[Pause : 5 secondes]
+À très bientôt pour une nouvelle séance.
+[Pause : 3 secondes]

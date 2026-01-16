@@ -43,7 +43,7 @@ Ferme ta nouvelle main intérieure et pousse avec ta nouvelle jambe à la sangle
 
 Continue ce huit de chiffre au pas. [Pause : 30 secondes]
 
-Cherche à faire des cercles bien ronds en gardant une allure régulière. [Pause : 30 secondes]
+Trace des cercles bien ronds en gardant une allure régulière. [Pause : 30 secondes]
 
 On maintient ce tracé, garde ton cheval entre tes deux rênes. [Pause : 60 secondes]
 
@@ -63,6 +63,12 @@ Ton cheval doit garder le même rythme du début à la fin. [Pause : 5 secondes]
 
 Passe au trot enlevé sur la piste. [Pause : 15 secondes]
 
+Au trot enlevé, tu te lèves et tu t'assieds en rythme avec ton cheval. [Pause : 3 secondes]
+
+Vérifie que tu te lèves quand l'épaule extérieure de ton cheval avance. [Pause : 3 secondes]
+
+C'est ce qu'on appelle trotter sur le bon diagonal. [Pause : 10 secondes]
+
 Compte mentalement tes foulées : un, deux, un, deux. [Pause : 3 secondes]
 
 Maintiens ce rythme stable sur le grand côté. [Pause : 20 secondes]
@@ -81,7 +87,9 @@ Maintiens ce trot régulier sur le cercle. [Pause : 30 secondes]
 
 Reviens sur la piste après un tour complet. [Pause : 15 secondes]
 
-Change de main sur la diagonale. [Pause : 20 secondes]
+Change de main sur la diagonale. [Pause : 3 secondes]
+
+Change de diagonal. [Pause : 20 secondes]
 
 Refais le même cercle de vingt mètres en C, à l'autre main. [Pause : 60 secondes]
 
@@ -103,6 +111,8 @@ Passe au trot enlevé sur la piste. [Pause : 15 secondes]
 
 Engage-toi sur la diagonale de M vers K. [Pause : 3 secondes]
 
+Change de diagonal. [Pause : 3 secondes]
+
 Fixe ton regard sur la lettre K, tout au bout de la ligne. [Pause : 3 secondes]
 
 Garde tes deux rênes au même contact pour rester sur ton rail. [Pause : 20 secondes]
@@ -112,6 +122,8 @@ Si ton cheval dévie, corrige avec une pression brève du mollet opposé. [Pause
 Rejoins la piste en gardant ton trot de travail. [Pause : 10 secondes]
 
 Refais une diagonale, cette fois de F vers H. [Pause : 3 secondes]
+
+Change de diagonal. [Pause : 3 secondes]
 
 Anticipe ton tracé : regarde vers la lettre H dès le tournant. [Pause : 25 secondes]
 
@@ -133,7 +145,7 @@ Détends tes bras, laisse ton cheval s'oxygéner. [Pause : 60 secondes]
 
 Pour terminer, nous allons enchaîner un cercle et une diagonale. [Pause : 5 secondes]
 
-Cherche la fluidité entre les deux figures. [Pause : 5 secondes]
+Enchaîne les deux figures avec fluidité. [Pause : 5 secondes]
 
 Passe au trot enlevé. [Pause : 15 secondes]
 
@@ -147,7 +159,9 @@ Garde tes mains fixes et tes jambes au contact. [Pause : 25 secondes]
 
 Très bien, tu as enchaîné les deux figures sans perdre ton rythme. [Pause : 10 secondes]
 
-Change de main et refais cet enchaînement à l'autre main. [Pause : 70 secondes]
+Change de main et refais cet enchaînement à l'autre main. [Pause : 3 secondes]
+
+Change de diagonal. [Pause : 70 secondes]
 
 Excellent travail, repasse au pas. [Pause : 10 secondes]
 

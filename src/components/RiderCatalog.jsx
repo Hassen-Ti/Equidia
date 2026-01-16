@@ -39,8 +39,9 @@ export default function RiderCatalog({ onPlay }) {
         'Toutes',
         'Dressage',
         'Obstacle',
-        'Balade',
-        'Travail à pied',
+        'Cross & Extérieur sportif',
+        'Travail au sol',
+        'Détente & Bien-être',
         'Thématique spécifique',
         'Résolution de problème'
     ];
@@ -170,18 +171,20 @@ function getSeanceVisual(seance) {
     const discipline = seance.discipline;
 
     // Mapping par mot-clé (prioritaire)
+    if (name.includes('cross') || name.includes('fossé') || name.includes('tronc') || name.includes('gué')) return '/trail.png';
+    if (name.includes('détente') || name.includes('bien-être') || name.includes('relaxation') || name.includes('zen')) return '/equestrian_lifestyle_bg.png';
     if (name.includes('galop')) return '/dressage.png';
-    if (name.includes('longe') || name.includes('pied') || name.includes('tap')) return '/groundwork.png';
+    if (name.includes('longe') || name.includes('pied') || name.includes('sol')) return '/groundwork.png';
     if (name.includes('saut') || name.includes('obstacle') || name.includes('cavaletti')) return '/obstacle.png';
-    if (name.includes('extérieur') || name.includes('balade')) return '/trail.png';
     if (name.includes('cession') || name.includes('souplesse') || name.includes('dressage')) return '/dressage.png';
 
     // Fallback par discipline
     switch (discipline) {
         case 'Dressage': return '/dressage.png';
         case 'Obstacle': return '/obstacle.png';
-        case 'Travail à pied': return '/groundwork.png';
-        case 'Balade': return '/trail.png';
+        case 'Cross & Extérieur sportif': return '/trail.png';
+        case 'Travail au sol': return '/groundwork.png';
+        case 'Détente & Bien-être': return '/equestrian_lifestyle_bg.png';
         default: return '/equestrian_lifestyle_bg.png';
     }
 }

@@ -4,9 +4,29 @@ import SeancesData from '../data/seances';
 
 export default function RiderHome({ onExplore, onPlay, profile }) {
     const [activeCategory, setActiveCategory] = useState('Dressage');
+    const [activeSubcategory, setActiveSubcategory] = useState(null);
     const [filterLevel, setFilterLevel] = useState('all');
     const [filterDuration, setFilterDuration] = useState('all');
-    const [includeLowerLevels, setIncludeLowerLevels] = useState(false);
+    const [includeLowerLevels, setIncludeLowerLevels] = useState(true);
+
+    // Définition des sous-catégories
+    const subcategories = {
+        'Cross & Extérieur sportif': [
+            { id: 'all', label: 'Toutes les séances', themes: null },
+            { id: 'galop-cross', label: 'Galop de cross & Condition physique', themes: ['Galop de cross', 'Condition physique', 'Endurance', 'Compétition'] },
+            { id: 'gymnastique', label: 'Gymnastique & Préparation technique', themes: ['Gymnastique', 'Technique'] },
+            { id: 'obstacles-naturels', label: 'Obstacles spécifiques cross', themes: ['Obstacles naturels'] },
+            { id: 'parcours', label: 'Parcours & Mise en situation', themes: ['Parcours', 'Stratégie', 'Mental'] },
+            { id: 'recuperation', label: 'Récupération & Soins', themes: ['Récupération'] }
+        ],
+        'Travail au sol': [
+            { id: 'all', label: 'Toutes les séances', themes: null },
+            { id: 'longe', label: 'Longe', themes: ['Longe'] },
+            { id: 'liberte', label: 'Travail en main & Liberté', themes: ['Liberté', 'Longues rênes', 'Technique'] },
+            { id: 'gymnastique-sol', label: 'Gymnastique & Préparation physique', themes: ['Gymnastique', 'Muscu'] },
+            { id: 'education', label: 'Éducation & Confiance', themes: ['Confiance', 'Éducation'] }
+        ]
+    };
 
     // Recommendation personnalisée selon le niveau du cavalier
     const recommendedSeance = useMemo(() => {
@@ -26,8 +46,9 @@ export default function RiderHome({ onExplore, onPlay, profile }) {
     const categories = [
         { id: 'Dressage', label: 'Dressage', image: '/dressage.png' },
         { id: 'Obstacle', label: 'Obstacle', image: '/obstacle.png' },
-        { id: 'Balade', label: 'Balade', image: '/trail.png' },
-        { id: 'Travail à pied', label: 'TAP', image: '/groundwork.png' },
+        { id: 'Cross & Extérieur sportif', label: 'Cross & Extérieur sportif', image: '/trail.png' },
+        { id: 'Travail au sol', label: 'Travail au Sol', image: '/groundwork.png' },
+        { id: 'Détente & Bien-être', label: 'Détente & Bien-être', image: '/equestrian_lifestyle_bg.png' },
         { id: 'specifique', label: 'Travail Spécifique', image: '/equestrian_premium.png' },
         { id: 'corrections', label: 'Corrections Ciblées', image: '/equestrian_lifestyle_bg.png' },
     ];
@@ -49,25 +70,37 @@ export default function RiderHome({ onExplore, onPlay, profile }) {
     const filteredSeances = useMemo(() => {
         return SeancesData.filter(s => {
             const matchesCategory = activeCategory === 'all' ||
-                (activeCategory === 'Travail à pied' && s.discipline === 'Travail à pied') ||
+                (activeCategory === 'Travail au sol' && s.discipline === 'Travail au sol') ||
+                (activeCategory === 'Cross & Extérieur sportif' && s.discipline === 'Cross & Extérieur sportif') ||
+                (activeCategory === 'Détente & Bien-être' && s.discipline === 'Détente & Bien-être') ||
                 (activeCategory === 'specifique' && s.type === 'Thématique spécifique') ||
                 (activeCategory === 'corrections' && s.type === 'Résolution de problème') ||
-                (activeCategory !== 'all' && activeCategory !== 'Travail à pied' && activeCategory !== 'specifique' && activeCategory !== 'corrections' && s.discipline === activeCategory);
+                (activeCategory !== 'all' && activeCategory !== 'Travail au sol' && activeCategory !== 'Cross & Extérieur sportif' && activeCategory !== 'Détente & Bien-être' && activeCategory !== 'specifique' && activeCategory !== 'corrections' && s.discipline === activeCategory);
+
+            // Filtrage par sous-catégorie
+            let matchesSubcategory = true;
+            if (activeSubcategory && activeSubcategory !== 'all' && subcategories[activeCategory]) {
+                const subcat = subcategories[activeCategory].find(sc => sc.id === activeSubcategory);
+                if (subcat && subcat.themes) {
+                    matchesSubcategory = subcat.themes.includes(s.theme);
+                }
+            }
 
             const matchesLevel = filterLevel === 'all' || isLevelIncluded(s.niveau, filterLevel);
             const matchesDuration = filterDuration === 'all' || s.duree === filterDuration;
 
-            return matchesCategory && matchesLevel && matchesDuration;
-        }).slice(0, 10); // Keep the slice(0, 10) from original
-    }, [activeCategory, filterLevel, filterDuration, includeLowerLevels]);
+            return matchesCategory && matchesSubcategory && matchesLevel && matchesDuration;
+        }); // Removed slice(0, 10) to show all sessions
+    }, [activeCategory, activeSubcategory, filterLevel, filterDuration, includeLowerLevels]);
 
     const getHeroImage = (discipline) => {
         if (!discipline) return '/dressage.png'; // Fallback plus vivant
         switch (discipline) {
             case 'Dressage': return '/dressage.png';
             case 'Obstacle': return '/obstacle.png';
-            case 'Balade': return '/trail.png'; // Trail is usually good
-            case 'Travail à pied': return '/groundwork.png';
+            case 'Cross & Extérieur sportif': return '/trail.png';
+            case 'Travail au sol': return '/groundwork.png';
+            case 'Détente & Bien-être': return '/equestrian_lifestyle_bg.png';
             default: return '/dressage.png';
         }
     };
@@ -141,6 +174,7 @@ export default function RiderHome({ onExplore, onPlay, profile }) {
                             key={cat.id}
                             onClick={() => {
                                 setActiveCategory(cat.id);
+                                setActiveSubcategory(null); // Reset subcategory when changing category
                                 setFilterLevel('all');
                                 setFilterDuration('all');
                             }}
@@ -157,6 +191,27 @@ export default function RiderHome({ onExplore, onPlay, profile }) {
                         </button>
                     ))}
                 </div>
+
+                {/* Sous-catégories (si applicable) */}
+                {subcategories[activeCategory] && (
+                    <div className="px-10 pb-8 animate-in fade-in slide-in-from-top-2 duration-500">
+                        <div className="flex gap-3 overflow-x-auto no-scrollbar scroll-smooth pb-2">
+                            {subcategories[activeCategory].map((subcat) => (
+                                <button
+                                    key={subcat.id}
+                                    onClick={() => setActiveSubcategory(subcat.id)}
+                                    className={`px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-widest transition-all duration-300 whitespace-nowrap shrink-0 border-2
+                                        ${activeSubcategory === subcat.id || (activeSubcategory === null && subcat.id === 'all')
+                                            ? 'bg-equi-gold text-equi-olive border-equi-gold shadow-lg scale-105'
+                                            : 'bg-white/60 text-equi-clay border-white/80 hover:bg-white hover:border-equi-gold/30 hover:text-equi-olive'
+                                        }`}
+                                >
+                                    {subcat.label}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </section >
 
             {/* 3. SESSION LIST & FILTERS */}
@@ -276,8 +331,10 @@ function getSeanceVisual(seance) {
     const discipline = seance.discipline;
 
     // Mapping par mot-clé (prioritaire)
-    if (name.includes('galop')) return '/dressage.png'; // Remplacer par galop.png si dispos
-    if (name.includes('longe') || name.includes('pied') || name.includes('tap')) return '/groundwork.png';
+    if (name.includes('cross') || name.includes('fossé') || name.includes('tronc') || name.includes('gué')) return '/trail.png';
+    if (name.includes('détente') || name.includes('bien-être') || name.includes('relaxation') || name.includes('zen')) return '/equestrian_lifestyle_bg.png';
+    if (name.includes('galop')) return '/dressage.png';
+    if (name.includes('longe') || name.includes('pied') || name.includes('sol')) return '/groundwork.png';
     if (name.includes('saut') || name.includes('obstacle') || name.includes('cavaletti')) return '/obstacle.png';
     if (name.includes('extérieur') || name.includes('balade')) return '/trail.png';
     if (name.includes('cession') || name.includes('souplesse') || name.includes('dressage')) return '/dressage.png';
@@ -286,8 +343,9 @@ function getSeanceVisual(seance) {
     switch (discipline) {
         case 'Dressage': return '/dressage.png';
         case 'Obstacle': return '/obstacle.png';
-        case 'Travail à pied': return '/groundwork.png';
-        case 'Balade': return '/trail.png';
+        case 'Cross & Extérieur sportif': return '/trail.png';
+        case 'Travail au sol': return '/groundwork.png';
+        case 'Détente & Bien-être': return '/equestrian_lifestyle_bg.png';
         default: return '/equestrian_lifestyle_bg.png';
     }
 }

@@ -1,0 +1,126 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    NOTES POUR LE DÉVELOPPEMENT FUTUR D'EQUICOACH
+                    Date de création : 12 janvier 2026
+═══════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 📌 IDÉE : SUBDIVISION DE LA CATÉGORIE "TRAVAIL AU SOL"                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+🎯 QUAND ?
+Lorsque nous aurons créé beaucoup plus de séances dans la catégorie "Travail au Sol"
+(actuellement 14 séances, objectif : 30-40+ séances)
+
+🎯 POURQUOI ?
+  • Meilleure organisation et navigation
+  • Facilite la recherche pour les utilisateurs
+  • Met en valeur la diversité du contenu
+  • Expérience utilisateur plus claire
+
+🎯 COMMENT SUBDIVISER ?
+
+Au lieu d'une seule catégorie "TRAVAIL AU SOL", créer 3-4 sous-catégories :
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 1️⃣  LONGE                                                                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Toutes les séances de travail en longe (avec ou sans enrênements)
+
+EXEMPLES DE SÉANCES ACTUELLES :
+  • Longe débutant - Les bases (20min) - G2-3
+  • Longe avec transitions (30min) - G4-5
+  • Longe aux enrênements (30min) - G5-6
+  • Travail du dos en longe (25min) - G4-5
+  • Travail de la voix en longe (20min) - G2-3
+
+EXEMPLES DE SÉANCES À CRÉER :
+  • Longe sur cavalettis (25min) - G3-4
+  • Longe et barres au sol (20min) - G2-3
+  • Longe avec changements d'allure (30min) - G4-5
+  • Longe en extérieur (30min) - G3-4
+  • Longe pour l'échauffement pré-compétition (15min) - G4-5
+  • Longe et travail de la cadence (25min) - G5-6
+  • Longe avec sauts (30min) - G5-6
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 2️⃣  TRAVAIL EN MAIN & LIBERTÉ                                                │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Travail en main, longues rênes, travail en liberté
+
+EXEMPLES DE SÉANCES ACTUELLES :
+  • Travail en liberté - Initiation (20min) - G5-6
+  • Longues rênes - Introduction (30min) - G7+
+  • Travail en main avancé (30min) - G7+
+  • Sauts en liberté (20min) - G4-5
+
+EXEMPLES DE SÉANCES À CRÉER :
+  • Travail en main débutant (20min) - G3-4
+  • Déplacements latéraux en main (25min) - G5-6
+  • Reculer et mobilité en main (20min) - G4-5
+  • Travail en liberté - Connexion (25min) - G4-5
+  • Longues rênes - Figures de dressage (30min) - G7+
+  • Travail en main - Flexions (20min) - G5-6
+  • Liberté et jeux éducatifs (25min) - G3-4
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 3️⃣  GYMNASTIQUE & PRÉPARATION PHYSIQUE                                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Exercices de renforcement, gymnastique, stretching, mobilisation
+
+EXEMPLES DE SÉANCES ACTUELLES :
+  • Gymnastique au sol (15min) - G3-4
+  • Renforcement musculaire à pied (20min) - G4-5
+  • Parcours d'obstacles à pied (20min) - G3-4
+  • Stretching et mobilisation (15min) - G3-4
+
+EXEMPLES DE SÉANCES À CRÉER :
+  • Renforcement du dos (20min) - G3-4
+  • Gymnastique des postérieurs (20min) - G4-5
+  • Étirements et assouplissement (15min) - G2-3
+  • Proprioception et équilibre (20min) - G3-4
+  • Préparation physique pré-saison (30min) - G4-5
+  • Mobilité articulaire (15min) - G3-4
+  • Circuit training équin (25min) - G5-6
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 4️⃣  ÉDUCATION & CONFIANCE                                                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Désensibilisation, respect, confiance, éducation de base
+
+EXEMPLES DE SÉANCES ACTUELLES :
+  • Désensibilisation et confiance (15min) - G2-3
+  • Exercices de respect à pied (15min) - G2-3
+
+EXEMPLES DE SÉANCES À CRÉER :
+  • Désensibilisation aux objets (20min) - G2-3
+  • Travail de la confiance mutuelle (20min) - G2-3
+  • Respect de l'espace personnel (15min) - G2-3
+  • Gestion des peurs (25min) - G3-4
+  • Éducation du jeune cheval (30min) - G3-4
+  • Travail de la connexion émotionnelle (20min) - G2-3
+  • Exercices de leadership (20min) - G3-4
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 SEUIL DE DÉCLENCHEMENT SUGGÉRÉ :
+
+Envisager la subdivision quand :
+  ✓ Au moins 35-40 séances au total dans "Travail au Sol"
+  ✓ Au moins 8-10 séances dans chaque future sous-catégorie
+  ✓ Retours utilisateurs indiquant une difficulté de navigation
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📝 AUTRES IDÉES DE DÉVELOPPEMENT FUTUR
+
+(À compléter au fur et à mesure)
+
+═══════════════════════════════════════════════════════════════════════════════

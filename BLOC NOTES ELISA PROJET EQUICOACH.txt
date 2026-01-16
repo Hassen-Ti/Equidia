@@ -615,3 +615,314 @@ Catégorie RÉSOLUTION DE PROBLÈME = TOUJOURS VISIBLE
 - BLOC NOTES ELISA PROJET EQUICOACH.txt (cahier des charges complet)
 
 
+
+
+
+ NOUVELLES RÈGLES - SESSION 11/01/2026
+
+
+ SYSTÈME DE COMMANDES VOCALES (APPROCHE HYBRIDE)
+
+Principe retenu : L'audio attend SOIT la fin du timeout SOIT une commande vocale
+- Si cavalier dit "C'est fait"  Passe immédiatement à la suite
+- Si cavalier ne dit rien  Continue automatiquement après timeout
+
+Commandes essentielles (Phase 1 - MVP) :
+ "C'est fait" / "Exercice terminé"  Passe à la consigne suivante
+ "Stop" / "Pause"  Met l'audio en pause
+ "Continue" / "Reprends"  Reprend l'audio
+ "Répète" / "Redis"  Répète la dernière consigne
+ "Explique [mot]"  Explique un terme technique
+
+Avantages :
+ Fonctionne même si commandes vocales échouent (fallback automatique)
+ Cavaliers avancés gagnent du temps
+ Cavaliers débutants prennent leur temps
+ Pas de silences inutiles
+
+Format dans les scripts :
+[ATTENTE : X secondes OU commande "C'est fait"]
+
+---
+
+ RÈGLES SPÉCIFIQUES À L'OBSTACLE
+
+Différences avec le dressage :
+ Pas besoin de préciser les lettres de manège (obstacles peuvent être partout)
+ TOUJOURS préciser l'allure lors des transitions
+ Rappeler la jambe isolée pour G2-3 et G3-4
+ Faire vérifier le bon pied au galop pour G2-3 et G3-4
+
+Pour les séances OBSTACLE G2-3 et G3-4 :
+ Toujours rappeler la jambe isolée pour les départs au galop
+ Toujours faire vérifier le bon pied après le départ
+ Préciser l'allure lors de CHAQUE transition
+
+Exemple :
+"Reviens au trot."
+"Change de main en passant par la diagonale."
+"Prépare ton départ au galop à l'autre main."
+"Recule légèrement ta jambe extérieure et demande le galop."
+"Vérifie que tu es bien sur le bon pied : la jambe intérieure de ton cheval doit avancer plus loin."
+
+Pour les séances OBSTACLE G5-6 et G7+ :
+ Préciser l'allure lors des transitions
+ Rappel jambe isolée uniquement si nécessaire (pas systématique)
+ Vérification du pied moins systématique (automatismes acquis)
+
+---
+
+ COMPLEXITÉ SPÉCIFIQUE DE L'OBSTACLE
+
+Problématiques identifiées :
+ Timing critique : consignes ne doivent PAS tomber pendant le passage des obstacles
+ Imprévisibilité : refus, dérobades, variations de foulées
+ Concentration totale nécessaire pendant l'abord et le saut
+ Impossible de prévoir le timing exact (chaque cheval différent)
+
+Solution retenue pour MVP :
+ Consignes AVANT l'engagement (claires et complètes)
+ Pendant le passage : Silences LONGS (40-60 secondes) avec max 1-2 rappels généraux
+ JAMAIS de consigne technique précise pendant le passage
+ Après la sortie : Feedback positif + consigne pour la suite
+ Système hybride : timeout OU commande vocale "C'est fait"
+
+Exemple de structure :
+"Engage-toi sur la ligne d'obstacles."
+"Garde ton galop stable."
+"Laisse ton cheval gérer ses distances."
+[ATTENTE : 50 secondes OU commande "C'est fait"]
+"Très bien, reviens au pas."
+
+---
+
+ ÉVOLUTION FUTURE - IA CONVERSATIONNELLE
+
+Phase 2 (6-12 mois) :
+ "Mon cheval a refusé"  IA donne des conseils
+ "Il manque d'impulsion"  IA adapte les consignes
+ "Il accélère trop"  IA donne des corrections
+ "Je n'ai pas compris"  IA réexplique
+
+Phase 3 (12-24 mois) :
+ Caméra fixe + Computer Vision
+ Détection automatique des problèmes (refus, dérobades)
+ IA intervient automatiquement avec conseils personnalisés
+
+---
+
+ DOCUMENTS DE RÉFÉRENCE MIS À JOUR :
+- .agent/COMMANDES_VOCALES.md (système hybride complet)
+- .agent/PARAMETRES_SCRIPTS_AUDIO.md (règles générales)
+- .agent/PHILOSOPHIE_EQUICOACH.md (piliers + règle galop)
+- .agent/REGLES_FILTRES_NIVEAUX.md (logique de filtrage avec toggle)
+
+
+
+
+ VÉRIFICATIONS PÉDAGOGIQUES SELON LE NIVEAU
+
+Pour G2-3 et G3-4 UNIQUEMENT :
+
+1. VÉRIFICATION DU DIAGONAL (Trot enlevé)
+    Au PREMIER trot de la séance : Explication complète
+    Formulation : "Vérifie d'être sur le bon diagonal. Regarde l'épaule extérieure de ton cheval : tu dois te lever quand elle avance. Si tu n'es pas sur le bon diagonal, assieds-toi un temps de trot et reprends."
+    Lors des changements de main : Rappel simple "Change de diagonal" ou "N'oublie pas de changer de diagonal"
+    Fréquence : 1 explication complète + rappels simples
+
+2. VÉRIFICATION DU PIED (Galop)
+    Au PREMIER galop de la séance : Explication complète
+    Formulation : "Prépare ton départ au galop. Recule légèrement ta jambe extérieure et demande le galop. Vérifie que tu es bien sur le bon pied : l'antérieur intérieur doit avancer plus loin. Si tu n'es pas sur le bon pied, reviens au trot et redemande."
+    Départs suivants : Rappel simple "Vérifie ton pied" ou "Vérifie d'être sur le bon pied"
+    Fréquence : 1 explication complète + rappels simples
+
+Pour G4-5 et au-dessus :
+ Pas d'explication (automatismes acquis)
+ Éventuellement un rappel discret : "N'oublie pas ta diagonale" (1 fois max)
+ Pas de vérification du pied (maîtrise totale attendue)
+
+Raison : À partir de G4-5, ces vérifications sont des automatismes. Les répéter serait infantilisant et ralentirait inutilement la séance.
+
+
+
+
+ RÈGLE IMPORTANTE : COHÉRENCE DES CONSIGNES
+
+NE PAS mentionner le changement de diagonal si :
+ Le cavalier va partir au galop juste apr\u00e8s le changement de main
+ Le cavalier va revenir au pas juste apr\u00e8s
+
+Mentionner le changement de diagonal UNIQUEMENT si :
+ Le cavalier va CONTINUER au trot apr\u00e8s le changement de main
+
+Raison : \u00c9viter les consignes inutiles qui alourdissent le dialogue et perturbent le cavalier.
+
+Exemple MAUVAIS :
+"Change de main en passant par la diagonale."
+"Change de diagonal."   INUTILE
+"Pr\u00e9pare ton d\u00e9part au galop."
+
+Exemple BON :
+"Change de main en passant par la diagonale."
+"Pr\u00e9pare ton d\u00e9part au galop."   Direct, pas de consigne inutile
+
+Cette r\u00e8gle s'applique \u00e0 TOUTES les disciplines (dressage, obstacle, balade, TAP).
+
+
+
+
+
+ RÈGLES SPÉCIFIQUES OBSTACLE - SESSION 11/01/2026
+
+
+ PHASE D'INSTALLATION OBLIGATOIRE
+
+TOUTES les séances d'obstacle doivent commencer par une phase d'installation :
+ Durée : 1-3 minutes
+ Description de chaque obstacle (type, hauteur, position)
+ Distances en mètres et en foulées
+ Pause ou commande vocale "Continue" une fois installé
+
+Raison : Le cavalier ne peut pas descendre entre les exercices pour déplacer les obstacles.
+
+---
+
+ HAUTEURS RECOMMANDÉES FFE
+
+RESPECTER STRICTEMENT pour éviter refus et barres qui tombent :
+
+ G2-3 : 50-60cm (max 65cm)
+ G3-4 : 55-65cm (max 70cm)
+ G4-5 : 65-75cm (max 80cm)
+ G5-6 : 75-85cm (max 90cm)
+ G6-7 : 85-95cm (max 100cm)
+ G7+ : 90-100cm (max 110cm)
+
+Règle d'or : Mieux vaut réussir à 50cm que rater à 80cm.
+
+Note à inclure : "Les hauteurs sont ajustables selon ton niveau. Tu peux augmenter de 5-10cm en fin de séance si tu es à l'aise."
+
+---
+
+ ÉCONOMIE DE MATÉRIEL
+
+Privilégier les parcours simples :
+ 4-6 obstacles physiques maximum
+ Réutiliser les mêmes obstacles dans les 2 sens
+ Lignes simples plutôt que parcours complexes
+ Penser au cavalier seul qui doit tout installer
+
+Exemple : 4 obstacles en ligne = 8 passages possibles (aller-retour)
+
+---
+
+ CONSIGNES PENDANT LES PASSAGES
+
+Rappel des règles :
+ Consignes AVANT l'engagement (jamais pendant le saut)
+ Silences longs pendant les passages (40-60 secondes)
+ Maximum 1-2 rappels généraux (regard, position)
+ JAMAIS de consignes techniques précises pendant le saut
+
+---
+
+ SCHÉMAS VISUELS
+
+Pour l'instant :
+ Description textuelle détaillée dans le script
+ Note : "Schéma visuel disponible sous le player audio"
+
+À terme (quand outil de dessin trouvé) :
+ Plan du manège vu du dessus
+ Obstacles différenciés (croix, verticaux, oxers)
+ Tracé avec flèches directionnelles
+ Distances en mètres et foulées
+ Numérotation claire
+
+
+
+
+
+ ÉVOLUTION FUTURE - POP-UP INSTALLATION OBSTACLE
+
+
+ PROBLÈME ACTUEL
+
+Le cavalier lance l'audio déjà à cheval :
+ L'audio dit "descends et installe ton parcours"  illogique
+ Le cavalier doit mettre pause, descendre, installer, remonter
+ Perte de temps et frustration
+
+---
+
+ SOLUTION À IMPLÉMENTER (Phase 2)
+
+POP-UP AVANT de lancer l'audio avec :
+  Avertissement "Installation requise"
+  Liste du matériel (nombre d'obstacles, types, hauteurs)
+  Bouton "Voir le plan du parcours"  schéma en grand
+  Bouton "J'ai compris, lancer la séance"
+
+Exemple de pop-up :
+`\r
+ INSTALLATION REQUISE
+
+Cette séance nécessite l'installation d'un parcours avant de commencer.
+
+ Matériel nécessaire :
+ 5 obstacles (2 verticaux, 1 oxer, 1 croix, 1 vertical)
+ Hauteurs recommandées : 65-75cm
+
+ [Voir le plan du parcours]
+
+Une fois votre parcours installé, montez à cheval et lancez la séance.
+
+[Annuler]  [J'ai compris, lancer la séance]
+`\r
+
+---
+
+ MODIFICATIONS DES SCRIPTS AUDIO
+
+Quand la pop-up sera implémentée :
+  Supprimer la phase d'installation de l'audio
+  Commencer directement par l'introduction
+  Audio plus fluide sans pause forcée
+
+---
+
+ IMPLÉMENTATION TECHNIQUE
+
+1. Badge "Installation requise" visible sur la carte de séance
+2. Pop-up au clic sur "Commencer la séance"
+3. Fichier JSON avec métadonnées pour chaque séance
+
+Structure JSON :
+`json
+{
+  "seance_id": "parcours_type_club_g4_5",
+  "installation_requise": true,
+  "materiel": {
+    "obstacles": 5,
+    "types": ["2 verticaux", "1 oxer", "1 croix", "1 vertical"],
+    "hauteurs": "65-75cm",
+    "plan_visuel": "/parcours/parcours_club_g4_5.png"
+  }
+}
+``r
+
+---
+
+ TIMELINE
+
+ Phase 1 (ACTUEL) :
+ Phase d'installation dans l'audio (1-2 min)
+ Renvoie au plan visuel
+ Solution temporaire en attendant les visuels
+
+ Phase 2 (QUAND VISUELS PRÊTS) :
+ Pop-up avant lancement de l'audio
+ Suppression de la phase d'installation audio
+ Meilleure UX et workflow logique
+
+

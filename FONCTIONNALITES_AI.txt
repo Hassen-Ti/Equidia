@@ -1,0 +1,544 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    FONCTIONNALITÉS AI POUR EQUICOACH
+                    Document de Réflexion - Janvier 2026
+═══════════════════════════════════════════════════════════════════════════════
+
+📌 CONTEXTE
+-----------
+Ce document liste tous les use cases (cas d'usage) possibles pour l'intégration 
+d'un assistant AI dans l'application EquiCoach. L'objectif est d'identifier les 
+fonctionnalités qui apporteront le plus de valeur aux cavaliers utilisateurs.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                        🎯 USE CASES PRIORITAIRES
+═══════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 1️⃣  ASSISTANT DE SÉLECTION DE SÉANCE                                        │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+📍 SITUATION
+Le cavalier ouvre l'application mais ne sait pas quelle séance choisir aujourd'hui.
+
+🎬 DÉCLENCHEUR
+Bouton visible sur la page d'accueil : "Je ne sais pas quoi choisir" ou 
+"Aide-moi à choisir ma séance"
+
+💡 FONCTIONNEMENT
+L'AI pose 3-5 questions rapides au cavalier :
+  • Comment te sens-tu aujourd'hui ? (motivé, fatigué, stressé...)
+  • Quel est ton objectif principal cette semaine ?
+  • Comment est ton cheval aujourd'hui ? (en forme, calme, énergique...)
+  • Combien de temps as-tu ? (30min, 45min, 1h...)
+  • Quel type de travail préfères-tu aujourd'hui ? (dressage, obstacle, TAP...)
+  • Météo/conditions ? (chaud, froid, pluie...)
+
+✅ RÉSULTAT
+L'AI propose 2-3 séances personnalisées avec une justification pour chacune :
+  Exemple : "Je te recommande 'Transitions fluides' car tu as dit vouloir 
+  travailler la connexion avec ton cheval, et cette séance est parfaite pour 
+  ça. Durée : 45min."
+
+💎 VALEUR AJOUTÉE
+  • Gain de temps (pas besoin de parcourir tout le catalogue)
+  • Personnalisation selon l'état du jour
+  • Encourage la variété dans l'entraînement
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 2️⃣  COACH AI EN TEMPS RÉEL (pendant la séance)                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+📍 SITUATION
+Le cavalier est à cheval, en pleine séance, et rencontre une difficulté ou 
+ne comprend pas bien un exercice.
+
+🎬 DÉCLENCHEUR
+Bouton "Pause - J'ai besoin d'aide" visible pendant la lecture de la séance
+(vocal ou tactile)
+
+💡 FONCTIONNALITÉS
+L'AI peut :
+  ✓ Réexpliquer un concept avec d'autres mots
+    Exemple : "Je ne comprends pas ce qu'est l'incurvation"
+    
+  ✓ Clarifier les aides à utiliser pour un exercice
+    Exemple : "Quelles aides dois-je utiliser pour le départ au galop ?"
+    
+  ✓ Proposer une variante plus facile
+    Exemple : "Cet exercice est trop difficile, as-tu quelque chose de plus simple ?"
+    
+  ✓ Proposer une variante plus difficile
+    Exemple : "C'est trop facile, je veux un challenge supplémentaire"
+    
+  ✓ Donner des tips de correction
+    Exemple : "Mon cheval accélère dans les courbes, que faire ?"
+    
+  ✓ Encourager et motiver
+    Exemple : "Bravo ! Tu progresses bien, continue comme ça !"
+
+✅ RÉSULTAT
+Le cavalier reçoit une réponse immédiate et adaptée, comme s'il avait un 
+moniteur à ses côtés.
+
+💎 VALEUR AJOUTÉE
+  • Autonomie du cavalier (pas besoin d'un moniteur physique)
+  • Apprentissage en temps réel
+  • Adaptation instantanée aux difficultés
+  • Expérience premium et différenciante
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 3️⃣  ANALYSE DE PROGRESSION                                                  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+📍 SITUATION
+Le cavalier veut savoir s'il progresse et identifier ses points forts et 
+axes d'amélioration.
+
+🎬 DÉCLENCHEUR
+  • Onglet "Ma Progression" dans l'application
+  • Notification hebdomadaire/mensuelle automatique
+
+💡 FONCTIONNEMENT
+BASE DE DONNÉES :
+  • Système de notation après chaque séance :
+    - Note globale de la séance (/5 étoiles)
+    - Note par exercice (/5 étoiles)
+    - Ressenti (facile, moyen, difficile)
+    - Commentaires libres optionnels
+
+L'AI ANALYSE :
+  ✓ Évolution des notes dans le temps
+  ✓ Identification des exercices maîtrisés vs. en difficulté
+  ✓ Fréquence d'entraînement
+  ✓ Variété des séances (dressage, obstacle, TAP)
+  ✓ Détection de plateaux ou régressions
+
+✅ RÉSULTAT
+Rapport de progression avec :
+  • Graphiques d'évolution
+  • Points forts identifiés
+  • Axes d'amélioration suggérés
+  • Recommandations de séances pour progresser
+  • Badges/récompenses pour la motivation
+
+💎 VALEUR AJOUTÉE
+  • Motivation par la visualisation des progrès
+  • Objectivité dans l'auto-évaluation
+  • Guidance pour l'entraînement futur
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 4️⃣  GÉNÉRATEUR DE SÉANCES SUR-MESURE                                        │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+📍 SITUATION
+Le cavalier a des besoins très spécifiques qui ne correspondent pas exactement 
+aux séances pré-programmées (ex: son cheval a peur des barres au sol, ou il 
+veut travailler uniquement le galop à droite).
+
+🎬 DÉCLENCHEUR
+Bouton "Créer une séance personnalisée" dans le catalogue
+
+💡 FONCTIONNEMENT
+L'AI pose des questions détaillées :
+  • Quel est ton objectif principal pour cette séance ?
+  • Quelle durée souhaites-tu ?
+  • Quel niveau de difficulté ?
+  • Y a-t-il des exercices à éviter ? (problèmes du cheval, blessures...)
+  • Y a-t-il des exercices que tu veux absolument inclure ?
+  • Quel matériel as-tu à disposition ?
+  • Discipline ? (dressage, obstacle, TAP, mixte)
+
+✅ RÉSULTAT
+L'AI génère en temps réel une séance complète et structurée :
+  • Échauffement adapté
+  • Exercices principaux ciblés
+  • Retour au calme
+  • Format identique aux séances pré-programmées
+  • Possibilité de sauvegarder pour réutiliser
+
+💎 VALEUR AJOUTÉE
+  • Flexibilité maximale
+  • Adaptation aux contraintes spécifiques
+  • Créativité dans l'entraînement
+  • Valeur perçue très élevée
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                    💡 FONCTIONNALITÉS AI SUPPLÉMENTAIRES
+═══════════════════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 5️⃣  JOURNAL DE BORD INTELLIGENT                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+📍 SITUATION
+Le cavalier termine sa séance et veut garder une trace de ce qui s'est passé.
+
+💡 FONCTIONNEMENT
+Après chaque séance, l'AI pose quelques questions :
+  • "Comment s'est comporté ton cheval aujourd'hui ?"
+  • "As-tu remarqué quelque chose de particulier ?"
+  • "Y a-t-il eu des difficultés ?"
+  • "Un moment dont tu es fier·e ?"
+
+L'AI crée automatiquement une entrée de journal structurée.
+
+ANALYSE INTELLIGENTE :
+L'AI détecte des patterns sur le long terme :
+  • "Ton cheval semble plus tendu les lundis"
+  • "Tu progresses beaucoup sur les transitions"
+  • "Attention, cela fait 2 semaines sans travailler l'obstacle"
+
+💎 VALEUR AJOUTÉE
+  • Mémoire de l'entraînement sans effort
+  • Détection de patterns invisibles à l'œil nu
+  • Aide à la prise de décision
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 6️⃣  PRÉPARATION DE COMPÉTITION                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+📍 SITUATION
+Un cavalier a une compétition dans 2-4 semaines et veut s'y préparer efficacement.
+
+💡 FONCTIONNEMENT
+L'AI pose des questions :
+  • Type de compétition ? (dressage, CSO, hunter, complet...)
+  • Niveau ? (club, amateur, pro...)
+  • Dans combien de temps ?
+  • Points faibles à travailler en priorité ?
+
+✅ RÉSULTAT
+L'AI génère un plan d'entraînement progressif :
+  • Semaine 1 : Bases et renforcement
+  • Semaine 2 : Intensification
+  • Semaine 3 : Simulation de compétition
+  • Semaine 4 : Affûtage et confiance
+
+BONUS :
+  • Rappels automatiques
+  • Ajustement du plan selon les résultats des séances
+  • Conseils mentaux pré-compétition
+
+💎 VALEUR AJOUTÉE
+  • Préparation structurée et professionnelle
+  • Confiance accrue
+  • Meilleurs résultats en compétition
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 7️⃣  DÉTECTION DE PLATEAU / DÉMOTIVATION                                     │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+📍 SITUATION
+Le cavalier tombe dans une routine ou stagne dans sa progression.
+
+💡 FONCTIONNEMENT
+L'AI surveille en arrière-plan :
+  • Fréquence d'utilisation de l'app
+  • Variété des séances choisies
+  • Évolution des notes
+  • Commentaires négatifs répétés
+
+DÉTECTION :
+  • "Tu fais souvent les mêmes séances"
+  • "Tes notes stagnent depuis 3 semaines"
+  • "Tu n'as pas essayé de nouvelle discipline depuis longtemps"
+
+✅ ACTION PROACTIVE
+L'AI suggère :
+  • Un nouveau challenge
+  • Une séance découverte
+  • Un objectif motivant
+  • Une série de séances thématiques
+
+💎 VALEUR AJOUTÉE
+  • Maintien de la motivation
+  • Prévention de l'abandon
+  • Engagement long terme
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 8️⃣  ASSISTANT THÉORIQUE                                                     │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+📍 SITUATION
+Le cavalier veut comprendre un concept équestre ou approfondir ses connaissances.
+
+💡 FONCTIONNEMENT
+Chatbot accessible à tout moment :
+  • "C'est quoi l'incurvation ?"
+  • "Comment faire un départ au galop à droite ?"
+  • "Pourquoi mon cheval met la tête en l'air ?"
+  • "Quelle est la différence entre impulsion et vitesse ?"
+
+✅ RÉSULTAT
+L'AI explique :
+  • Avec des mots simples
+  • Des exemples concrets
+  • Des schémas si nécessaire
+  • Des liens vers des séances qui travaillent ce concept
+
+💎 VALEUR AJOUTÉE
+  • Apprentissage autonome
+  • Compréhension approfondie
+  • Complément aux séances pratiques
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 9️⃣  CONSEILS ADAPTÉS À LA MÉTÉO / SAISON                                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+📍 SITUATION
+Les conditions météo ou la saison influencent le type de travail possible.
+
+💡 FONCTIONNEMENT
+L'AI détecte automatiquement (via géolocalisation ou saisie manuelle) :
+  • Température
+  • Pluie / Neige
+  • Saison
+  • Luminosité
+
+✅ SUGGESTIONS ADAPTÉES
+  • Forte chaleur → Séances plus courtes, travail à l'ombre, hydratation
+  • Pluie → Travail en main, exercices en carrière couverte
+  • Hiver → Échauffement prolongé, attention aux sols glissants
+  • Printemps → Attention aux chevaux excités par l'herbe fraîche
+
+💎 VALEUR AJOUTÉE
+  • Sécurité du cavalier et du cheval
+  • Adaptation intelligente
+  • Conseils pratiques
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 🔟  MODE "MONITEUR VIRTUEL" POUR PROPRIÉTAIRES                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+📍 SITUATION
+Un cavalier propriétaire veut organiser le travail de son cheval sur la semaine 
+pour un entraînement équilibré.
+
+💡 FONCTIONNEMENT
+L'AI pose des questions :
+  • Combien de séances par semaine ?
+  • Objectifs principaux du mois ?
+  • Points faibles à travailler ?
+  • Contraintes (matériel, temps, installations) ?
+
+✅ RÉSULTAT
+Planning hebdomadaire équilibré :
+  • Lundi : Dressage - Transitions
+  • Mardi : Repos ou balade
+  • Mercredi : Obstacle - Barres au sol
+  • Jeudi : Travail en main
+  • Vendredi : Dressage - Assouplissement
+  • Samedi : Séance libre ou compétition
+  • Dimanche : Repos
+
+AJUSTEMENTS :
+L'AI adapte le planning selon :
+  • Les résultats des séances
+  • La fatigue du cheval
+  • Les imprévus
+
+💎 VALEUR AJOUTÉE
+  • Organisation professionnelle
+  • Équilibre dans l'entraînement
+  • Prévention du surmenage
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 1️⃣1️⃣  CHATBOT DE DÉPANNAGE TECHNIQUE                                        │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+📍 SITUATION
+Le cavalier rencontre un problème récurrent avec son cheval.
+
+💡 EXEMPLES DE PROBLÈMES
+  • "Mon cheval ne veut pas tourner à droite"
+  • "Il accélère avant les barres"
+  • "Il met la tête en l'air au trot"
+  • "Il refuse de partir au galop à gauche"
+  • "Il tire sur les rênes"
+
+DIAGNOSTIC AI :
+L'AI pose des questions pour comprendre :
+  • Depuis quand ?
+  • Dans quelles situations ?
+  • Qu'as-tu déjà essayé ?
+  • Comment réagit le cheval ?
+
+✅ RÉSULTAT
+  • Diagnostic probable (avec disclaimer vétérinaire si nécessaire)
+  • Exercices correctifs ciblés
+  • Séances recommandées
+  • Conseils de moniteur
+
+💎 VALEUR AJOUTÉE
+  • Résolution de problèmes autonome
+  • Gain de temps et d'argent
+  • Amélioration continue
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 1️⃣2️⃣  RÉSUMÉ AUDIO POST-SÉANCE                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+📍 SITUATION
+Le cavalier vient de terminer sa séance, il est fatigué et n'a pas envie de lire.
+
+💡 FONCTIONNEMENT
+Après la notation de la séance, l'AI génère automatiquement un résumé audio 
+de 30-60 secondes :
+
+EXEMPLE :
+  "Bravo pour cette séance de transitions fluides ! Tu as particulièrement 
+  bien réussi les transitions trot-galop. Point à améliorer : la régularité 
+  dans les courbes. Continue comme ça, tu progresses bien ! À bientôt pour 
+  ta prochaine séance."
+
+✅ FORMAT
+  • Ton encourageant et motivant
+  • Personnalisé selon les notes données
+  • Écoutable en rangeant le matériel
+
+💎 VALEUR AJOUTÉE
+  • Expérience premium
+  • Motivation immédiate
+  • Accessibilité (mains libres)
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                            📊 TABLEAU RÉCAPITULATIF
+═══════════════════════════════════════════════════════════════════════════════
+
+┌────────┬──────────────────────────────────┬──────────┬──────────┬───────────┐
+│ N°     │ FONCTIONNALITÉ                   │ PRIORITÉ │ DIFFICULTÉ│ IMPACT   │
+├────────┼──────────────────────────────────┼──────────┼──────────┼───────────┤
+│ 1      │ Assistant Sélection Séance       │ ⭐⭐⭐    │ Moyenne  │ Élevé     │
+│ 2      │ Coach AI Temps Réel              │ ⭐⭐⭐⭐⭐ │ Élevée   │ Très Élevé│
+│ 3      │ Analyse Progression              │ ⭐⭐⭐⭐  │ Moyenne  │ Élevé     │
+│ 4      │ Générateur Séances Sur-Mesure    │ ⭐⭐⭐⭐  │ Élevée   │ Très Élevé│
+│ 5      │ Journal de Bord Intelligent      │ ⭐⭐     │ Moyenne  │ Moyen     │
+│ 6      │ Préparation Compétition          │ ⭐⭐     │ Moyenne  │ Élevé     │
+│ 7      │ Détection Plateau/Démotivation   │ ⭐⭐     │ Faible   │ Moyen     │
+│ 8      │ Assistant Théorique              │ ⭐⭐⭐    │ Moyenne  │ Moyen     │
+│ 9      │ Conseils Météo/Saison            │ ⭐       │ Faible   │ Faible    │
+│ 10     │ Moniteur Virtuel Propriétaires   │ ⭐⭐     │ Moyenne  │ Moyen     │
+│ 11     │ Chatbot Dépannage Technique      │ ⭐⭐⭐    │ Élevée   │ Élevé     │
+│ 12     │ Résumé Audio Post-Séance         │ ⭐       │ Faible   │ Moyen     │
+└────────┴──────────────────────────────────┴──────────┴──────────┴───────────┘
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                        🎯 RECOMMANDATIONS POUR LE MVP
+═══════════════════════════════════════════════════════════════════════════════
+
+Pour la PREMIÈRE VERSION de l'application avec AI, je recommande de se 
+concentrer sur les fonctionnalités suivantes :
+
+🥇 PRIORITÉ ABSOLUE (MVP v1)
+  ✅ Fonctionnalité #2 : Coach AI en Temps Réel
+     → C'est la fonctionnalité la plus différenciante et innovante
+     → Apporte une valeur immédiate pendant l'utilisation
+     → Crée une expérience "WOW"
+
+  ✅ Fonctionnalité #1 : Assistant de Sélection de Séance
+     → Relativement simple à implémenter
+     → Très utile au quotidien
+     → Bon point d'entrée pour l'AI
+
+🥈 PRIORITÉ HAUTE (MVP v1.5)
+  ✅ Fonctionnalité #4 : Générateur de Séances Sur-Mesure
+     → Forte valeur ajoutée
+     → Différenciation concurrentielle
+     → Justifie un abonnement premium
+
+  ✅ Fonctionnalité #3 : Analyse de Progression
+     → Fidélisation des utilisateurs
+     → Motivation long terme
+     → Nécessite d'avoir des données historiques
+
+🥉 PRIORITÉ MOYENNE (v2)
+  ✅ Fonctionnalité #8 : Assistant Théorique
+  ✅ Fonctionnalité #11 : Chatbot Dépannage Technique
+  ✅ Fonctionnalité #6 : Préparation Compétition
+
+🏅 PRIORITÉ BASSE (v3 ou selon retours utilisateurs)
+  ✅ Fonctionnalités #5, #7, #9, #10, #12
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                        💭 QUESTIONS À SE POSER ENSEMBLE
+═══════════════════════════════════════════════════════════════════════════════
+
+Avant de prendre une décision finale, voici les questions importantes à 
+discuter avec votre mari :
+
+1. BUDGET & RESSOURCES
+   • Quel budget pour l'intégration de l'AI ? (API OpenAI, Claude, etc.)
+   • Avez-vous les compétences techniques en interne ou besoin d'aide externe ?
+   • Quel délai pour le développement ?
+
+2. MODÈLE ÉCONOMIQUE
+   • L'AI sera-t-elle incluse dans l'abonnement de base ou en option premium ?
+   • Quel prix les utilisateurs sont-ils prêts à payer pour ces fonctionnalités ?
+   • Quelle fonctionnalité AI justifie le mieux un surcoût ?
+
+3. DONNÉES & CONFIDENTIALITÉ
+   • Comment allez-vous stocker les données des utilisateurs ?
+   • Politique de confidentialité pour les conversations avec l'AI ?
+   • RGPD et protection des données personnelles ?
+
+4. EXPÉRIENCE UTILISATEUR
+   • Interface vocale, textuelle, ou les deux ?
+   • L'AI doit-elle avoir une "personnalité" ? (ton amical, professionnel, etc.)
+   • Nom de l'assistant AI ? (ex: "Coach Équi", "Léa l'assistante", etc.)
+
+5. DIFFÉRENCIATION
+   • Quelles fonctionnalités AI vos concurrents ont-ils (si applicable) ?
+   • Quelle est votre proposition de valeur unique ?
+   • Comment communiquer sur l'AI dans votre marketing ?
+
+6. MESURE DU SUCCÈS
+   • Comment allez-vous mesurer si l'AI apporte de la valeur ?
+   • Quels KPIs suivre ? (taux d'utilisation, satisfaction, rétention...)
+   • Tests utilisateurs avant le lancement complet ?
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                            📝 NOTES & PROCHAINES ÉTAPES
+═══════════════════════════════════════════════════════════════════════════════
+
+Date de création : 12 janvier 2026
+
+PROCHAINES ÉTAPES SUGGÉRÉES :
+  1. Discussion avec votre mari sur les fonctionnalités prioritaires
+  2. Définition du budget et du planning
+  3. Choix de la technologie AI (OpenAI GPT, Claude, Gemini, etc.)
+  4. Création de wireframes/maquettes pour les interfaces AI
+  5. Rédaction des prompts et scénarios de conversation
+  6. Développement d'un prototype (POC) sur 1-2 fonctionnalités
+  7. Tests utilisateurs
+  8. Itération et amélioration
+  9. Lancement progressif (beta testeurs puis grand public)
+
+RESSOURCES À PRÉVOIR :
+  • Développeur avec expérience en intégration d'API AI
+  • Designer UX/UI pour les interfaces conversationnelles
+  • Budget API (coût par requête)
+  • Serveur/infrastructure pour stocker les conversations
+  • Temps de rédaction des prompts et fine-tuning
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🐴 N'hésitez pas à annoter ce document avec vos réflexions et décisions !
+
+═══════════════════════════════════════════════════════════════════════════════

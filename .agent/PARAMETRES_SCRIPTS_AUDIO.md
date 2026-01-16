@@ -22,6 +22,10 @@ Avant de soumettre un script, vérifier TOUS ces points :
 - [ ] Aucune mention de "scan corporel"
 - [ ] Aucune mention de "mâchoires" ou "dents"
 - [ ] Phrase encourageante en conclusion
+- [ ] Moment de réflexion (questions au cavalier) avant la fin
+- [ ] Conseils donnés AVANT les passages/exercices (pas après)
+- [ ] Feedbacks variés (pas toujours "Très bien" ou "Parfait")
+- [ ] Pas de consignes inutiles (ex: diagonal avant galop)
 
 ---
 
@@ -192,8 +196,6 @@ Change de main et reprends le galop à l'autre main.
 
 ---
 
-## 4. INTERDICTIONS (STYLE AUDIO)
-
 ### ❌ Phrases BANNIES
 
 | ❌ INTERDIT | ✅ ALTERNATIVE |
@@ -201,6 +203,32 @@ Change de main et reprends le galop à l'autre main.
 | "Scan corporel" | Intégrer directement : "Relâchez vos épaules, descendez vos talons" |
 | "Relâchez vos mâchoires et décrochez vos dents" | "Relâchez vos épaules, détendez votre dos" |
 | "Logique" | "Maintenant que..." / "C'est pour cela que..." |
+| "Sortez du coin" / "Traversez" | "Prenez la diagonale après le coin du petit côté" |
+| "Diagonale large" | "Diagonale H-F" ou "M-K" |
+
+---
+
+## 4bis. PRÉCISION GÉOGRAPHIQUE ET TEMPORELLE (CRITIQUE)
+
+### ✅ Diagonales et Tracés (Règle Galop 1-4)
+- **INTERDIT** : "Sortez du coin", "Coupez le manège".
+- **OBLIGATOIRE** : "Prenez la diagonale à la fin du petit côté", "Après le deuxième coin".
+- **RAPPEL** : Toujours préciser les lettres quand possible (H-F, M-K).
+
+### ✅ Temps de Replacement (Règle Pauses-Action)
+- **INTERDIT** : Laisser une pause courte pour un exercice à répéter.
+- **OBLIGATOIRE** : Si l'exercice demande de repartir d'un point précis (ex: "Refaites une serpentine"), il faut **INCLURE le temps de retour au pas** dans la pause (ex: ajouter 30s pour revenir au départ).
+- **FORMULE** : Pause = Temps d'action + Temps de retour au calme/départ.
+
+### ✅ Moment de Réflexion (Conclusion)
+- **OBLIGATOIRE** : Insérer un bloc **(XX:XX) Moment de réflexion** vers la fin de la séance.
+- **PLACEMENT CRITIQUE** : Ce moment doit se trouver **AVANT** la consigne finale de "Caresser le cheval" et la phase de repos/marche rênes longues finale. Le cavalier doit être encore concentré.
+- **CONTENU** : 2-3 questions pour que le cavalier analyse son ressenti ("As-tu senti... ?").
+- **BUT** : Ancrer le progrès avant le relâchement total.
+
+---
+
+## 5. INTERDICTIONS (STYLE AUDIO)
 
 ### ❌ Termes à éviter (selon niveau)
 - **G4-5+** : Éviter les métaphores enfantines (ex: "accordéon")
@@ -255,7 +283,316 @@ Accompagnez le mouvement et sentez l'énergie.
 
 ---
 
-## 6. CONSEIL SUPPLÉMENTAIRE
+## 6. COHÉRENCE ET OPTIMISATION DES SCRIPTS
+
+### ✅ Conseils AVANT les passages/exercices
+
+**Les conseils doivent être donnés AVANT l'action, pas après**
+
+```
+✅ BON :
+Si jamais ton cheval accélère, reprends doucement le contact pour ralentir.
+[Pause : 3 secondes]
+Si jamais il ralentit, ferme tes jambes pour maintenir l'impulsion.
+[Pause : 5 secondes]
+Engage-toi sur la ligne.
+[ATTENTE : 50 secondes]
+
+❌ MAUVAIS :
+Engage-toi sur la ligne.
+[ATTENTE : 50 secondes]
+Si jamais ton cheval accélère, reprends doucement le contact...
+```
+
+**Raison** : Le cavalier doit connaître les solutions AVANT de rencontrer le problème, pas après.
+
+### ✅ Feedbacks variés
+
+**Ne pas répéter toujours les mêmes mots d'encouragement**
+
+| ✅ À VARIER | ❌ À ÉVITER |
+|-------------|-------------|
+| "Super" | Toujours "Très bien" |
+| "C'est bien" | Toujours "Parfait" |
+| "Nickel" | Toujours "Excellent" |
+| "Impeccable" | Répétitions monotones |
+| "Parfait" | |
+| "Très bien" | |
+| "Excellent" | |
+
+**Règle** : Utiliser chaque feedback maximum 2 fois par séance. Varier pour maintenir l'engagement.
+
+### ✅ Cohérence des consignes
+
+**Ne pas donner de consignes inutiles qui alourdissent le dialogue**
+
+```
+❌ MAUVAIS :
+Change de main en passant par la diagonale.
+[Pause : 3 secondes]
+Change de diagonal.  ← INUTILE car galop juste après
+[Pause : 15 secondes]
+Prépare ton départ au galop.
+
+✅ BON :
+Change de main en passant par la diagonale.
+[Pause : 15 secondes]
+Prépare ton départ au galop.
+```
+
+**Règle générale** : Mentionner le changement de diagonal UNIQUEMENT si le cavalier va continuer au trot après le changement de main.
+
+**Autres exemples de consignes inutiles à éviter :**
+- Parler de la position au pas si le cavalier va partir au trot immédiatement après
+- Demander de vérifier l'incurvation si le cavalier va revenir au pas juste après
+- Donner des consignes techniques pendant un temps de récupération
+
+### ✅ Vérifications pédagogiques selon le niveau
+
+**Pour G2-3 et G3-4 UNIQUEMENT :**
+
+**Diagonal (trot enlevé) :**
+- 1ère fois : Explication complète
+- Changements de main suivants : Rappel simple "Change de diagonal"
+- Fréquence : 1 explication + rappels simples
+
+**Pied (galop) :**
+- 1er galop : Explication complète avec jambe isolée
+- Départs suivants : Rappel simple "Vérifie ton pied"
+- Fréquence : 1 explication + rappels simples
+
+**Pour G4-5 et au-dessus :**
+- Pas d'explication (automatismes acquis)
+- Éventuellement un rappel discret (1 fois max)
+
+### ✅ Type de trot selon le niveau
+
+**RÈGLE IMPORTANTE** : Le type de trot doit TOUJOURS être précisé explicitement dans les scripts.
+
+**Pour G2-3 et G3-4 :**
+- ✅ **Toujours préciser "trot enlevé"** (ex: "Passe au trot enlevé sur la piste")
+- ❌ **JAMAIS de trot assis** (trop difficile à ce niveau)
+- Le cavalier débutant doit se concentrer sur les figures, pas sur l'assiette
+
+**Pour G4-5 :**
+- ✅ **"Trot enlevé" par défaut** pour la majorité du travail
+- ✅ **"Trot assis" optionnel** sur certains exercices techniques
+- Formulation : "Si tu es à l'aise, tu peux essayer en trot assis"
+- Laisser le choix au cavalier
+
+**Pour G5-6 et au-dessus :**
+- ✅ **Alterner selon l'exercice** :
+  - **Trot ASSIS** pour les exercices techniques (cessions, épaule en dedans, transitions fines, etc.)
+  - **Trot ENLEVÉ** pour l'échauffement et les moments de récupération active
+- ✅ **Toujours préciser explicitement** "trot assis" ou "trot enlevé"
+- Le cavalier ne pensera pas à passer en trot assis si ce n'est pas demandé explicitement
+
+**Exemples de formulation :**
+```
+✅ BON (G2-3) :
+Passe au trot enlevé sur la piste.
+[Pause : 15 secondes]
+
+✅ BON (G4-5) :
+Passe au trot enlevé sur la piste.
+[Pause : 15 secondes]
+Si tu es à l'aise, tu peux essayer quelques foulées en trot assis.
+[Pause : 10 secondes]
+
+✅ BON (G5-6+) :
+Passe au trot assis pour cet exercice de cessions.
+[Pause : 15 secondes]
+
+❌ MAUVAIS (tous niveaux) :
+Passe au trot.  ← Type de trot non précisé
+[Pause : 15 secondes]
+```
+
+---
+
+## 7. RÈGLES SPÉCIFIQUES AUX SÉANCES D'OBSTACLE
+
+### ✅ Phase d'installation obligatoire
+
+**TOUTES les séances d'obstacle doivent commencer par une phase d'installation du parcours**
+
+**Durée** : 1-3 minutes selon la complexité
+
+**Contenu obligatoire :**
+1. Nombre total d'obstacles nécessaires
+2. Description de chaque obstacle (type, hauteur, position)
+3. Distances entre obstacles (en mètres et en foulées)
+4. Ordre logique d'installation
+5. Pause ou commande vocale "Continue" une fois installé
+
+**Exemple :**
+```
+## [INSTALLATION DU PARCOURS] (0:00 - 2:00)
+
+Avant de monter à cheval, installe ton parcours.
+[Pause : 5 secondes]
+
+Tu auras besoin de quatre obstacles alignés en ligne droite :
+[Pause : 3 secondes]
+
+Obstacle 1 : Une croix de cinquante centimètres.
+[Pause : 5 secondes]
+
+Obstacle 2 : Un vertical de cinquante-cinq centimètres, à dix-huit mètres du premier.
+[Pause : 5 secondes]
+
+Obstacle 3 : Un vertical de soixante centimètres, à dix-neuf mètres du deuxième.
+[Pause : 5 secondes]
+
+Obstacle 4 : Une croix de cinquante-cinq centimètres, à dix-huit mètres du troisième.
+[Pause : 5 secondes]
+
+Une fois ton parcours installé, monte à cheval et dis "Continue" pour reprendre.
+[Pause : 3 secondes]
+
+[ATTENTE : commande "Continue"]
+```
+
+### ✅ Hauteurs recommandées selon les Galops (FFE)
+
+**Respecter STRICTEMENT ces hauteurs pour éviter refus et barres qui tombent**
+
+| Niveau | Hauteur recommandée | Hauteur maximum |
+|--------|---------------------|-----------------|
+| **G2-3** | 50-60cm | 65cm |
+| **G3-4** | 55-65cm | 70cm |
+| **G4-5** | 65-75cm | 80cm |
+| **G5-6** | 75-85cm | 90cm |
+| **G6-7** | 85-95cm | 100cm |
+| **G7+** | 90-100cm | 110cm |
+
+**Règle d'or** : Mieux vaut réussir à 50cm que rater à 80cm.
+
+**Note à inclure dans chaque script :**
+```
+Les hauteurs indiquées sont des recommandations pour ce niveau.
+N'hésite pas à les ajuster selon ton cheval et ton aisance.
+En fin de séance, tu peux augmenter de cinq à dix centimètres si tu te sens à l'aise.
+```
+
+### ✅ Économie de matériel
+
+**Privilégier les parcours avec peu d'obstacles physiques**
+
+- ✅ 4-6 obstacles physiques maximum
+- ✅ Réutiliser les mêmes obstacles dans les 2 sens si possible
+- ✅ Lignes simples plutôt que parcours complexes
+- ✅ Penser au cavalier seul qui doit tout installer
+
+**Exemple bon :**
+- 4 obstacles en ligne = 8 passages possibles (aller-retour)
+- 5 obstacles en parcours simple = parcours complet
+
+**Exemple mauvais :**
+- 10 obstacles différents = trop de matériel
+- Parcours nécessitant de déplacer les obstacles entre exercices
+
+### ✅ Consignes pendant les passages d'obstacles
+
+**Rappel des règles spécifiques obstacle :**
+
+1. **Consignes AVANT l'engagement** (jamais pendant le saut)
+2. **Silences longs** pendant les passages (40-60 secondes)
+3. **Maximum 1-2 rappels généraux** pendant le passage (regard, position)
+4. **JAMAIS de consignes techniques précises** pendant le saut
+
+**Exemple :**
+```
+✅ BON :
+Si ton cheval accélère, reprends doucement le contact.
+[Pause : 3 secondes]
+Si il ralentit, ferme tes jambes pour maintenir l'impulsion.
+[Pause : 5 secondes]
+Engage-toi sur la ligne.
+[ATTENTE : 50 secondes]
+
+❌ MAUVAIS :
+Engage-toi sur la ligne.
+[ATTENTE : 20 secondes]
+Attention, ferme tes jambes maintenant !  ← Trop tard, déconcentre le cavalier
+```
+
+### ✅ Schémas visuels (à venir)
+
+**Pour l'instant :**
+- Description textuelle détaillée dans le script
+- Note : "Schéma visuel disponible sous le player audio"
+
+**À terme :**
+- Plan du manège vu du dessus
+- Obstacles différenciés (croix, verticaux, oxers)
+- Tracé avec flèches directionnelles
+- Distances en mètres et foulées
+- Numérotation claire
+
+### ✅ Évolution future : Pop-up d'installation (Phase 2)
+
+**Problème actuel :**
+- Le cavalier lance l'audio déjà à cheval
+- L'audio dit "descends et installe ton parcours" → illogique
+- Le cavalier doit mettre pause, descendre, installer, remonter
+- Perte de temps et frustration
+
+**Solution à implémenter :**
+
+**Pop-up AVANT de lancer l'audio** avec :
+- ⚠️ Avertissement "Installation requise"
+- 📋 Liste du matériel nécessaire (nombre d'obstacles, types, hauteurs)
+- 🗺️ Bouton "Voir le plan du parcours" → ouvre le schéma en grand
+- ✅ Bouton "J'ai compris, lancer la séance"
+
+**Exemple de pop-up :**
+```
+⚠️ INSTALLATION REQUISE
+
+Cette séance nécessite l'installation d'un parcours avant de commencer.
+
+📋 Matériel nécessaire :
+• 5 obstacles (2 verticaux, 1 oxer, 1 croix, 1 vertical)
+• Hauteurs recommandées : 65-75cm
+
+🗺️ [Voir le plan du parcours]
+
+Une fois votre parcours installé, montez à cheval et lancez la séance.
+
+[Annuler]  [J'ai compris, lancer la séance]
+```
+
+**Modifications des scripts audio :**
+- ❌ Supprimer la phase d'installation de l'audio
+- ✅ Commencer directement par l'introduction
+- ✅ Audio plus fluide sans pause forcée
+
+**Implémentation technique :**
+- Badge "Installation requise" visible sur la carte de séance
+- Pop-up au clic sur "Commencer la séance"
+- Fichier JSON avec métadonnées pour chaque séance :
+
+```json
+{
+  "seance_id": "parcours_type_club_g4_5",
+  "installation_requise": true,
+  "materiel": {
+    "obstacles": 5,
+    "types": ["2 verticaux", "1 oxer", "1 croix", "1 vertical"],
+    "hauteurs": "65-75cm",
+    "plan_visuel": "/parcours/parcours_club_g4_5.png"
+  }
+}
+```
+
+**Timeline :**
+- 🔜 **Phase 1 (actuel)** : Phase d'installation dans l'audio (1-2 min)
+- 🔜 **Phase 2 (quand visuels prêts)** : Pop-up + suppression de la phase audio
+
+---
+
+## 8. CONSEIL SUPPLÉMENTAIRE
 
 **"L'originalité doit reposer sur l'intelligence du tracé"**
 
@@ -267,8 +604,36 @@ Ne pas proposer toujours les mêmes cercles et diagonales. Varier :
 
 ---
 
-## 📌 RAPPEL FINAL
+### 9. COMBATTRE L'ENNUI (VARIÉTÉ & LUDIQUE)
+Le dressage classique peut être rébarbatif.
+- **RÈGLE :** Chaque séance doit contenir au moins un exercice au tracé "original" ou ludique.
+- **Exemples :**
+  - Remplacer un simple cercle par un **Huit de Chiffre**.
+  - Remplacer une ligne droite par une **Serpentine douce**.
+  - Utiliser des transitions à des endroits précis (lettres) sous forme de "Jeu de la précision".
+- **Interdit :** Enchaîner 15 minutes de "Cercle en A, Cercle en C" sans variation.
 
-**Avant de valider un script, relire TOUS les points de la checklist en haut de ce document.**
+### 10. TUTOIEMENT OBLIGATOIRE
+EquiCoach est un coach sportif proche du cavalier.
+- **RÈGLE :** Utiliser exclusivement le **TU**.
+- **Interdit :** Le vouvoiement ("Vous").
+- **Exemple :** "Redresse-toi" (pas "Redressez-vous").
 
-**Objectif : Zéro correction nécessaire après génération du script.**
+### 11. CONCLUSION CHALEUREUSE
+La fin de séance ne doit pas être expéditive.
+- **RÈGLE :** Terminer par un message bienveillant qui valorise l'effort du couple et invite à revenir.
+- **Interdit :** "C'est fini au revoir."
+- **Exemple :** "Ce travail paiera sur le long terme. Prends le temps de caresser ton cheval. Merci pour ton écoute et à très bientôt."
+
+### 12. RELECTURE OBLIGATOIRE
+Avant de valider :
+- Relire à voix haute (rythme).
+- Vérifier la symétrie des exercices (Gauche/Droite).
+- Vérifier le tutoiement intégral.
+
+### 13. SYMÉTRIE OBLIGATOIRE (RÈGLE D'OR)
+Pour garantir le développement physique harmonieux du cheval :
+- **RÈGLE 1 (TEMPS) :** Le temps de travail doit être rigoureusement identique à main gauche et à main droite.
+- **RÈGLE 2 (CONTENU) :** Les exercices doivent être strictement les mêmes d'une main à l'autre (mêmes figures, mêmes demandes).
+- **RÈGLE 3 (STRUCTURE) :** Si un exercice dure 3 min à gauche, il DOIT durer 3 min à droite (ajuster les pauses si besoin).
+- **EXCEPTION :** Sauf si l'objectif explicite de la séance est de corriger une dissymétrie (rare et signalé).

@@ -1,13 +1,10 @@
 const SeancesData = [
-    // ====== TECHNIQUE CLASSIQUE (65 séances) ======
-
-    // DRESSAGE (25 séances : 18 + 7 nouvelles)
+    // ====== DRESSAGE (24 séances) ======
     { id: 1, type: "Technique classique", nom: "Souplesse latérale - Débutant", discipline: "Dressage", theme: "Souplesse", niveau: "G2-3", duree: "30min", intensite: "Moyenne", objectif: "Premiers exercices de flexion et incurvation" },
     { id: 2, type: "Technique classique", nom: "Transitions fluides", discipline: "Dressage", theme: "Transitions", niveau: "G4-5", duree: "20min", intensite: "Légère", objectif: "Améliorer les transitions montantes et descendantes" },
     { id: 3, type: "Technique classique", nom: "Rectitude et ligne droite", discipline: "Dressage", theme: "Rectitude", niveau: "G4-5", duree: "30min", intensite: "Moyenne", objectif: "Travailler la symétrie et l'alignement" },
-    { id: 4, type: "Technique classique", nom: "Impulsion au trot", discipline: "Dressage", theme: "Impulsion", niveau: "G3-4", duree: "20min", intensite: "Moyenne", objectif: "Développer l'énergie et le rebond" },
+    { id: 4, type: "Technique classique", nom: "Impulsion au trot", discipline: "Dressage", theme: "Impulsion", niveau: "G3-4+", duree: "20min", intensite: "Moyenne", objectif: "Développer l'énergie et le rebond" },
     { id: 5, type: "Technique classique", nom: "Cercles et précision", discipline: "Dressage", theme: "Précision", niveau: "G2-3", duree: "30min", intensite: "Légère", objectif: "Maîtriser la trajectoire sur cercles" },
-    { id: 6, type: "Technique classique", nom: "Décontraction et étirements", discipline: "Dressage", theme: "Décontraction", niveau: "G2-3", duree: "20min", intensite: "Légère", objectif: "Détendre le cheval et favoriser l'extension" },
     { id: 7, type: "Technique classique", nom: "Épaule en dedans - Introduction", discipline: "Dressage", theme: "Souplesse", niveau: "G7+", duree: "30min", intensite: "Moyenne", objectif: "Initiation à l'épaule en dedans au pas" },
     { id: 8, type: "Technique classique", nom: "Galop rassemblé", discipline: "Dressage", theme: "Rassembler", niveau: "G6-7", duree: "45min", intensite: "Intense", objectif: "Développer l'équilibre et le rassembler" },
     { id: 9, type: "Technique classique", nom: "Cessions à la jambe - Pas et trot", discipline: "Dressage", theme: "Latéralité", niveau: "G5-6", duree: "30min", intensite: "Moyenne", objectif: "Maîtriser les cessions au pas (G5) et au trot (G6)" },
@@ -18,7 +15,7 @@ const SeancesData = [
     { id: 14, type: "Technique classique", nom: "Séance découverte dressage", discipline: "Dressage", theme: "Initiation", niveau: "G2-3", duree: "30min", intensite: "Légère", objectif: "Première approche du dressage" },
     { id: 15, type: "Technique classique", nom: "Contre-galop contrôlé", discipline: "Dressage", theme: "Équilibre", niveau: "G6-7", duree: "30min", intensite: "Moyenne", objectif: "Travailler le contre-galop sur courbe large (G6)" },
     { id: 16, type: "Technique classique", nom: "Enchaînements figures imposées", discipline: "Dressage", theme: "Précision", niveau: "G7+", duree: "45min", intensite: "Intense", objectif: "Reprise de dressage Club 1 ou Amateur" },
-    { id: 17, type: "Technique classique", nom: "Travail en extension d'encolure", discipline: "Dressage", theme: "Décontraction", niveau: "G3-4", duree: "20min", intensite: "Légère", objectif: "Favoriser l'extension et la musculation dorsale" },
+    { id: 17, type: "Technique classique", nom: "Travail en extension d'encolure", discipline: "Dressage", theme: "Décontraction", niveau: "G3-4+", duree: "20min", intensite: "Légère", objectif: "Favoriser l'extension et la musculation dorsale" },
     { id: 18, type: "Technique classique", nom: "Session équilibre et assiette", discipline: "Dressage", theme: "Position", niveau: "G4-5", duree: "30min", intensite: "Moyenne", objectif: "Améliorer la position et l'équilibre du cavalier" },
     { id: 41, type: "Technique classique", nom: "Voltes et petits cercles", discipline: "Dressage", theme: "Souplesse", niveau: "G4-5", duree: "30min", intensite: "Moyenne", objectif: "Travailler la souplesse sur petits cercles" },
     { id: 42, type: "Technique classique", nom: "Arrêts et immobilité", discipline: "Dressage", theme: "Équilibre", niveau: "G2-3", duree: "20min", intensite: "Légère", objectif: "Perfectionner les arrêts carrés" },
@@ -28,24 +25,24 @@ const SeancesData = [
     { id: 46, type: "Technique classique", nom: "Courbes et contre-courbes", discipline: "Dressage", theme: "Souplesse", niveau: "G3-4", duree: "30min", intensite: "Moyenne", objectif: "Enchaîner courbes et changements d'incurvation" },
     { id: 47, type: "Technique classique", nom: "Galop juste et départs précis", discipline: "Dressage", theme: "Galop", niveau: "G3-4", duree: "30min", intensite: "Moyenne", objectif: "Obtenir des départs au galop nets et justes" },
 
-    // TRAVAIL À PIED
-    { id: 19, type: "Technique classique", nom: "Longe débutant - Les bases", discipline: "Travail à pied", theme: "Longe", niveau: "G2-3", duree: "20min", intensite: "Légère", objectif: "Initiation au travail en longe" },
-    { id: 20, type: "Technique classique", nom: "Désensibilisation et confiance", discipline: "Travail à pied", theme: "Confiance", niveau: "G2-3", duree: "15min", intensite: "Légère", objectif: "Habituer le cheval aux stimuli extérieurs" },
-    { id: 21, type: "Technique classique", nom: "Longe avec transitions", discipline: "Travail à pied", theme: "Longe", niveau: "G4-5", duree: "30min", intensite: "Moyenne", objectif: "Perfectionner les transitions en longe" },
-    { id: 22, type: "Technique classique", nom: "Travail en liberté - Initiation", discipline: "Travail à pied", theme: "Liberté", niveau: "G5-6", duree: "20min", intensite: "Moyenne", objectif: "Premiers exercices sans longe" },
-    { id: 23, type: "Technique classique", nom: "Gymnastique au sol", discipline: "Travail à pied", theme: "Gymnastique", niveau: "G3-4", duree: "15min", intensite: "Moyenne", objectif: "Barres au sol et cavalettis" },
-    { id: 24, type: "Technique classique", nom: "Longues rênes - Introduction", discipline: "Travail à pied", theme: "Longues rênes", niveau: "G7+", duree: "30min", intensite: "Moyenne", objectif: "Découverte des longues rênes (Galop 7)" },
-    { id: 25, type: "Technique classique", nom: "Renforcement musculaire à pied", discipline: "Travail à pied", theme: "Muscu", niveau: "G4-5", duree: "20min", intensite: "Moyenne", objectif: "Exercices de musculation du cheval" },
-    { id: 26, type: "Technique classique", nom: "Travail en main avancé", discipline: "Travail à pied", theme: "Technique", niveau: "G7+", duree: "30min", intensite: "Intense", objectif: "Travail en main avancé type dressage (post-Galop 7)" },
-    { id: 48, type: "Technique classique", nom: "Longe aux enrênements", discipline: "Travail à pied", theme: "Longe", niveau: "G5-6", duree: "30min", intensite: "Moyenne", objectif: "Utilisation des enrênements en toute sécurité" },
-    { id: 49, type: "Technique classique", nom: "Travail du dos en longe", discipline: "Travail à pied", theme: "Muscu", niveau: "G4-5", duree: "25min", intensite: "Moyenne", objectif: "Muscler la ligne du dessus en longe" },
-    { id: 50, type: "Technique classique", nom: "Sauts en liberté", discipline: "Travail à pied", theme: "Gymnastique", niveau: "G4-5", duree: "20min", intensite: "Moyenne", objectif: "Sauts d'obstacles en liberté" },
-    { id: 51, type: "Technique classique", nom: "Exercices de respect à pied", discipline: "Travail à pied", theme: "Éducation", niveau: "G2-3", duree: "15min", intensite: "Légère", objectif: "Établir le respect et les limites" },
-    { id: 52, type: "Technique classique", nom: "Parcours d'obstacles à pied", discipline: "Travail à pied", theme: "Technique", niveau: "G3-4", duree: "20min", intensite: "Légère", objectif: "Franchir des obstacles variés en main" },
-    { id: 53, type: "Technique classique", nom: "Stretching et mobilisation", discipline: "Travail à pied", theme: "Bien-être", niveau: "G3-4", duree: "15min", intensite: "Légère", objectif: "Étirements et mobilisations articulaires" },
-    { id: 54, type: "Technique classique", nom: "Travail de la voix en longe", discipline: "Travail à pied", theme: "Communication", niveau: "G2-3", duree: "20min", intensite: "Légère", objectif: "Affiner les ordres vocaux" },
+    // ====== TRAVAIL AU SOL (15 séances) ======
+    { id: 19, type: "Technique classique", nom: "Longe débutant - Les bases", discipline: "Travail au sol", theme: "Longe", niveau: "G2-3", duree: "20min", intensite: "Légère", objectif: "Initiation au travail en longe" },
+    { id: 20, type: "Technique classique", nom: "Désensibilisation et confiance", discipline: "Travail au sol", theme: "Confiance", niveau: "G2-3", duree: "15min", intensite: "Légère", objectif: "Habituer le cheval aux stimuli extérieurs" },
+    { id: 21, type: "Technique classique", nom: "Longe avec transitions", discipline: "Travail au sol", theme: "Longe", niveau: "G4-5", duree: "30min", intensite: "Moyenne", objectif: "Perfectionner les transitions en longe" },
+    { id: 22, type: "Technique classique", nom: "Travail en liberté - Initiation", discipline: "Travail au sol", theme: "Liberté", niveau: "G5-6", duree: "20min", intensite: "Moyenne", objectif: "Premiers exercices sans longe" },
+    { id: 23, type: "Technique classique", nom: "Gymnastique au sol", discipline: "Travail au sol", theme: "Gymnastique", niveau: "G3-4", duree: "15min", intensite: "Moyenne", objectif: "Barres au sol et cavalettis" },
+    { id: 24, type: "Technique classique", nom: "Longues rênes - Introduction", discipline: "Travail au sol", theme: "Longues rênes", niveau: "G7+", duree: "30min", intensite: "Moyenne", objectif: "Découverte des longues rênes (Galop 7)" },
+    { id: 25, type: "Technique classique", nom: "Renforcement musculaire à pied", discipline: "Travail au sol", theme: "Muscu", niveau: "G4-5", duree: "20min", intensite: "Moyenne", objectif: "Exercices de musculation du cheval" },
+    { id: 26, type: "Technique classique", nom: "Travail en main avancé", discipline: "Travail au sol", theme: "Technique", niveau: "G7+", duree: "30min", intensite: "Intense", objectif: "Travail en main avancé type dressage (post-Galop 7)" },
+    { id: 48, type: "Technique classique", nom: "Longe aux enrênements", discipline: "Travail au sol", theme: "Longe", niveau: "G5-6", duree: "30min", intensite: "Moyenne", objectif: "Utilisation des enrênements en toute sécurité" },
+    { id: 49, type: "Technique classique", nom: "Travail du dos en longe", discipline: "Travail au sol", theme: "Muscu", niveau: "G4-5", duree: "25min", intensite: "Moyenne", objectif: "Muscler la ligne du dessus en longe" },
+    { id: 50, type: "Technique classique", nom: "Sauts en liberté", discipline: "Travail au sol", theme: "Gymnastique", niveau: "G4-5", duree: "20min", intensite: "Moyenne", objectif: "Sauts d'obstacles en liberté" },
+    { id: 51, type: "Technique classique", nom: "Exercices de respect à pied", discipline: "Travail au sol", theme: "Éducation", niveau: "G2-3", duree: "15min", intensite: "Légère", objectif: "Établir le respect et les limites" },
+    { id: 52, type: "Technique classique", nom: "Parcours d'obstacles à pied", discipline: "Travail au sol", theme: "Technique", niveau: "G3-4", duree: "20min", intensite: "Légère", objectif: "Franchir des obstacles variés en main" },
+    { id: 53, type: "Technique classique", nom: "Stretching et mobilisation", discipline: "Travail au sol", theme: "Bien-être", niveau: "G3-4", duree: "15min", intensite: "Légère", objectif: "Étirements et mobilisations articulaires" },
+    { id: 54, type: "Technique classique", nom: "Travail de la voix en longe", discipline: "Travail au sol", theme: "Communication", niveau: "G2-3", duree: "20min", intensite: "Légère", objectif: "Affiner les ordres vocaux" },
 
-    // OBSTACLE
+    // ====== OBSTACLE (15 séances) ======
     { id: 27, type: "Technique classique", nom: "Premiers sauts - Cavalettis", discipline: "Obstacle", theme: "Initiation", niveau: "G2-3", duree: "30min", intensite: "Moyenne", objectif: "Découvrir le saut en toute sécurité" },
     { id: 28, type: "Technique classique", nom: "Ligne d'obstacles simples", discipline: "Obstacle", theme: "Technique", niveau: "G3-4", duree: "30min", intensite: "Moyenne", objectif: "Enchaîner des obstacles en ligne" },
     { id: 29, type: "Technique classique", nom: "Parcours type club", discipline: "Obstacle", theme: "Parcours", niveau: "G4-5", duree: "45min", intensite: "Intense", objectif: "Parcours complet avec virages" },
@@ -62,19 +59,34 @@ const SeancesData = [
     { id: 58, type: "Technique classique", nom: "Spa et détente à l'obstacle", discipline: "Obstacle", theme: "Plaisir", niveau: "G4-5", duree: "30min", intensite: "Légère", objectif: "Séance fun sans pression" },
     { id: 59, type: "Technique classique", nom: "Cross indoor - obstacles naturels", discipline: "Obstacle", theme: "Polyvalence", niveau: "G5-6", duree: "45min", intensite: "Intense", objectif: "Obstacles rustiques en carrière" },
 
-    // BALADE
-    { id: 37, type: "Technique classique", nom: "Balade en extérieur - Découverte", discipline: "Balade", theme: "Initiation", niveau: "G2-3", duree: "45min", intensite: "Légère", objectif: "Sortie calme en extérieur" },
-    { id: 38, type: "Technique classique", nom: "Balade avec exercices terrain varié", discipline: "Balade", theme: "Polyvalence", niveau: "G4-5", duree: "60min", intensite: "Moyenne", objectif: "Travail technique en extérieur" },
-    { id: 39, type: "Technique classique", nom: "Balade endurance active", discipline: "Balade", theme: "Endurance", niveau: "G5-6", duree: "60min", intensite: "Intense", objectif: "Sortie longue avec variations d'allures" },
-    { id: 40, type: "Technique classique", nom: "Mini-TREC en extérieur", discipline: "Balade", theme: "Technique", niveau: "G4-5", duree: "45min", intensite: "Moyenne", objectif: "Obstacles naturels et orientation" },
-    { id: 60, type: "Technique classique", nom: "Balade découverte débutant", discipline: "Balade", theme: "Initiation", niveau: "G2-3", duree: "30min", intensite: "Légère", objectif: "Première sortie courte en extérieur" },
-    { id: 61, type: "Technique classique", nom: "Balade montées et descentes", discipline: "Balade", theme: "Équilibre", niveau: "G3-4", duree: "45min", intensite: "Moyenne", objectif: "Travailler l'équilibre en terrain vallonné" },
-    { id: 62, type: "Technique classique", nom: "Balade galop en extérieur", discipline: "Balade", theme: "Cardio", niveau: "G4-5", duree: "45min", intensite: "Intense", objectif: "Galops contrôlés en ligne droite" },
-    { id: 63, type: "Technique classique", nom: "Balade contemplative au pas", discipline: "Balade", theme: "Détente", niveau: "G2-3", duree: "60min", intensite: "Légère", objectif: "Balade zen et relaxante" },
-    { id: 64, type: "Technique classique", nom: "Franchissements naturels", discipline: "Balade", theme: "Technique", niveau: "G4-5", duree: "45min", intensite: "Moyenne", objectif: "Troncs, fossés, gués en extérieur" },
-    { id: 65, type: "Technique classique", nom: "Sortie autonomie et confiance", discipline: "Balade", theme: "Mental", niveau: "G3-4", duree: "45min", intensite: "Moyenne", objectif: "Renforcer l'autonomie du cheval" },
+    // ====== CROSS & EXTÉRIEUR SPORTIF (13 séances) ======
+    { id: 101, type: "Technique classique", nom: "Introduction au galop de cross", discipline: "Cross & Extérieur sportif", theme: "Galop de cross", niveau: "G3-4", duree: "30min", intensite: "Moyenne", objectif: "Découvrir le galop d'attaque et maintenir un rythme régulier" },
+    { id: 102, type: "Technique classique", nom: "Galop de cross - Rythme et régularité", discipline: "Cross & Extérieur sportif", theme: "Galop de cross", niveau: "G4-5", duree: "35min", intensite: "Moyenne", objectif: "Maintenir un rythme constant sur de longues distances" },
+    { id: 103, type: "Technique classique", nom: "Condition physique pour le cross", discipline: "Cross & Extérieur sportif", theme: "Condition physique", niveau: "G4-5", duree: "45min", intensite: "Intense", objectif: "Développer l'endurance et le système cardio-respiratoire" },
+    { id: 107, type: "Technique classique", nom: "Gymnastique au galop - Préparation cross", discipline: "Cross & Extérieur sportif", theme: "Gymnastique", niveau: "G3-4", duree: "30min", intensite: "Moyenne", objectif: "Travailler la gymnastique au galop avec barres au sol" },
+    { id: 108, type: "Technique classique", nom: "Cavalettis au galop - Distances cross", discipline: "Cross & Extérieur sportif", theme: "Gymnastique", niveau: "G4-5", duree: "35min", intensite: "Moyenne", objectif: "Habituer le cheval aux foulées et distances de cross" },
+    { id: 109, type: "Technique classique", nom: "Sauts isolés - Technique de cross", discipline: "Cross & Extérieur sportif", theme: "Technique", niveau: "G4-5", duree: "40min", intensite: "Moyenne", objectif: "Développer la franchise et la technique sur sauts isolés" },
+    { id: 112, type: "Technique classique", nom: "Initiation aux troncs et obstacles fixes", discipline: "Cross & Extérieur sportif", theme: "Obstacles naturels", niveau: "G3-4", duree: "30min", intensite: "Moyenne", objectif: "Découvrir les obstacles fixes et développer la confiance" },
+    { id: 113, type: "Technique classique", nom: "Passage d'eau et gués", discipline: "Cross & Extérieur sportif", theme: "Obstacles naturels", niveau: "G3-4", duree: "30min", intensite: "Moyenne", objectif: "Apprendre à franchir l'eau et désensibiliser le cheval" },
+    { id: 114, type: "Technique classique", nom: "Sauts en montée et descente", discipline: "Cross & Extérieur sportif", theme: "Obstacles naturels", niveau: "G4-5", duree: "35min", intensite: "Moyenne", objectif: "Gérer l'équilibre et sauter dans les dénivelés" },
+    { id: 126, type: "Technique classique", nom: "Franchissements naturels en extérieur", discipline: "Cross & Extérieur sportif", theme: "Obstacles naturels", niveau: "G4-5", duree: "45min", intensite: "Moyenne", objectif: "Troncs, fossés, gués en extérieur" },
+    { id: 118, type: "Technique classique", nom: "Mini-parcours de cross débutant", discipline: "Cross & Extérieur sportif", theme: "Parcours", niveau: "G3-4", duree: "40min", intensite: "Moyenne", objectif: "Réaliser un premier mini-parcours de cross (4-6 obstacles)" },
+    { id: 119, type: "Technique classique", nom: "Simulation de cross en carrière", discipline: "Cross & Extérieur sportif", theme: "Parcours", niveau: "G4-5", duree: "45min", intensite: "Intense", objectif: "Simuler un parcours de cross en carrière" },
+    { id: 124, type: "Technique classique", nom: "Récupération active post-cross", discipline: "Cross & Extérieur sportif", theme: "Récupération", niveau: "G3+", duree: "30min", intensite: "Légère", objectif: "Gérer la récupération après un effort intense" },
 
-    // THÉMATIQUE SPÉCIFIQUE
+    // ====== DÉTENTE & BIEN-ÊTRE (10 séances) ======
+    { id: 6, type: "Technique classique", nom: "Décontraction et étirements", discipline: "Détente & Bien-être", theme: "Décontraction", niveau: "G2-3+", duree: "20min", intensite: "Légère", objectif: "Détendre le cheval et favoriser l'extension" },
+    { id: 127, type: "Technique classique", nom: "Détente au pas - Séance zen", discipline: "Détente & Bien-être", theme: "Détente", niveau: "G2-3+", duree: "30min", intensite: "Légère", objectif: "Séance calme et relaxante au pas" },
+    { id: 128, type: "Technique classique", nom: "Échauffement doux et progressif", discipline: "Détente & Bien-être", theme: "Échauffement", niveau: "G2-3+", duree: "15min", intensite: "Légère", objectif: "Échauffer en douceur pour les jours froids" },
+    { id: 129, type: "Technique classique", nom: "Retour au calme après effort", discipline: "Détente & Bien-être", theme: "Récupération", niveau: "G3+", duree: "20min", intensite: "Légère", objectif: "Détendre après une séance intense" },
+    { id: 130, type: "Technique classique", nom: "Séance plaisir sans objectif", discipline: "Détente & Bien-être", theme: "Plaisir", niveau: "G2-3+", duree: "30min", intensite: "Légère", objectif: "Juste pour le plaisir de monter" },
+    { id: 131, type: "Technique classique", nom: "Connexion et complicité", discipline: "Détente & Bien-être", theme: "Relation", niveau: "G2-3+", duree: "25min", intensite: "Légère", objectif: "Renforcer la relation cheval-cavalier" },
+    { id: 132, type: "Technique classique", nom: "Stretching monté - Extension d'encolure", discipline: "Détente & Bien-être", theme: "Stretching", niveau: "G3-4+", duree: "20min", intensite: "Légère", objectif: "Étirements et assouplissement monté" },
+    { id: 133, type: "Technique classique", nom: "Récupération active douce", discipline: "Détente & Bien-être", theme: "Récupération", niveau: "G3-4+", duree: "25min", intensite: "Légère", objectif: "Récupération en douceur" },
+    { id: 134, type: "Technique classique", nom: "Massage et relaxation à pied", discipline: "Détente & Bien-être", theme: "Bien-être", niveau: "G2-3+", duree: "15min", intensite: "Légère", objectif: "Massage et détente à pied" },
+    { id: 135, type: "Technique classique", nom: "Séance bien-être après compétition", discipline: "Détente & Bien-être", theme: "Récupération", niveau: "G3+", duree: "25min", intensite: "Légère", objectif: "Détente après une compétition" },
+
+    // ====== THÉMATIQUE SPÉCIFIQUE (15 séances) ======
     { id: 66, type: "Thématique spécifique", nom: "Focus cadence régulière", discipline: "Transversal", theme: "Rythme", niveau: "G3-4", duree: "30min", intensite: "Moyenne", objectif: "Stabiliser la cadence aux 3 allures" },
     { id: 67, type: "Thématique spécifique", nom: "Engagement des postérieurs", discipline: "Transversal", theme: "Impulsion", niveau: "G4-5", duree: "30min", intensite: "Moyenne", objectif: "Activer l'arrière-main et la propulsion" },
     { id: 68, type: "Thématique spécifique", nom: "Musculation du dos", discipline: "Transversal", theme: "Muscu", niveau: "G3-4", duree: "30min", intensite: "Moyenne", objectif: "Renforcer la ligne du dessus" },
@@ -91,19 +103,19 @@ const SeancesData = [
     { id: 79, type: "Thématique spécifique", nom: "Variations d'amplitude", discipline: "Transversal", theme: "Contrôle", niveau: "G4-5", duree: "30min", intensite: "Moyenne", objectif: "Maîtriser allongements et raccourcis" },
     { id: 80, type: "Thématique spécifique", nom: "Stabilité de l'allure", discipline: "Transversal", theme: "Régularité", niveau: "G3-4", duree: "20min", intensite: "Légère", objectif: "Maintenir une allure constante" },
 
-    // MISE EN SELLE (10 séances)
-    { id: 91, type: "Thématique spécifique", nom: "Travail de l'assiette et équilibre", discipline: "Transversal", theme: "Position", niveau: "G2-3", duree: "30min", intensite: "Moyenne", objectif: "Améliorer la stabilité et l'équilibre en selle" },
-    { id: 92, type: "Thématique spécifique", nom: "Indépendance des aides", discipline: "Transversal", theme: "Technique", niveau: "G4-5", duree: "30min", intensite: "Moyenne", objectif: "Dissocier jambes, mains et assiette" },
-    { id: 93, type: "Thématique spécifique", nom: "Exercices sans étriers", discipline: "Transversal", theme: "Équilibre", niveau: "G3-4", duree: "20min", intensite: "Intense", objectif: "Renforcer l'assiette et la fixité des jambes" },
-    { id: 94, type: "Thématique spécifique", nom: "Mobilité et souplesse en selle", discipline: "Transversal", theme: "Souplesse", niveau: "G2-3", duree: "20min", intensite: "Légère", objectif: "Assouplir le cavalier et améliorer sa décontraction" },
-    { id: 95, type: "Thématique spécifique", nom: "Coordination jambes-mains-assiette", discipline: "Transversal", theme: "Technique", niveau: "G4-5", duree: "30min", intensite: "Moyenne", objectif: "Harmoniser l'utilisation des aides" },
-    { id: 96, type: "Thématique spécifique", nom: "Exercices ludiques d'équilibre", discipline: "Transversal", theme: "Équilibre", niveau: "G2-3", duree: "25min", intensite: "Légère", objectif: "Jeux et exercices pour améliorer l'équilibre" },
-    { id: 97, type: "Thématique spécifique", nom: "Assiette au galop", discipline: "Transversal", theme: "Position", niveau: "G3-4", duree: "30min", intensite: "Moyenne", objectif: "Stabiliser l'assiette au galop" },
-    { id: 98, type: "Thématique spécifique", nom: "Fixité du haut du corps", discipline: "Transversal", theme: "Position", niveau: "G4-5", duree: "25min", intensite: "Moyenne", objectif: "Améliorer la stabilité des épaules et des mains" },
-    { id: 99, type: "Thématique spécifique", nom: "Descente de jambes et d'assiette", discipline: "Transversal", theme: "Position", niveau: "G3-4", duree: "20min", intensite: "Légère", objectif: "Approfondir l'assiette et allonger les jambes" },
-    { id: 100, type: "Thématique spécifique", nom: "Respiration et décontraction du cavalier", discipline: "Transversal", theme: "Mental", niveau: "G2-3", duree: "20min", intensite: "Légère", objectif: "Apprendre à se détendre et respirer en selle" },
+    // ====== MISE EN SELLE (10 séances) ======
+    { id: 91, type: "Thématique spécifique", nom: "Travail de l'assiette et équilibre", discipline: "Transversal", theme: "Position", niveau: "G2-3+", duree: "30min", intensite: "Moyenne", objectif: "Améliorer la stabilité et l'équilibre en selle" },
+    { id: 92, type: "Thématique spécifique", nom: "Indépendance des aides", discipline: "Transversal", theme: "Technique", niveau: "G4-5+", duree: "30min", intensite: "Moyenne", objectif: "Dissocier jambes, mains et assiette" },
+    { id: 93, type: "Thématique spécifique", nom: "Exercices sans étriers", discipline: "Transversal", theme: "Équilibre", niveau: "G3-4+", duree: "20min", intensite: "Intense", objectif: "Renforcer l'assiette et la fixité des jambes" },
+    { id: 94, type: "Thématique spécifique", nom: "Mobilité et souplesse en selle", discipline: "Transversal", theme: "Souplesse", niveau: "G2-3+", duree: "20min", intensite: "Légère", objectif: "Assouplir le cavalier et améliorer sa décontraction" },
+    { id: 95, type: "Thématique spécifique", nom: "Coordination jambes-mains-assiette", discipline: "Transversal", theme: "Technique", niveau: "G4-5+", duree: "30min", intensite: "Moyenne", objectif: "Harmoniser l'utilisation des aides" },
+    { id: 96, type: "Thématique spécifique", nom: "Exercices ludiques d'équilibre", discipline: "Transversal", theme: "Équilibre", niveau: "G2-3+", duree: "25min", intensite: "Légère", objectif: "Jeux et exercices pour améliorer l'équilibre" },
+    { id: 97, type: "Thématique spécifique", nom: "Assiette au galop", discipline: "Transversal", theme: "Position", niveau: "G3-4+", duree: "30min", intensite: "Moyenne", objectif: "Stabiliser l'assiette au galop" },
+    { id: 98, type: "Thématique spécifique", nom: "Fixité du haut du corps", discipline: "Transversal", theme: "Position", niveau: "G4-5+", duree: "25min", intensite: "Moyenne", objectif: "Améliorer la stabilité des épaules et des mains" },
+    { id: 99, type: "Thématique spécifique", nom: "Descente de jambes et d'assiette", discipline: "Transversal", theme: "Position", niveau: "G3-4+", duree: "20min", intensite: "Légère", objectif: "Approfondir l'assiette et allonger les jambes" },
+    { id: 100, type: "Thématique spécifique", nom: "Respiration et décontraction du cavalier", discipline: "Transversal", theme: "Mental", niveau: "G2-3+", duree: "20min", intensite: "Légère", objectif: "Apprendre à se détendre et respirer en selle" },
 
-    // RÉSOLUTION DE PROBLÈME
+    // ====== RÉSOLUTION DE PROBLÈME (10 séances) ======
     { id: 81, type: "Résolution de problème", nom: "Cheval qui tire sur la main", discipline: "Transversal", theme: "Contact", niveau: "G3+", duree: "30min", intensite: "Moyenne", objectif: "Rééquilibrer et alléger le contact" },
     { id: 82, type: "Résolution de problème", nom: "Cheval précipité/speed", discipline: "Transversal", theme: "Calme", niveau: "G3+", duree: "30min", intensite: "Légère", objectif: "Retrouver le calme et la cadence" },
     { id: 83, type: "Résolution de problème", nom: "Manque d'impulsion", discipline: "Transversal", theme: "Énergie", niveau: "G3+", duree: "30min", intensite: "Moyenne", objectif: "Réveiller l'énergie et la réactivité" },

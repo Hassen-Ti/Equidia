@@ -6,7 +6,6 @@ LISTE DES SÉANCES EQUICOACH
 3 - Rectitude et ligne droite (30min) - G4-5
 4 - Impulsion au trot (20min) - G3-4
 5 - Cercles et précision (30min) - G2-3
-6 - Décontraction et étirements (20min) - G2-3
 7 - Épaule en dedans - Introduction (30min) - G7+
 8 - Galop rassemblé (45min) - G6-7
 9 - Cessions à la jambe - Pas et trot (30min) - G5-6
@@ -27,22 +26,30 @@ LISTE DES SÉANCES EQUICOACH
 46 - Courbes et contre-courbes (30min) - G3-4
 47 - Galop juste et départs précis (30min) - G3-4
 
-=== TRAVAIL À PIED ===
+=== TRAVAIL AU SOL ===
+
+--- LONGE ---
 19 - Longe débutant - Les bases (20min) - G2-3
-20 - Désensibilisation et confiance (15min) - G2-3
 21 - Longe avec transitions (30min) - G4-5
-22 - Travail en liberté - Initiation (20min) - G5-6
-23 - Gymnastique au sol (15min) - G3-4
-24 - Longues rênes - Introduction (30min) - G7+
-25 - Renforcement musculaire à pied (20min) - G4-5
-26 - Travail en main avancé (30min) - G7+
 48 - Longe aux enrênements (30min) - G5-6
 49 - Travail du dos en longe (25min) - G4-5
+54 - Travail de la voix en longe (20min) - G2-3
+
+--- TRAVAIL EN MAIN & LIBERTÉ ---
+22 - Travail en liberté - Initiation (20min) - G5-6
+24 - Longues rênes - Introduction (30min) - G7+
+26 - Travail en main avancé (30min) - G7+
 50 - Sauts en liberté (20min) - G4-5
-51 - Exercices de respect à pied (15min) - G2-3
+
+--- GYMNASTIQUE & PRÉPARATION PHYSIQUE ---
+23 - Gymnastique au sol (15min) - G3-4
+25 - Renforcement musculaire à pied (20min) - G4-5
 52 - Parcours d'obstacles à pied (20min) - G3-4
 53 - Stretching et mobilisation (15min) - G3-4
-54 - Travail de la voix en longe (20min) - G2-3
+
+--- ÉDUCATION & CONFIANCE ---
+20 - Désensibilisation et confiance (15min) - G2-3
+51 - Exercices de respect à pied (15min) - G2-3
 
 === OBSTACLE ===
 27 - Premiers sauts - Cavalettis (30min) - G2-3
@@ -61,17 +68,42 @@ LISTE DES SÉANCES EQUICOACH
 58 - Spa et détente à l'obstacle (30min) - G4-5
 59 - Cross indoor - obstacles naturels (45min) - G5-6
 
-=== BALADE ===
-37 - Balade en extérieur - Découverte (45min) - G2-3
-38 - Balade avec exercices terrain varié (60min) - G4-5
-39 - Balade endurance active (60min) - G5-6
-40 - Mini-TREC en extérieur (45min) - G4-5
-60 - Balade découverte débutant (30min) - G2-3
-61 - Balade montées et descentes (45min) - G3-4
-62 - Balade galop en extérieur (45min) - G4-5
-63 - Balade contemplative au pas (60min) - G2-3
-64 - Franchissements naturels (45min) - G4-5
-65 - Sortie autonomie et confiance (45min) - G3-4
+=== CROSS & EXTÉRIEUR SPORTIF ===
+
+--- GALOP DE CROSS & CONDITION PHYSIQUE ---
+101 - Introduction au galop de cross (30min) - G3-4
+102 - Galop de cross - Rythme et régularité (35min) - G4-5
+103 - Condition physique pour le cross (45min) - G4-5
+
+--- GYMNASTIQUE & PRÉPARATION TECHNIQUE ---
+107 - Gymnastique au galop - Préparation cross (30min) - G3-4
+108 - Cavalettis au galop - Distances cross (35min) - G4-5
+109 - Sauts isolés - Technique de cross (40min) - G4-5
+
+--- OBSTACLES SPÉCIFIQUES CROSS ---
+112 - Initiation aux troncs et obstacles fixes (30min) - G3-4
+113 - Passage d'eau et gués (30min) - G3-4
+114 - Sauts en montée et descente (35min) - G4-5
+126 - Franchissements naturels en extérieur (45min) - G4-5
+
+--- PARCOURS & MISE EN SITUATION ---
+118 - Mini-parcours de cross débutant (40min) - G3-4
+119 - Simulation de cross en carrière (45min) - G4-5
+
+--- RÉCUPÉRATION & SOINS POST-CROSS ---
+124 - Récupération active post-cross (30min) - G3+
+
+=== DÉTENTE & BIEN-ÊTRE ===
+6 - Décontraction et étirements (20min) - G2-3
+127 - Détente au pas - Séance zen (30min) - G2-3
+128 - Échauffement doux et progressif (15min) - G2-3
+129 - Retour au calme après effort (20min) - G3+
+130 - Séance plaisir sans objectif (30min) - G2-3
+131 - Connexion et complicité (25min) - G2-3
+132 - Stretching monté - Extension d'encolure (20min) - G3-4
+133 - Récupération active douce (25min) - G3-4
+134 - Massage et relaxation à pied (15min) - G2-3
+135 - Séance bien-être après compétition (25min) - G3+
 
 === THÉMATIQUE SPÉCIFIQUE ===
 66 - Focus cadence régulière (30min) - G3-4
