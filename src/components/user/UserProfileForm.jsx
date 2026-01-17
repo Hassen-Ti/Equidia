@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { User, Award, Target, Save, CheckCircle2, Trophy, Settings, MapPin, Plus, X } from 'lucide-react';
+import bgPatternImg from '/bg-pattern.png';
 
 export default function UserProfileForm({ profile, onSave, onReset }) {
     const [formData, setFormData] = useState({
@@ -112,7 +113,7 @@ export default function UserProfileForm({ profile, onSave, onReset }) {
                 <div
                     className="absolute inset-0 opacity-25 mix-blend-multiply"
                     style={{
-                        backgroundImage: `url('${import.meta.env.BASE_URL}bg-pattern.png')`,
+                        backgroundImage: `url('${bgPatternImg}')`,
                         backgroundSize: '250px', // Taille ajustée pour voir le motif
                         backgroundRepeat: 'repeat'
                     }}

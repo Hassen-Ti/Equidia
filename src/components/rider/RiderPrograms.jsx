@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { Play, Calendar, Star, ChevronRight, Target, Trophy, Clock, Lock } from 'lucide-react';
 import SeancesData from '../../data/seances';
 
+// Import des images
+import dressageImg from '/dressage.png';
+import obstacleImg from '/obstacle.png';
+import lifestyleImg from '/equestrian_lifestyle_bg.png';
+import bgPatternImg from '/bg-pattern.png';
+
 export default function RiderPrograms({ profile, activeHorse, onPlay }) {
     const [activeProgram, setActiveProgram] = useState(null);
 
@@ -15,7 +21,7 @@ export default function RiderPrograms({ profile, activeHorse, onPlay }) {
             sessionsCount: 12,
             level: 'Tout niveau',
             description: `Un programme progressif pour remuscler ${activeHorse?.name || 'votre cheval'} en douceur après une période de repos.`,
-            image: `${import.meta.env.BASE_URL}equestrian_lifestyle_bg.png`,
+            image: lifestyleImg,
             progress: 33, // 33% complété
             locked: false,
             sessions: [
@@ -32,7 +38,7 @@ export default function RiderPrograms({ profile, activeHorse, onPlay }) {
             sessionsCount: 18,
             level: 'G4-5',
             description: `Préparation spécifique pour enchaîner un parcours type sans faute. Travail sur la franchise et la technique.`,
-            image: `${import.meta.env.BASE_URL}obstacle.png`,
+            image: obstacleImg,
             progress: 0,
             locked: false,
             sessions: [
@@ -49,7 +55,7 @@ export default function RiderPrograms({ profile, activeHorse, onPlay }) {
             sessionsCount: 24,
             level: 'G5+',
             description: `Un cycle dédié à l'amélioration du contact et de l'équilibre pour un cheval disponible et léger.`,
-            image: `${import.meta.env.BASE_URL}dressage.png`,
+            image: dressageImg,
             progress: 0,
             locked: true, // Exemple verrouillé
             sessions: []
@@ -61,7 +67,7 @@ export default function RiderPrograms({ profile, activeHorse, onPlay }) {
             <div className="relative min-h-full pb-32 animate-in slide-in-from-right duration-500">
                 {/* BACKGROUND */}
                 <div className="fixed inset-0 z-0 bg-[#FAF7F2]">
-                    <div className="absolute inset-0 opacity-25 mix-blend-multiply" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}bg-pattern.png')`, backgroundSize: '250px', backgroundRepeat: 'repeat' }}></div>
+                    <div className="absolute inset-0 opacity-25 mix-blend-multiply" style={{ backgroundImage: `url('${bgPatternImg}')`, backgroundSize: '250px', backgroundRepeat: 'repeat' }}></div>
                     <div className="absolute inset-0 bg-gradient-to-b from-[#FDFBF7]/40 via-[#FDFBF7]/80 to-[#FDFBF7]/95 backdrop-blur-[1px]"></div>
                 </div>
 
@@ -138,7 +144,7 @@ export default function RiderPrograms({ profile, activeHorse, onPlay }) {
         <div className="relative min-h-full pb-32 animate-in fade-in duration-700">
             {/* BACKGROUND */}
             <div className="fixed inset-0 z-0 bg-[#FAF7F2]">
-                <div className="absolute inset-0 opacity-25 mix-blend-multiply" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}bg-pattern.png')`, backgroundSize: '250px', backgroundRepeat: 'repeat' }}></div>
+                <div className="absolute inset-0 opacity-25 mix-blend-multiply" style={{ backgroundImage: `url('${bgPatternImg}')`, backgroundSize: '250px', backgroundRepeat: 'repeat' }}></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-[#FDFBF7]/40 via-[#FDFBF7]/80 to-[#FDFBF7]/95 backdrop-blur-[1px]"></div>
             </div>
 
