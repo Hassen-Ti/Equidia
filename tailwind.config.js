@@ -12,8 +12,8 @@ export default {
             },
             colors: {
                 equi: {
-                    olive: '#4A5D4A',
-                    sage: '#7A8D76',
+                    olive: '#8C9E79', // Classic Sage Green from user image
+                    sage: '#B5C4A9',  // Adjusted Lighter Sage
                     gold: '#E8C07D',
                     cream: '#FAF7F2',
                     paper: '#FDFBF7',

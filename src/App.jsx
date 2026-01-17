@@ -9,6 +9,8 @@ import RiderApp from './components/RiderApp';
 import { scriptSeance1 } from './data/seance_scripts';
 
 export default function CatalogueSeances() {
+  // Version 2026-01-17 with Multi-Horse Support active
+  // Version 2026-01-17 with Phone Layout Fix & Classic Sage Green & Premium Header & Fixed Padding & Duration Fix & Card Layout V2 & Editorial Disciplines & Hero Text Update & All Images Fixed & Explicit Subcategories & Strict Mapping & Subcat Rename & Programs Integration & Demo Labels & Wallpaper Fixed & Player Refreshed & Fixed & Import Fixed & Prop Fixed & UI Polished & Details Panel & Obstacle Plan & Logbook & Fix & Info Label & Button Moved & Optimized & Timer Fixed & Work Dist & Fix & Form Polish & Dyn Profile & Reordered & Filter Button & Feedback & Radar & History Filters & Fix White Screen & Remove Weekly & Fix Horse Selector Final Opacity & Remove Streak & Photo Support Fix & Photos Injected & Layout Adjusted
   const [isRiderMode, setIsRiderMode] = useState(false);
   const [ongletActif, setOngletActif] = useState('technique');
   const [selectedSeance, setSelectedSeance] = useState(null);

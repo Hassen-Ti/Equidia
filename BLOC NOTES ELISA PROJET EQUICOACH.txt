@@ -926,3 +926,64 @@ Structure JSON :
  Meilleure UX et workflow logique
 
 
+
+ 
+ ---
+ 
+ [V2 - EVOLUTION RADAR & ANALYSE - 17/01/2026]
+ 
+ OBJECTIF : Rendre le 'Radar de Compétences' adaptatif et spécifique à chaque discipline pour une évaluation plus fine.
+ 
+ 1. LIMITES DU MODÈLE ACTUEL (V1)
+    - Modèle actuel basé sur l'Échelle de Progression Classique (Dressage) : 
+      [Impulsion, Tracé, Équilibre, Technique/Connexion, Mental].
+    - Bien que 'Universel', il manque de précision pour le CSO (Franchise, Style) ou l'Extérieur (Endurance, Calme).
+ 
+ 2. CONCEPT D'AXES DYNAMIQUES (V2)
+    L'idée est d'adapter les 5 axes du radar selon la 'Vue' choisie ou la discipline dominante du cheval.
+ 
+    A. VUE 'DRESSAGE' (Classique)
+       - Impulsion
+       - Rythme / Cadence
+       - Connexion / Contact
+       - Rectitude
+       - Rassembler (Niveaux élevés)
+ 
+    B. VUE 'OBSTACLE' (CSO)
+       - Équilibre (à la réception/abord)
+       - Franchise (Mental face à la barre)
+       - Frappe / Style
+       - Cadence (Régularité du galop)
+       - Tracé (Précision des courbes)
+ 
+    C. VUE 'EXTÉRIEUR / CROSS'
+       - Franchise
+       - Endurance / Souffle
+       - Pied Sûr (Équilibre terrain varié)
+       - Calme (Gestion émotionnelle)
+       - Obéissance (Réponse aux freins/gaz)
+ 
+ 3. MÉTHODE DE CALCUL (ALGORITHME)
+    Comment alimenter ces axes automatiquement sans demander 50 notes à l'utilisateur ?
+ 
+    - 'Tagging' des Exercices : Chaque exercice en base de données aura des 'Poids' invisibles.
+      EXEMPLE : Exercice 'Sauts de puce'
+        -> Impact CSO_Equilibre : +3
+        -> Impact CSO_Cadence : +2
+        -> Impact DRESS_Impulsion : +1
+ 
+    - Pondération par la Note Utilisateur :
+      Si l'utilisateur note 'Sauts de puce' = 4/4 (Excellent)
+        -> Les jauges 'Équilibre' et 'Cadence' du radar CSO augmentent fortement.
+      Si note = 1/4 (Difficile)
+        -> La jauge baisse ou stagne, déclenchant une alerte 'Blocage'.
+ 
+ 4. IMPLÉMENTATION UI
+    - Ajouter un sélecteur 'Discipline' au dessus du Radar sur le profil.
+    - Animation de transition fluide entre les formes du radar lors du changement de vue.
+ 
+ 5. INTELLIGENCE DE RECOMMANDATION
+    - L'IA analysera les axes faibles SPÉCIFIQUES.
+      Ex: Radar CSO montre 'Franchise' faible -> Recommander séance 'Passage de bidets & soubassements'.
+      Ex: Radar Dressage montre 'Connexion' faible -> Recommander séance 'Mise sur la main & Décontraction'.
+

@@ -1,135 +1,185 @@
 import React, { useState, useEffect } from 'react';
-import { Home, BookOpen, User, Home as HomeIcon, BookOpen as BookIcon, User as UserIcon, PlayCircle } from 'lucide-react';
+import { Home, Book, User, Play, Menu, X, Bell } from 'lucide-react';
 import RiderHome from './RiderHome';
-import RiderCatalog from './RiderCatalog';
+import RiderPrograms from './RiderPrograms';
 import RiderPlayer from './RiderPlayer';
+import UserProfileDisplay from './UserProfileDisplay';
 import UserProfileForm from './UserProfileForm';
 
 export default function RiderApp({ onExit }) {
     const [activeTab, setActiveTab] = useState('home');
-    const [playingSeance, setPlayingSeance] = useState(null);
+    const [currentSession, setCurrentSession] = useState(null);
+    const [isEditingProfile, setIsEditingProfile] = useState(false);
 
-    // Initialisation robuste du profil
+    // Initial Profile State (simulated backend)
     const [profile, setProfile] = useState(() => {
-        const defaultProfile = {
-            userName: '',
-            horseName: '',
+        const saved = localStorage.getItem('equicoach_profile');
+        return saved ? JSON.parse(saved) : {
+            userName: 'Sophie',
             galopLevel: 'G4-5',
-            primaryObjectives: [],
-            disciplines: []
+            horses: [
+                { id: 1, name: 'Spirit', age: '8', color: 'Bai', temperament: 'Calme' }
+            ],
+            stats: { sessionsCompleted: 14, totalMinutes: 420 },
+            primaryObjectives: ['Dressage', 'Confiance']
         };
-        try {
-            const saved = localStorage.getItem('equicoach_profile');
-            if (saved && saved !== 'undefined') {
-                const parsed = JSON.parse(saved);
-                return { ...defaultProfile, ...parsed };
-            }
-        } catch (e) {
-            console.error('Erreur profil:', e);
-        }
-        return defaultProfile;
     });
 
-    // Onboarding : Vers le profil si le prénom est vide
+    const [activeHorseId, setActiveHorseId] = useState(() => {
+        return profile.horses && profile.horses.length > 0 ? profile.horses[0].id : null;
+    });
+
+    // Save profile on change
     useEffect(() => {
-        if (!profile?.userName || profile.userName.trim() === '') {
-            setActiveTab('profile');
+        localStorage.setItem('equicoach_profile', JSON.stringify(profile));
+    }, [profile]);
+
+    // Update active horse if horses change and current active is invalid
+    useEffect(() => {
+        if (profile.horses && profile.horses.length > 0) {
+            if (!activeHorseId || !profile.horses.find(h => h.id === activeHorseId)) {
+                setActiveHorseId(profile.horses[0].id);
+            }
         }
-    }, []); // One-time check on mount
+    }, [profile.horses, activeHorseId]);
+
+    const activeHorse = profile.horses?.find(h => h.id === activeHorseId) ||
+        (profile.horses?.length > 0 ? profile.horses[0] : { name: 'Mon Cheval' });
+
+    const handlePlaySession = (session) => {
+        setCurrentSession(session);
+    };
 
     const handleSaveProfile = (newProfile) => {
         setProfile(newProfile);
-        localStorage.setItem('equicoach_profile', JSON.stringify(newProfile));
-        setTimeout(() => setActiveTab('home'), 1500);
+        // Ensure active horse remains valid
+        setIsEditingProfile(false);
     };
 
-    const renderContent = () => {
-        switch (activeTab) {
-            case 'home':
-                return <RiderHome
-                    profile={profile}
-                    onExplore={() => setActiveTab('catalog')}
-                    onPlay={(s) => setPlayingSeance(s)}
-                />;
-            case 'catalog':
-                return <RiderCatalog onPlay={(s) => setPlayingSeance(s)} />;
-            case 'profile':
-                return <UserProfileForm profile={profile} onSave={handleSaveProfile} />;
-            default:
-                return <RiderHome profile={profile} />;
-        }
-    };
+    if (currentSession) {
+        return <RiderPlayer session={currentSession} onClose={() => setCurrentSession(null)} />;
+    }
 
     return (
-        <div className="flex flex-col h-screen max-w-md mx-auto bg-equi-cream shadow-2xl relative overflow-hidden font-sans border-x border-equi-border transition-all duration-500">
+        /* Mobile: Full Screen, White Bg | Desktop: Gray Bg, Centered Flex */
+        <div className="fixed inset-0 bg-[#FAF7F2] sm:bg-gray-100 sm:flex sm:justify-center sm:items-center sm:py-8 z-50">
+            {/* Mobile: Full Size, No Border | Desktop: Max Width, Rounded, Bordered Phone Look */}
+            <div className="w-full h-full sm:h-[85vh] sm:max-w-[400px] bg-[#FAF7F2] relative font-sans text-[#5C5C5C] sm:shadow-2xl overflow-hidden sm:rounded-[2.5rem] sm:border-[8px] sm:border-white flex flex-col">
 
-            {/* Texture de papier subtile */}
-            <div className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-multiply z-50 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]"></div>
+                {/* Version Check Banner */}
+                {/* <div className="bg-red-500 text-white text-xs text-center p-1 absolute top-0 w-full z-[60]">DEBUG: Phone Layout V3</div> */}
 
-            {/* Header Premium */}
-            <header className="px-6 py-6 flex justify-between items-center bg-equi-olive z-[60] shadow-xl border-b border-white/5">
-                <div className="flex flex-col gap-0.5">
-                    <h1 className="text-2xl font-serif text-equi-paper italic font-black tracking-tight">EquiCoach</h1>
-                    <span className="text-[8px] uppercase tracking-[0.5em] font-extrabold text-equi-gold opacity-80">Studio de Excellence</span>
+                {/* TOP HEADER (Fixed inside phone) */}
+                {/* TOP HEADER (Fixed inside phone) */}
+                <div className="absolute top-0 inset-x-0 z-50 h-20 bg-[#FAF7F2]/80 backdrop-blur-xl border-b border-[#8C9E79]/10 flex items-center justify-between px-6 transition-all duration-300">
+                    {/* Left: Menu/Drawer */}
+                    <button className="p-2 -ml-2 text-[#8C9E79]/50 hover:text-[#8C9E79] transition-colors active:scale-95">
+                        <Menu size={24} />
+                    </button>
+
+                    {/* Center: Brand */}
+                    <div className="flex flex-col items-center animate-in fade-in slide-in-from-top-2 duration-700">
+                        <span className="font-serif font-black text-3xl text-[#8C9E79] italic tracking-tighter drop-shadow-sm">
+                            EquiCoach
+                        </span>
+                    </div>
+
+                    {/* Right: Notifications */}
+                    <button className="p-2 -mr-2 text-[#8C9E79]/50 hover:text-[#8C9E79] transition-colors relative active:scale-95">
+                        <Bell size={24} />
+                        <span className="absolute top-2 right-2.5 w-2 h-2 bg-red-400 rounded-full border-2 border-[#FAF7F2]"></span>
+                    </button>
                 </div>
+
+                {/* MAIN SCROLLABLE CONTENT AREA */}
+                <main className="flex-1 overflow-y-scroll no-scrollbar pb-24 pt-20">
+                    {activeTab === 'home' && (
+                        <RiderHome
+                            profile={profile}
+                            activeHorse={activeHorse}
+                            onExplore={() => setActiveTab('catalog')}
+                            onPlay={handlePlaySession}
+                        />
+                    )}
+                    {activeTab === 'programs' && (
+                        <RiderPrograms
+                            profile={profile}
+                            activeHorse={activeHorse}
+                            onPlay={handlePlaySession}
+                        />
+                    )}
+                    {activeTab === 'profile' && (
+                        isEditingProfile ? (
+                            <UserProfileForm
+                                profile={profile}
+                                onSave={handleSaveProfile}
+                                onReset={() => setIsEditingProfile(false)}
+                            />
+                        ) : (
+                            <UserProfileDisplay
+                                profile={profile}
+                                activeHorse={activeHorse}
+                                onEdit={() => setIsEditingProfile(true)}
+                                onSwitchHorse={setActiveHorseId}
+                            />
+                        )
+                    )}
+                </main>
+
+                {/* BOTTOM NAVIGATION BAR (Fixed inside phone) */}
+                <div className="absolute bottom-6 inset-x-6 z-50">
+                    <div className="bg-[#8C9E79] text-white backdrop-blur-xl rounded-[2.5rem] p-2 shadow-2xl flex items-center justify-between px-6 border border-white/20">
+                        <NavButton
+                            icon={<Home size={24} />}
+                            label="Accueil"
+                            isActive={activeTab === 'home'}
+                            onClick={() => setActiveTab('home')}
+                        />
+                        <NavButton
+                            icon={<Book size={24} />}
+                            label="Programmes"
+                            isActive={activeTab === 'programs'}
+                            onClick={() => setActiveTab('programs')}
+                        />
+                        <NavButton
+                            icon={<User size={24} />}
+                            label="Profil"
+                            isActive={activeTab === 'profile'}
+                            onClick={() => setActiveTab('profile')}
+                        />
+                    </div>
+                </div>
+
+                {/* EXIT BUTTON */}
                 <button
                     onClick={onExit}
-                    className="text-[9px] bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-full font-black uppercase tracking-widest border border-white/10 transition-all active:scale-95"
+                    className="absolute top-4 right-4 z-50 w-8 h-8 flex items-center justify-center bg-black/10 rounded-full hover:bg-black/20 transition-colors"
+                    title="Quitter"
                 >
-                    Fermer
+                    <X size={16} color="white" />
                 </button>
-            </header>
-
-            {/* Content Area */}
-            <main className="flex-1 overflow-y-auto pb-28 relative z-10 scroll-smooth">
-                {renderContent()}
-            </main>
-
-            {/* Navigation Tab Bar Glassmorphism */}
-            <nav className="fixed bottom-6 left-6 right-6 max-w-[calc(448px-3rem)] mx-auto bg-white/70 backdrop-blur-2xl border border-white/40 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] flex justify-around items-center py-4 px-2 z-[60]">
-                <NavButton
-                    active={activeTab === 'home'}
-                    onClick={() => setActiveTab('home')}
-                    icon={<HomeIcon size={20} />}
-                    label="Studio"
-                />
-                <NavButton
-                    active={activeTab === 'catalog'}
-                    onClick={() => setActiveTab('catalog')}
-                    icon={<BookIcon size={20} />}
-                    label="Bibliothèque"
-                />
-                <NavButton
-                    active={activeTab === 'profile'}
-                    onClick={() => setActiveTab('profile')}
-                    icon={<UserIcon size={20} />}
-                    label="Profil"
-                />
-            </nav>
-
-            {/* Player Overlay */}
-            {playingSeance && (
-                <RiderPlayer
-                    seance={playingSeance}
-                    onClose={() => setPlayingSeance(null)}
-                />
-            )}
+            </div>
         </div>
     );
 }
 
-function NavButton({ active, onClick, icon, label }) {
+function NavButton({ icon, label, isActive, onClick }) {
     return (
         <button
             onClick={onClick}
-            className={`flex flex-col items-center gap-1.5 transition-all duration-300 relative group`}
+            className={`flex flex-col items-center gap-1 p-3 rounded-2xl transition-all duration-500 w-20
+            ${isActive
+                    ? 'bg-white text-[#8C9E79] -translate-y-4 shadow-lg scale-110'
+                    : 'text-white/70 hover:text-white hover:bg-white/10'}`}
         >
-            <div className={`p-2.5 rounded-2xl transition-all duration-300 ${active ? 'bg-equi-olive text-equi-paper shadow-lg scale-110' : 'text-equi-clay opacity-40 group-hover:opacity-100 group-hover:bg-equi-olive/5'}`}>
+            <div className="relative">
                 {icon}
+                {isActive && <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#8C9E79] rounded-full"></div>}
             </div>
-            <span className={`text-[8px] font-black uppercase tracking-[0.2em] transition-all duration-300 ${active ? 'text-equi-olive' : 'text-equi-clay opacity-0'}`}>{label}</span>
-            {active && (
-                <div className="absolute -bottom-1 w-1 h-1 rounded-full bg-equi-gold animate-pulse"></div>
+            {isActive && (
+                <span className="text-[9px] font-bold uppercase tracking-widest animate-in fade-in slide-in-from-bottom-2 duration-300">
+                    {label}
+                </span>
             )}
         </button>
     );

@@ -83,7 +83,7 @@ const SeancesData = [
     { id: 131, type: "Technique classique", nom: "Connexion et complicité", discipline: "Détente & Bien-être", theme: "Relation", niveau: "G2-3+", duree: "25min", intensite: "Légère", objectif: "Renforcer la relation cheval-cavalier" },
     { id: 132, type: "Technique classique", nom: "Stretching monté - Extension d'encolure", discipline: "Détente & Bien-être", theme: "Stretching", niveau: "G3-4+", duree: "20min", intensite: "Légère", objectif: "Étirements et assouplissement monté" },
     { id: 133, type: "Technique classique", nom: "Récupération active douce", discipline: "Détente & Bien-être", theme: "Récupération", niveau: "G3-4+", duree: "25min", intensite: "Légère", objectif: "Récupération en douceur" },
-    { id: 134, type: "Technique classique", nom: "Massage et relaxation à pied", discipline: "Détente & Bien-être", theme: "Bien-être", niveau: "G2-3+", duree: "15min", intensite: "Légère", objectif: "Massage et détente à pied" },
+    { id: 134, type: "Technique classique", nom: "Massage et relaxation à pied", discipline: "Travail au sol", theme: "Bien-être", niveau: "G2-3+", duree: "15min", intensite: "Légère", objectif: "Massage et détente à pied" },
     { id: 135, type: "Technique classique", nom: "Séance bien-être après compétition", discipline: "Détente & Bien-être", theme: "Récupération", niveau: "G3+", duree: "25min", intensite: "Légère", objectif: "Détente après une compétition" },
 
     // ====== THÉMATIQUE SPÉCIFIQUE (15 séances) ======
