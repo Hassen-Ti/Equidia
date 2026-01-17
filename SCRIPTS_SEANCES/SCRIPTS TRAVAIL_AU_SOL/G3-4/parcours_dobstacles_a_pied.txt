@@ -1,1 +1,0 @@
-﻿TO_DO : RÃ©diger le script pour Parcours d'obstacles à pied (G3-4)

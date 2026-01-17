@@ -1,1 +1,0 @@
-﻿TO_DO : RÃ©diger le script pour Échauffement doux et progressif (G2-3)
