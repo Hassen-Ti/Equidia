@@ -44,13 +44,13 @@ export default function RiderHome({ onExplore, onPlay, profile, activeHorse }) {
     }, [profile?.galopLevel]);
 
     const categories = [
-        { id: 'Dressage', label: 'Dressage', image: '/dressage.png' },
-        { id: 'Obstacle', label: 'Obstacle', image: '/obstacle.png' },
-        { id: 'Cross & Extérieur sportif', label: 'Cross &\nExtérieur', image: '/trail.png' },
-        { id: 'Travail au sol', label: 'Travail\nau Sol', image: '/groundwork.png' },
-        { id: 'Détente & Bien-être', label: 'Détente &\nBien-être', image: '/equestrian_lifestyle_bg.png' },
-        { id: 'specifique', label: 'Travail\nSpécifique', image: '/equestrian_premium.png' },
-        { id: 'corrections', label: 'Corrections\nCiblées', image: '/corrections.png' },
+        { id: 'Dressage', label: 'Dressage', image: `${import.meta.env.BASE_URL}dressage.png` },
+        { id: 'Obstacle', label: 'Obstacle', image: `${import.meta.env.BASE_URL}obstacle.png` },
+        { id: 'Cross & Extérieur sportif', label: 'Cross &\nExtérieur', image: `${import.meta.env.BASE_URL}trail.png` },
+        { id: 'Travail au sol', label: 'Travail\nau Sol', image: `${import.meta.env.BASE_URL}groundwork.png` },
+        { id: 'Détente & Bien-être', label: 'Détente &\nBien-être', image: `${import.meta.env.BASE_URL}equestrian_lifestyle_bg.png` },
+        { id: 'specifique', label: 'Travail\nSpécifique', image: `${import.meta.env.BASE_URL}equestrian_premium.png` },
+        { id: 'corrections', label: 'Corrections\nCiblées', image: `${import.meta.env.BASE_URL}corrections.png` },
     ];
 
     // Fonction pour vérifier si un niveau est inférieur ou égal au niveau sélectionné
@@ -94,14 +94,14 @@ export default function RiderHome({ onExplore, onPlay, profile, activeHorse }) {
     }, [activeCategory, activeSubcategory, filterLevel, filterDuration, includeLowerLevels]);
 
     const getHeroImage = (discipline) => {
-        if (!discipline) return '/dressage.png'; // Fallback plus vivant
+        if (!discipline) return `${import.meta.env.BASE_URL}dressage.png`; // Fallback plus vivant
         switch (discipline) {
-            case 'Dressage': return '/dressage.png';
-            case 'Obstacle': return '/obstacle.png';
-            case 'Cross & Extérieur sportif': return '/trail.png';
-            case 'Travail au sol': return '/groundwork.png';
-            case 'Détente & Bien-être': return '/equestrian_lifestyle_bg.png';
-            default: return '/dressage.png';
+            case 'Dressage': return `${import.meta.env.BASE_URL}dressage.png`;
+            case 'Obstacle': return `${import.meta.env.BASE_URL}obstacle.png`;
+            case 'Cross & Extérieur sportif': return `${import.meta.env.BASE_URL}trail.png`;
+            case 'Travail au sol': return `${import.meta.env.BASE_URL}groundwork.png`;
+            case 'Détente & Bien-être': return `${import.meta.env.BASE_URL}equestrian_lifestyle_bg.png`;
+            default: return `${import.meta.env.BASE_URL}dressage.png`;
         }
     };
 
@@ -109,7 +109,7 @@ export default function RiderHome({ onExplore, onPlay, profile, activeHorse }) {
         <div className="relative min-h-[800px] rounded-[2rem] overflow-hidden">
             {/* BACKGROUND */}
             <div className="absolute inset-0 z-0 bg-[#FAF7F2]">
-                <div className="absolute inset-0 opacity-20 mix-blend-multiply" style={{ backgroundImage: `url('/bg-pattern.png')`, backgroundSize: '250px', backgroundRepeat: 'repeat' }}></div>
+                <div className="absolute inset-0 opacity-20 mix-blend-multiply" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}bg-pattern.png')`, backgroundSize: '250px', backgroundRepeat: 'repeat' }}></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-[#FDFBF7]/40 via-[#FDFBF7]/80 to-[#FDFBF7]/95 backdrop-blur-[1px]"></div>
             </div>
 
@@ -354,16 +354,16 @@ export default function RiderHome({ onExplore, onPlay, profile, activeHorse }) {
 
 function getSeanceVisual(seance) {
     // Priorité absolue aux types spéciaux
-    if (seance.type === 'Résolution de problème') return '/corrections.png';
-    if (seance.type === 'Thématique spécifique') return '/equestrian_premium.png';
+    if (seance.type === 'Résolution de problème') return `${import.meta.env.BASE_URL}corrections.png`;
+    if (seance.type === 'Thématique spécifique') return `${import.meta.env.BASE_URL}equestrian_premium.png`;
 
     // Ensuite, mappage strict par discipline
     switch (seance.discipline) {
-        case 'Dressage': return '/dressage.png';
-        case 'Obstacle': return '/obstacle.png';
-        case 'Cross & Extérieur sportif': return '/trail.png';
-        case 'Travail au sol': return '/groundwork.png';
-        case 'Détente & Bien-être': return '/equestrian_lifestyle_bg.png';
-        default: return '/equestrian_lifestyle_bg.png';
+        case 'Dressage': return `${import.meta.env.BASE_URL}dressage.png`;
+        case 'Obstacle': return `${import.meta.env.BASE_URL}obstacle.png`;
+        case 'Cross & Extérieur sportif': return `${import.meta.env.BASE_URL}trail.png`;
+        case 'Travail au sol': return `${import.meta.env.BASE_URL}groundwork.png`;
+        case 'Détente & Bien-être': return `${import.meta.env.BASE_URL}equestrian_lifestyle_bg.png`;
+        default: return `${import.meta.env.BASE_URL}equestrian_lifestyle_bg.png`;
     }
 }

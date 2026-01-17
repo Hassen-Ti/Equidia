@@ -104,7 +104,7 @@ export default function UserProfileDisplay({ profile, activeHorse, onEdit, onSwi
                 <div
                     className="absolute inset-0 opacity-25 mix-blend-multiply"
                     style={{
-                        backgroundImage: `url('/bg-pattern.png')`,
+                        backgroundImage: `url('${import.meta.env.BASE_URL}bg-pattern.png')`,
                         backgroundSize: '250px',
                         backgroundRepeat: 'repeat'
                     }}

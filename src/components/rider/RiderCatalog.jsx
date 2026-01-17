@@ -50,7 +50,7 @@ export default function RiderCatalog({ onPlay }) {
         <div className="relative min-h-screen">
             {/* BACKGROUND */}
             <div className="absolute inset-0 z-0 overflow-hidden bg-[#FAF7F2]">
-                <div className="absolute inset-0 opacity-20 mix-blend-multiply" style={{ backgroundImage: `url('/bg-pattern.png')`, backgroundSize: '250px', backgroundRepeat: 'repeat' }}></div>
+                <div className="absolute inset-0 opacity-20 mix-blend-multiply" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}bg-pattern.png')`, backgroundSize: '250px', backgroundRepeat: 'repeat' }}></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-[#FDFBF7]/40 via-[#FDFBF7]/80 to-[#FDFBF7]/95 backdrop-blur-[1px]"></div>
             </div>
 
@@ -178,20 +178,20 @@ function getSeanceVisual(seance) {
     const discipline = seance.discipline;
 
     // Mapping par mot-clé (prioritaire)
-    if (name.includes('cross') || name.includes('fossé') || name.includes('tronc') || name.includes('gué')) return '/trail.png';
-    if (name.includes('détente') || name.includes('bien-être') || name.includes('relaxation') || name.includes('zen')) return '/equestrian_lifestyle_bg.png';
-    if (name.includes('galop')) return '/dressage.png';
-    if (name.includes('longe') || name.includes('pied') || name.includes('sol')) return '/groundwork.png';
-    if (name.includes('saut') || name.includes('obstacle') || name.includes('cavaletti')) return '/obstacle.png';
-    if (name.includes('cession') || name.includes('souplesse') || name.includes('dressage')) return '/dressage.png';
+    if (name.includes('cross') || name.includes('fossé') || name.includes('tronc') || name.includes('gué')) return `${import.meta.env.BASE_URL}trail.png`;
+    if (name.includes('détente') || name.includes('bien-être') || name.includes('relaxation') || name.includes('zen')) return `${import.meta.env.BASE_URL}equestrian_lifestyle_bg.png`;
+    if (name.includes('galop')) return `${import.meta.env.BASE_URL}dressage.png`;
+    if (name.includes('longe') || name.includes('pied') || name.includes('sol')) return `${import.meta.env.BASE_URL}groundwork.png`;
+    if (name.includes('saut') || name.includes('obstacle') || name.includes('cavaletti')) return `${import.meta.env.BASE_URL}obstacle.png`;
+    if (name.includes('cession') || name.includes('souplesse') || name.includes('dressage')) return `${import.meta.env.BASE_URL}dressage.png`;
 
     // Fallback par discipline
     switch (discipline) {
-        case 'Dressage': return '/dressage.png';
-        case 'Obstacle': return '/obstacle.png';
-        case 'Cross & Extérieur sportif': return '/trail.png';
-        case 'Travail au sol': return '/groundwork.png';
-        case 'Détente & Bien-être': return '/equestrian_lifestyle_bg.png';
-        default: return '/equestrian_lifestyle_bg.png';
+        case 'Dressage': return `${import.meta.env.BASE_URL}dressage.png`;
+        case 'Obstacle': return `${import.meta.env.BASE_URL}obstacle.png`;
+        case 'Cross & Extérieur sportif': return `${import.meta.env.BASE_URL}trail.png`;
+        case 'Travail au sol': return `${import.meta.env.BASE_URL}groundwork.png`;
+        case 'Détente & Bien-être': return `${import.meta.env.BASE_URL}equestrian_lifestyle_bg.png`;
+        default: return `${import.meta.env.BASE_URL}equestrian_lifestyle_bg.png`;
     }
 }

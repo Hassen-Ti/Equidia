@@ -33,7 +33,7 @@ export default function RiderPlayer({ session: seance, onClose }) {
 
             {/* Background Lifestyle Soft - Immersion Totale */}
             <div className="absolute inset-0 z-0 scale-110">
-                <div className="absolute inset-0 opacity-25 mix-blend-multiply" style={{ backgroundImage: `url('/bg-pattern.png')`, backgroundSize: '250px', backgroundRepeat: 'repeat' }}></div>
+                <div className="absolute inset-0 opacity-25 mix-blend-multiply" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}bg-pattern.png')`, backgroundSize: '250px', backgroundRepeat: 'repeat' }}></div>
                 <div className="absolute inset-0 bg-gradient-to-b from-[#FAF7F2]/90 via-[#FAF7F2]/95 to-[#FAF7F2]"></div>
 
                 {/* Decorative Elements */}
@@ -240,16 +240,16 @@ export default function RiderPlayer({ session: seance, onClose }) {
 }
 
 function getSeanceVisual(seance) {
-    if (seance.type === 'Résolution de problème') return '/corrections.png';
-    if (seance.type === 'Thématique spécifique') return '/equestrian_premium.png';
+    if (seance.type === 'Résolution de problème') return `${import.meta.env.BASE_URL}corrections.png`;
+    if (seance.type === 'Thématique spécifique') return `${import.meta.env.BASE_URL}equestrian_premium.png`;
 
     switch (seance.discipline) {
-        case 'Dressage': return '/dressage.png';
-        case 'Obstacle': return '/obstacle.png';
-        case 'Cross & Extérieur sportif': return '/trail.png';
-        case 'Travail au sol': return '/groundwork.png';
-        case 'Détente & Bien-être': return '/equestrian_lifestyle_bg.png';
-        default: return '/equestrian_lifestyle_bg.png';
+        case 'Dressage': return `${import.meta.env.BASE_URL}dressage.png`;
+        case 'Obstacle': return `${import.meta.env.BASE_URL}obstacle.png`;
+        case 'Cross & Extérieur sportif': return `${import.meta.env.BASE_URL}trail.png`;
+        case 'Travail au sol': return `${import.meta.env.BASE_URL}groundwork.png`;
+        case 'Détente & Bien-être': return `${import.meta.env.BASE_URL}equestrian_lifestyle_bg.png`;
+        default: return `${import.meta.env.BASE_URL}equestrian_lifestyle_bg.png`;
     }
 }
 
