@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Edit2, Award, TrendingUp, Calendar, Zap, Layout, Settings, Trophy, Activity } from 'lucide-react';
+import profileRiderImg from '/profile_rider.png';
+import profileHorseImg from '/profile_horse.png';
+import bgPatternImg from '/bg-pattern.png';
 
 export default function UserProfileDisplay({ profile, activeHorse, onEdit, onSwitchHorse }) {
     // --- DONNÉES MOCKÉES DYNAMIQUES ---
@@ -119,7 +122,7 @@ export default function UserProfileDisplay({ profile, activeHorse, onEdit, onSwi
                 <div className="flex flex-col items-center pt-6">
                     <div className="relative">
                         <div className="w-36 h-36 rounded-full border-4 border-white shadow-2xl bg-[#E8DCCA] flex items-center justify-center relative z-10 overflow-hidden">
-                            <img src="/profile_rider.png" alt="Profil Cavalier" className="w-full h-full object-cover" />
+                            <img src={profileRiderImg} alt="Profil Cavalier" className="w-full h-full object-cover" />
                         </div>
                         {/* Level Badge */}
                         <div className="absolute -bottom-2 -right-2 bg-[#8C9E79] text-[#E8DCCA] text-xs font-black uppercase px-3 py-1.5 rounded-full shadow-lg border-2 border-white z-20">
@@ -205,7 +208,7 @@ export default function UserProfileDisplay({ profile, activeHorse, onEdit, onSwi
                         </div>
                         {/* PHOTO CHEVAL (Agrandie) */}
                         <div className="w-28 h-28 rounded-3xl bg-white/10 flex items-center justify-center border-2 border-white/20 overflow-hidden shadow-lg relative shrink-0 -mt-2 -mr-2">
-                            <img src="/profile_horse.png" alt="Cheval" className="w-full h-full object-cover" />
+                            <img src={profileHorseImg} alt="Cheval" className="w-full h-full object-cover" />
                             {/* Small Edit Icon Overlay */}
                             <div className="absolute bottom-1 right-1 bg-white/90 p-1.5 rounded-full text-[#8C9E79] shadow-sm cursor-pointer hover:scale-110 transition-transform">
                                 <Edit2 size={10} />
